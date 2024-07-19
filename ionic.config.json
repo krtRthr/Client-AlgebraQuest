@@ -1,0 +1,7 @@
+{
+  "name": "Client1_AlgebraQuest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

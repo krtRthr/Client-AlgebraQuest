@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Game-Over";
+  src: url("../../assets/font/game_over_2/Game\ Over.otf");
+}
+
+@font-face {
+  font-family: "Good-Game";
+  src: url("../../assets/font/good_game/Good-Game.ttf");
+}
+
+.level1-page {
+  --background: url("../../assets/AlgebraQuest_Asset/lvl2-bg.png") 0 0/ 100% 100% no-repeat;
+  //background-position: 0 0;
+  //background-size: 100% 100%;
+  //background-repeat: no-repeat;
+}
+
+.button-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+#title {
+  font-family: "Good-Game";
+  font-size: 4rem;
+  top: 3.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-text-stroke: 2px #000000;
+}
+
+#back-button {
+  top: 2%;
+  left: 2%;
+}
+
+#button1 {
+  top: 77%;
+  left: 6%;
+}
+
+#button2 {
+  top: 71%;
+  left: 20%;
+}
+
+#button3 {
+  top: 64%;
+  left: 33%;
+}
+
+#button4 {
+  top: 58%;
+  left: 46%;
+}
+
+#button5 {
+  top: 52%;
+  left: 60%;
+}
+
+#button6 {
+  top: 44%;
+  left: 68%;
+}
+
+#button7 {
+  top: 36%;
+  left: 60%;
+}
+
+#button8 {
+  top: 29%;
+  left: 49%;
+}
+
+#button9 {
+  top: 23%;
+  left: 36%;
+}
+
+#button10 {
+  top: 16%;
+  left: 28%;
+}
