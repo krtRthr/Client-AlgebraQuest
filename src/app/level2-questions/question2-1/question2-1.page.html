@@ -1,0 +1,52 @@
+<ion-content [fullscreen]="true" class="level2-question1">
+  <div class="content-container">
+    <img
+      class="button"
+      id="back-button"
+      routerLink="/level-2"
+      src="../../../assets/AlgebraQuest_Asset/back btn (1).png"
+    />
+    <p class="button" id="title">Level 2-1</p>
+    <div class="button" id="question-cont">
+      <!--fraction-->
+      <p class="button" id="question">Question</p>
+      <br />
+      <p class="button" id="sub-question">
+        <sup>3x + 1</sup>&frasl;<sub>x + 3</sub>
+        <span id="arithmetic-operation"> + </span>
+        <sup>2</sup>&frasl;<sub>x + 3</sub>
+      </p>
+    </div>
+
+    <div class="button" id="simplify-cont">
+      <p class="button" id="simplify">Simplify</p>
+      <p class="button" id="simplify-question">
+        <sup>
+          <input [(ngModel)]="num1" class="blanks" type="text" />x +
+          <input [(ngModel)]="num2" class="blanks" type="text" /> +
+          <input [(ngModel)]="num3" class="blanks" type="text" /> </sup
+        >&frasl;
+        <sub>
+          <input [(ngModel)]="num4" class="blanks" type="text" /> +
+          <input [(ngModel)]="num5" class="blanks" type="text" />
+        </sub>
+      </p>
+    </div>
+    <div class="button" id="answer-cont">
+      <p class="button" id="answer">Answer</p>
+      <p class="button" id="answer-question">
+        <sup>
+          <input [(ngModel)]="ans1" class="blanks" type="text" />x +
+          <input [(ngModel)]="ans2" class="blanks" type="text" /> </sup
+        >&frasl;
+        <sub>
+          <input [(ngModel)]="ans3" class="blanks" type="text" /> +
+          <input [(ngModel)]="ans4" class="blanks" type="text" />
+        </sub>
+      </p>
+    </div>
+    <button class="button" id="verify" (click)="checkAnswers()">
+      Check Answers
+    </button> 
+  </div>
+</ion-content>

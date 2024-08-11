@@ -35,3 +35,36 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+//Imported fonts
+@font-face {
+  font-family: "Game-Over";
+  src: url("../../Client1_AlgebraQuest/src/assets/font/game_over_2/Game\ Over.otf");
+}
+
+@font-face {
+  font-family: "Good-Game";
+  src: url("../../Client1_AlgebraQuest/src/assets/font/good_game/Good-Game.ttf");
+}
+//Alert
+/* In question2-1.page.scss or global styles.scss */
+
+.custom-alert .alert-wrapper {
+  background: linear-gradient(#68e166, #45d143, #51DD4E) !important; /* Change background color */
+  color: white !important; /* Change text color */
+}
+
+.custom-alert .alert-title {
+  font-family: ''Arial', sans-serif' !important; /* Set your font choice */
+  font-size: 24px !important; /* Set your font size */
+}
+
+.custom-alert .alert-message {
+  font-family: 'Verdana', sans-serif !important; /* Set your font choice */
+  font-size: 18px !important; /* Set your font size */
+}
+
+.custom-alert .alert-button {
+  color: yellow !important; /* Change button text color */
+  font-size: 16px !important; /* Change button font size */
+}

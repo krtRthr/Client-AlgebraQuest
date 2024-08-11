@@ -1,0 +1,64 @@
+<ion-content [fullscreen]="true" class="level2-question2">
+  <div class="content-container">
+    <img
+      class="button"
+      id="back-button"
+      routerLink="/level-2"
+      src="../../../assets/AlgebraQuest_Asset/back btn (1).png"
+    />
+    <p class="button" id="title">Level 2-2</p>
+    <div class="button" id="question-cont">
+      <!--fraction-->
+      <p class="button" id="question">Question</p>
+      <br />
+      <p class="button" id="sub-question">
+        <sup>7y</sup>&frasl;<sub>3x + 1</sub>
+        <span id="arithmetic-operation"> - </span>
+        <sup>6y + 1</sup>&frasl;<sub>3x+ 1</sub>
+      </p>
+    </div>
+
+    <div class="button" id="simplify-cont">
+      <p class="button" id="simplify">Simplify</p>
+      <p class="button" id="simplify-question">
+        <sup>
+          <input [(ngModel)]="num1" class="blanks" id="num1" type="text" />y -
+          <input [(ngModel)]="num2" class="blanks" id="num2" type="text" />y -
+          <input
+            [(ngModel)]="num3"
+            class="blanks"
+            id="num3"
+            type="text"
+          /> </sup
+        >&frasl;
+        <sub>
+          <input [(ngModel)]="num4" class="blanks" id="num4" type="text" />x +
+          <input [(ngModel)]="num5" class="blanks" id="num5" type="text" />
+        </sub>
+      </p>
+    </div>
+
+    <div class="button" id="answer-cont">
+      <p class="button" id="answer">Answer</p>
+      <p class="button" id="answer-question">
+        <sup>
+          <input [(ngModel)]="ans1" class="blanks" id="ans1" type="text" /> -
+          <input
+            [(ngModel)]="ans2"
+            class="blanks"
+            id="ans2"
+            type="text"
+          /> </sup
+        >&frasl;
+        <sub>
+          <input [(ngModel)]="ans3" class="blanks" id="ans3" type="text" />x +
+          <input [(ngModel)]="ans4" class="blanks" id="ans4" type="text" />
+        </sub>
+      </p>
+    </div>
+
+    <button class="button" id="verify" (click)="checkAnswers()">
+      Check Answers
+    </button>
+  </div>
+</ion-content>
