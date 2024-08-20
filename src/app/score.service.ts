@@ -9,6 +9,11 @@ export class ScoreService {
 
   constructor() { }
 
+  addScore(points: number) {
+    this.score += points;
+    console.log(`Score updated: ${this.score}`);
+  }
+  
   incrementScore() {
     this.score += 1;
   }

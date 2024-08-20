@@ -30,7 +30,7 @@ export class Level1Page {
   newImageSrc9 = '../../assets/AlgebraQuest_Asset/lvl-buttons/lvl1-buttons/Group 46 (1).png';
   newImageSrc10 = '../../assets/AlgebraQuest_Asset/lvl-buttons/lvl1-buttons/Group 47 (1).png';
 
-  // Change image based on button clicked
+  
   changeImage(event: Event, buttonId: number) {
     const target = event.target as HTMLImageElement;
     switch (buttonId) {

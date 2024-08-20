@@ -56,7 +56,7 @@ export class Question10Page {
       buttons: [{
         text: 'Next Question',
         handler: () => {
-          this.router.navigate(['']);
+          this.router.navigate(['/final-score']);
         }
       }]
     });

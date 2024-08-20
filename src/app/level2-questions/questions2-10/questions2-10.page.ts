@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { ScoreService } from 'src/app/score.service';
 
 @Component({
   selector: 'app-question2-10',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./questions2-10.page.scss'],
 })
 export class Questions210Page implements OnInit {
-
+  
   // Define properties for each input
   num1: string = '';
   num2: string = '';
@@ -37,7 +38,11 @@ export class Questions210Page implements OnInit {
   ans6: string = '';
   ans7: string = '';
 
-  constructor(private alertController: AlertController, private router: Router) {}
+  constructor(
+    private alertController: AlertController, 
+    private router: Router, 
+    private scoreService: ScoreService // Inject the ScoreService
+  ) {}
 
   ngOnInit() {}
 
@@ -101,6 +106,10 @@ export class Questions210Page implements OnInit {
 
     const resultMessage = isCorrect ? 'Correct!' : 'Incorrect. Please try again.';
 
+    if (isCorrect) {
+      this.scoreService.addScore(10); // Add points to the score if correct
+    }
+
     const alert = await this.alertController.create({
       header: 'Result',
       message: resultMessage,
@@ -109,7 +118,7 @@ export class Questions210Page implements OnInit {
           text: 'Next',
           handler: () => {
             if (isCorrect) {
-              this.router.navigate(['/level-3']); // Navigate to the next page if the answer is correct
+              this.router.navigate(['/final-score']); // Navigate to the next page if the answer is correct
             }
           }
         },

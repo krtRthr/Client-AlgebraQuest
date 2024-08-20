@@ -17,4 +17,6 @@ export class FinalScorePage implements OnInit {
   resetGame() {
     this.scoreService.resetScore();  // Reset the score for a new game
   }
+
+  
 }
