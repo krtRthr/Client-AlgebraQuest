@@ -14,7 +14,7 @@
 
 .content-container{
   position: relative;
-  width: 100vw;
+  width: 100vw; 
   height: 100vh;
   display: flex;
   align-items: center;
@@ -27,6 +27,16 @@
   align-items: center;
   position: absolute;
 }
+
+
+.selected {
+  background-color: yellow; /* Highlight selected answer */
+}
+
+.correct {
+  background-color: green; /* Highlight correct answer */
+}
+
 
 #title {
   font-family: "Good-Game";
@@ -84,7 +94,7 @@
 }
 
 #choice-1, #choice-2, #choice-3, #choice-4{
-  width: 45%;
+  width: 40%;
   height: 60px;
   background:linear-gradient( #F1E5BA, #F2C934);
   color:#ffffff;
@@ -94,4 +104,15 @@
   font-family: "Good-Game";
   -webkit-text-stroke: 1px #000000;
   font-size: 1.9rem;
+}
+#submit{
+  top:90%;
+  width: 40%;
+  height: 45px;
+  background:linear-gradient(#68e166, #45d143, #51DD4E);
+  border-radius: 15px;
+  box-shadow: 2px 4px 3px #363535;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Good-Game";
+  font-size: 1.4rem;
 }

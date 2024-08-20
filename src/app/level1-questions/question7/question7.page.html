@@ -15,17 +15,26 @@
         <sup>12x<sup>2</sup> + 11x - 15</sup>&frasl;<sub>20x<sup>2</sup> - 23x + 6</sub>
       </p>
     </div>
-    <button class="button" id="choice-1">
+    <button class="button" id="choice-1"
+    [ngClass]="{'selected': selectedAnswer === 'choice-1', 'correct': correctAnswer === 'choice-1'}"
+    (click)="selectAnswer('choice-1')">
       <i><sup>(12x - 5)(x + 3)</sup>&frasl;<sub>(4x - 1)(5x - 4)</sub></i>
     </button>
-    <button class="button" id="choice-2">
+    <button class="button" id="choice-2"
+    [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
+    (click)="selectAnswer('choice-2')">
       <i><sup>2x + 5</sup>&frasl;<sub>5x - 3</sub></i>
     </button>
-    <button class="button" id="choice-3">
+    <button class="button" id="choice-3"
+    [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
+    (click)="selectAnswer('choice-3')">
       <i><sup>(12x + 5)(x - 3)</sup>&frasl;<sub>(4x + 1)(5x + 4)</sub></i>
     </button>
-    <button class="button" id="choice-4">
+    <button class="button" id="choice-4"
+    [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
+    (click)="selectAnswer('choice-4')">
       <i><sup>3x + 5</sup>&frasl;<sub>5x - 2</sub></i>
     </button>
+    <ion-button id="submit" (click)="submitAnswer()">Submit</ion-button>
   </div>
 </ion-content>
