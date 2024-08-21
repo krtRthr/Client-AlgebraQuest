@@ -8,8 +8,8 @@
   src: url("../../assets/font/good_game/Good-Game.ttf");
 }
 
-.level1-page {
-  --background: url("../../assets/AlgebraQuest_Asset/lvl3-bg.png") 0 0/ 100% 100% no-repeat;
+.level3-page {
+  --background: url("../../assets/AlgebraQuest_Asset/lvl2-bg.png") 0 0/ 100% 100% no-repeat;
   //background-position: 0 0;
   //background-size: 100% 100%;
   //background-repeat: no-repeat;
@@ -46,51 +46,51 @@
 }
 
 #button1 {
-  top: 90%;
-  left: 55%;
+  top: 77%;
+  left: 6%;
 }
 
 #button2 {
-  top: 82%;
-  left: 36%;
-}
-
-#button3 {
-  top: 72%;
+  top: 71%;
   left: 20%;
 }
 
+#button3 {
+  top: 64%;
+  left: 33%;
+}
+
 #button4 {
-  top: 60%;
-  left: 18%;
+  top: 58%;
+  left: 46%;
 }
 
 #button5 {
-  top: 51%;
-  left: 32%;
+  top: 52%;
+  left: 60%;
 }
 
 #button6 {
-  top: 43%;
-  left: 50%;
+  top: 44%;
+  left: 68%;
 }
 
 #button7 {
-  top: 37%;
-  left: 73%;
+  top: 36%;
+  left: 60%;
 }
 
 #button8 {
   top: 29%;
-  left: 57%;
+  left: 49%;
 }
 
 #button9 {
-  top: 22%;
-  left: 38%;
+  top: 23%;
+  left: 36%;
 }
 
 #button10 {
-  top: 15%;
-  left: 20%;
+  top: 16%;
+  left: 28%;
 }
