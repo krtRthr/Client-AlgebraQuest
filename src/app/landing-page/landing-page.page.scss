@@ -17,6 +17,8 @@
 
 .level-container {
   margin-top: 50%;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .level-slider-container {
