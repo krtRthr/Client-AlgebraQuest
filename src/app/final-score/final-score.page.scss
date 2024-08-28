@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Game-Over";
+  src: url("../../assets/font/game_over_2/Game\ Over.otf");
+}
+
+@font-face {
+  font-family: "Good-Game";
+  src: url("../../assets/font/good_game/Good-Game.ttf");
+}
+
+
+.main-page {
+  --background: url("../../assets/AlgebraQuest_Asset/results\ .png") 0 0/ 100% 100% no-repeat;
+  //background-position: 0 0;
+  //background-size: 100% 100%;
+  //background-repeat: no-repeat;
+}
+
+.final-score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #f0f4f8;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4a90e2;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  ion-button {
+    --background: #4a90e2;
+    --background-activated: #357abd;
+    --border-radius: 10px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    --padding-top: 12px;
+    --padding-bottom: 12px;
+    font-size: 1.2rem;
+    margin: 10px 0;
+
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+}
