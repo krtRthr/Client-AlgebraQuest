@@ -1,0 +1,434 @@
+<ion-content [fullscreen]="true" class="level3-question8">
+  <div class="content-container">
+    <img
+      class="button"
+      id="back-button"
+      routerLink="/level-3"
+      src="../../../assets/AlgebraQuest_Asset/back btn (1).png"
+    />
+    <p class="button" id="title">Level 3-8</p>
+    <div class="button" id="question-cont">
+      <!--fraction-->
+      <p class="button" id="question-title">Question</p>
+      <br />
+      <p class="button" id="question">
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            8r<sup>3</sup> + 1
+          </span>
+          <span style="display: block"> 2r - 1 </span>
+        </span>
+        <span id="arithmetic-operation"> - </span>
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            r
+          </span>
+          <span style="display: block"> r - 1 </span>
+        </span>
+      </p>
+    </div>
+    <div class="button" id="answer1-cont">
+      <p class="button" id="question-title">1st Simplify</p>
+      <p class="button" id="question">
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block">
+            (<input class="blanks" id="ans1" type="text" [(ngModel)]="ans1" />r
+            - 1)(
+            <input
+              class="blanks"
+              id="ans2"
+              type="text"
+              [(ngModel)]="ans2"
+            />r<sup>2</sup> +
+            <input class="blanks" id="ans3" type="text" [(ngModel)]="ans3" />r +
+            <input class="blanks" id="ans4" type="text" [(ngModel)]="ans4" />)
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans5" type="text" [(ngModel)]="ans5" />r -
+            1
+          </span>
+        </span>
+        <span id="arithmetic-operation"> - </span>
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input class="blanks" id="ans6" type="text" [(ngModel)]="ans6" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans7" type="text" [(ngModel)]="ans7" /> -
+            <input class="blanks" id="ans8" type="text" [(ngModel)]="ans8" />
+          </span>
+        </span>
+      </p>
+    </div>
+    <div class="button" id="answer2-cont">
+      <p class="button" id="question-title">2nd Simplify</p>
+      <p class="button" id="question">
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block">
+            <input
+              class="blanks"
+              id="ans9"
+              type="text"
+              [(ngModel)]="ans9"
+            />r<sup>2</sup> +
+            <input class="blanks" id="ans10" type="text" [(ngModel)]="ans10" />r
+            +
+            <input class="blanks" id="ans11" type="text" [(ngModel)]="ans11" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans12" type="text" [(ngModel)]="ans12" />
+          </span>
+        </span>
+        <span id="arithmetic-operation"> - </span>
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input class="blanks" id="ans13" type="text" [(ngModel)]="ans13" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans14" type="text" [(ngModel)]="ans14" />
+            -
+            <input class="blanks" id="ans15" type="text" [(ngModel)]="ans15" />
+          </span>
+        </span>
+      </p>
+    </div>
+    <div class="button" id="answer3-cont">
+      <p class="button" id="question-title">Guess the LCD</p>
+      <p class="button" id="lcd-cont">
+        <input class="blanks" id="lcd1" type="text" [(ngModel)]="lcd1" /> -
+        <input class="blanks" id="lcd2" type="text" [(ngModel)]="lcd2" />
+      </p>
+    </div>
+    <div class="button" id="answer4-cont">
+      <p class="button" id="question-title">3rd Simplify</p>
+      <p class="button" id="question">
+        <span style="font-size: 2rem; font-family: Arial; margin-right: 5px"
+          >(</span
+        >
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input
+              class="blanks"
+              id="ans16"
+              type="text"
+              [(ngModel)]="ans16"
+            />r<sup>2</sup> +
+            <input class="blanks" id="ans17" type="text" [(ngModel)]="ans17" />r
+            +
+            <input class="blanks" id="ans18" type="text" [(ngModel)]="ans18" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans19" type="text" [(ngModel)]="ans19" />
+          </span>
+        </span>
+        <span id="arithmetic-operation"> - </span>
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input class="blanks" id="ans20" type="text" [(ngModel)]="ans20" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans21" type="text" [(ngModel)]="ans21" />
+            -
+            <input class="blanks" id="ans22" type="text" [(ngModel)]="ans22" />
+          </span>
+        </span>
+        <span style="font-size: 2rem; font-family: Arial; margin-left: 5px"
+          >)</span
+        >
+        <span
+          >(<input class="blanks" id="ans23" type="text" [(ngModel)]="ans23" />
+          -
+          <input
+            class="blanks"
+            id="ans24"
+            type="text"
+            [(ngModel)]="ans24"
+          />)</span
+        >
+      </p>
+    </div>
+    <div class="button" id="answer5-cont">
+      <p class="button" id="question-title">4th Simplify</p>
+      <p class="button" id="question">
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            (<input
+              class="blanks"
+              id="ans25"
+              type="text"
+              [(ngModel)]="ans25"
+            />r<sup>2</sup> +
+            <input class="blanks" id="ans26" type="text" [(ngModel)]="ans26" />r
+            +
+            <input
+              class="blanks"
+              id="ans27"
+              type="text"
+              [(ngModel)]="ans27"
+            />)(<input
+              class="blanks"
+              id="ans28"
+              type="text"
+              [(ngModel)]="ans28"
+            />
+            -
+            <input class="blanks" id="ans29" type="text" [(ngModel)]="ans29" />)
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans30" type="text" [(ngModel)]="ans30" />
+            -
+            <input class="blanks" id="ans31" type="text" [(ngModel)]="ans31" />
+          </span>
+        </span>
+        <span id="arithmetic-operation"> - </span>
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input class="blanks" id="ans32" type="text" [(ngModel)]="ans32" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans33" type="text" [(ngModel)]="ans33" />
+            -
+            <input class="blanks" id="ans34" type="text" [(ngModel)]="ans34" />
+          </span>
+        </span>
+      </p>
+    </div>
+
+    <div class="button" id="answer6-cont">
+      <p class="button" id="question-title">5th Simplify</p>
+      <p class="button" id="question">
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input
+              class="blanks"
+              id="ans35"
+              type="text"
+              [(ngModel)]="ans35"
+            />r<sup>3</sup> +
+            <input
+              class="blanks"
+              id="ans36"
+              type="text"
+              [(ngModel)]="ans36"
+            />r<sup>2</sup> +
+            <input class="blanks" id="ans37" type="text" [(ngModel)]="ans37" />
+            -
+            <input
+              class="blanks"
+              id="ans38"
+              type="text"
+              [(ngModel)]="ans38"
+            />r<sup>2</sup> -
+            <input class="blanks" id="ans39" type="text" [(ngModel)]="ans39" />r
+            -
+            <input class="blanks" id="ans40" type="text" [(ngModel)]="ans40" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans41" type="text" [(ngModel)]="ans41" />
+            -
+            <input class="blanks" id="ans42" type="text" [(ngModel)]="ans42" />
+          </span>
+        </span>
+        <span id="arithmetic-operation"> - </span>
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input class="blanks" id="ans43" type="text" [(ngModel)]="ans43" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans44" type="text" [(ngModel)]="ans44" />
+            -
+            <input class="blanks" id="ans45" type="text" [(ngModel)]="ans45" />
+          </span>
+        </span>
+      </p>
+    </div>
+    <div class="button" id="answer7-cont">
+      <p class="button" id="question-title">6th Simplify</p>
+      <p class="button" id="question">
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input
+              class="blanks"
+              id="ans46"
+              type="text"
+              [(ngModel)]="ans46"
+            />r<sup>3</sup> -
+            <input
+              class="blanks"
+              id="ans47"
+              type="text"
+              [(ngModel)]="ans47"
+            />r<sup>2</sup> -
+            <input class="blanks" id="ans48" type="text" [(ngModel)]="ans48" />
+            -
+            <input class="blanks" id="ans49" type="text" [(ngModel)]="ans49" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans50" type="text" [(ngModel)]="ans50" />
+            -
+            <input class="blanks" id="ans51" type="text" [(ngModel)]="ans51" />
+          </span>
+        </span>
+        <span id="arithmetic-operation"> - </span>
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input class="blanks" id="ans52" type="text" [(ngModel)]="ans52" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans53" type="text" [(ngModel)]="ans53" />
+            -
+            <input class="blanks" id="ans54" type="text" [(ngModel)]="ans54" />
+          </span>
+        </span>
+      </p>
+    </div>
+    <div class="button" id="answer8-cont">
+      <p class="button" id="question-title">7th Simplify</p>
+      <p class="button" id="question">
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input
+              class="blanks"
+              id="ans55"
+              type="text"
+              [(ngModel)]="ans55"
+            />r<sup>3</sup> -
+            <input
+              class="blanks"
+              id="ans56"
+              type="text"
+              [(ngModel)]="ans56"
+            />r<sup>2</sup> -
+            <input class="blanks" id="ans57" type="text" [(ngModel)]="ans57" />
+            -
+            <input class="blanks" id="ans58" type="text" [(ngModel)]="ans58" />
+            -
+            <input class="blanks" id="ans59" type="text" [(ngModel)]="ans59" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans60" type="text" [(ngModel)]="ans60" />
+            -
+            <input class="blanks" id="ans61" type="text" [(ngModel)]="ans61" />
+          </span>
+        </span>
+      </p>
+    </div>
+
+    <div class="button" id="answer9-cont">
+      <p class="button" id="question-title">Answer</p>
+      <p class="button" id="question">
+        <span style="display: inline-block; text-align: center">
+          <span
+            style="
+              border-bottom: 3px solid white;
+              display: block;
+              margin-bottom: 5px;
+            "
+          >
+            <input
+              class="blanks"
+              id="ans62"
+              type="text"
+              [(ngModel)]="ans62"
+            />r<sup>3</sup> -
+            <input
+              class="blanks"
+              id="ans63"
+              type="text"
+              [(ngModel)]="ans63"
+            />r<sup>2</sup> -
+            <input class="blanks" id="ans64" type="text" [(ngModel)]="ans64" />r
+            -
+            <input class="blanks" id="ans65" type="text" [(ngModel)]="ans65" />
+          </span>
+          <span style="display: block">
+            <input class="blanks" id="ans66" type="text" [(ngModel)]="ans66" />
+            -
+            <input class="blanks" id="ans67" type="text" [(ngModel)]="ans67" />
+          </span>
+        </span>
+      </p>
+    </div>
+
+    <p class="button" id="verify" (click)="checkAnswers()">Check Answers</p>
+    <div class="button" id="filler"></div>
+  </div>
+</ion-content>

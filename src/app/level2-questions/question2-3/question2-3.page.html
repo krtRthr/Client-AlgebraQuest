@@ -12,30 +12,38 @@
       <p class="button" id="question">Question</p>
       <br />
       <p class="button" id="sub-question">
-        <sup>4y<sup>2</sup> + 3x<sup>2</sup></sup
-        >&frasl;<sub>7y<sup>3</sup></sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block; margin-bottom: 5px">
+            4y<sup>2</sup> + 3x<sup>2</sup>
+          </span>
+          <span style="display: block"> 7y<sup>3</sup> </span>
+        </span>
         <span id="arithmetic-operation"> + </span>
-        <sup>8y + 6x</sup>&frasl;<sub>7y<sup>3</sup></sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block; margin-bottom: 5px">
+            8y + 6x
+          </span>
+          <span style="display: block"> 7y<sup>3</sup> </span>
+        </span>
       </p>
     </div>
 
     <div class="button" id="simplify-cont">
-      <p class="button" id="simplify-question">
-        <sup>
-          <input [(ngModel)]="num1" class="blanks" id="num1" type="text" />y<sup
-            >2</sup
-          >
-          +
-          <input [(ngModel)]="num2" class="blanks" id="num2" type="text" />x<sup
-            >2</sup
-          >
-          + <input [(ngModel)]="num3" class="blanks" id="num3" type="text" />y +
-          6x </sup
-        >&frasl;
-        <sub>
-          <input [(ngModel)]="num4" class="blanks" id="num4" type="text" />x +
-          <input [(ngModel)]="num5" class="blanks" id="num5" type="text" />
-        </sub>
+      <p class="button" id="question">Answer</p>
+      <br />
+      <p class="button" id="sub-question">
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block; margin-bottom: 2px">
+            <input [(ngModel)]="num1" class="blanks" id="num1" type="text" />y<sup>2</sup>
+            +
+            <input [(ngModel)]="num2" class="blanks" id="num2" type="text" />x<sup>2</sup> +
+            <input [(ngModel)]="num3" class="blanks" id="num3" type="text" />y + 6x
+          </span>
+          <span style="display: block">
+            <input [(ngModel)]="num4" class="blanks" id="num4" type="text" />x +
+            <input [(ngModel)]="num5" class="blanks" id="num5" type="text" />
+          </span>
+        </span>
       </p>
     </div>
     <p class="button" id="verify" (click)="checkAnswers()">Check Answers</p>

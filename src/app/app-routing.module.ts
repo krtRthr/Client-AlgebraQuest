@@ -123,6 +123,30 @@ const routes: Routes = [
     path: 'question3-4',
     loadChildren: () => import('./level3-questions/question3-4/question3-4.module').then( m => m.Question34PageModule)
   },
+  {
+    path: 'question3-5',
+    loadChildren: () => import('./level3-questions/question3-5/question3-5.module').then( m => m.Question35PageModule)
+  },
+  {
+    path: 'question3-6',
+    loadChildren: () => import('./level3-questions/question3-6/question3-6.module').then( m => m.Question36PageModule)
+  },
+  {
+    path: 'question3-7',
+    loadChildren: () => import('./level3-questions/question3-7/question3-7.module').then( m => m.Question37PageModule)
+  },
+  {
+    path: 'question3-8',
+    loadChildren: () => import('./level3-questions/question3-8/question3-8.module').then( m => m.Question38PageModule)
+  },
+  {
+    path: 'question3-9',
+    loadChildren: () => import('./level3-questions/question3-9/question3-9.module').then( m => m.Question39PageModule)
+  },
+  {
+    path: 'question3-10',
+    loadChildren: () => import('./level3-questions/question3-10/question3-10.module').then( m => m.Question310PageModule)
+  },
 ];
 
 @NgModule({

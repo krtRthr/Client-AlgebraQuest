@@ -25,7 +25,7 @@ export class Question21Page implements OnInit {
   constructor(private alertController: AlertController, private router: Router) { }
 
   ngOnInit() {
-  } 
+  }
 
   async checkAnswers() {
     // Correct answers
@@ -42,7 +42,7 @@ export class Question21Page implements OnInit {
     };
 
     // Validate inputs
-    const isCorrect = 
+    const isCorrect =
       this.num1 === correctAnswers.num1 &&
       this.num2 === correctAnswers.num2 &&
       this.num3 === correctAnswers.num3 &&
@@ -59,7 +59,7 @@ export class Question21Page implements OnInit {
     // Present the alert
     const alert = await this.alertController.create({
       header: 'Result',
-      message: resultMessage, 
+      message: resultMessage,
       buttons: [
         {
           text: 'Next',
@@ -81,7 +81,7 @@ export class Question21Page implements OnInit {
 
     await alert.present();
   }
-  
+
   resetInputs() {
     this.num1 = '';
     this.num2 = '';
