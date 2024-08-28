@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { ScoreService } from 'src/app/score.service';
 
 @Component({
   selector: 'app-question2-10',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./questions2-10.page.scss'],
 })
 export class Questions210Page implements OnInit {
-
+  
   // Define properties for each input
   num1: string = '';
   num2: string = '';
@@ -37,7 +38,11 @@ export class Questions210Page implements OnInit {
   ans6: string = '';
   ans7: string = '';
 
-  constructor(private alertController: AlertController, private router: Router) {}
+  constructor(
+    private alertController: AlertController, 
+    private router: Router, 
+    private scoreService: ScoreService // Inject the ScoreService
+  ) {}
 
   ngOnInit() {}
 
@@ -70,37 +75,42 @@ export class Questions210Page implements OnInit {
       ans6: 'x',
       ans7: '1'
     };
-
-    const isCorrect =
-      this.num1 === correctAnswers.num1 &&
-      this.num2 === correctAnswers.num2 &&
-      this.num3 === correctAnswers.num3 &&
-      this.num4 === correctAnswers.num4 &&
-      this.num5 === correctAnswers.num5 &&
-      this.num6 === correctAnswers.num6 &&
-      this.num7 === correctAnswers.num7 &&
-      this.num8 === correctAnswers.num8 &&
-      this.num9 === correctAnswers.num9 &&
-      this.num10 === correctAnswers.num10 &&
-      this.simp1 === correctAnswers.simp1 &&
-      this.simp2 === correctAnswers.simp2 &&
-      this.simp3 === correctAnswers.simp3 &&
-      this.simp4 === correctAnswers.simp4 &&
-      this.simp5 === correctAnswers.simp5 &&
-      this.simp6 === correctAnswers.simp6 &&
-      this.simp7 === correctAnswers.simp7 &&
-      this.simp8 === correctAnswers.simp8 &&
-      this.simp9 === correctAnswers.simp9 &&
-      this.ans1 === correctAnswers.ans1 &&
-      this.ans2 === correctAnswers.ans2 &&
-      this.ans3 === correctAnswers.ans3 &&
-      this.ans4 === correctAnswers.ans4 &&
-      this.ans5 === correctAnswers.ans5 &&
-      this.ans6 === correctAnswers.ans6 &&
-      this.ans7 === correctAnswers.ans7;
-
-    const resultMessage = isCorrect ? 'Correct!' : 'Incorrect. Please try again.';
-
+  
+    // Check each answer and count the number of correct answers
+    let score = 0;
+    score += this.num1 === correctAnswers.num1 ? 1 : 0;
+    score += this.num2 === correctAnswers.num2 ? 1 : 0;
+    score += this.num3 === correctAnswers.num3 ? 1 : 0;
+    score += this.num4 === correctAnswers.num4 ? 1 : 0;
+    score += this.num5 === correctAnswers.num5 ? 1 : 0;
+    score += this.num6 === correctAnswers.num6 ? 1 : 0;
+    score += this.num7 === correctAnswers.num7 ? 1 : 0;
+    score += this.num8 === correctAnswers.num8 ? 1 : 0;
+    score += this.num9 === correctAnswers.num9 ? 1 : 0;
+    score += this.num10 === correctAnswers.num10 ? 1 : 0;
+    score += this.simp1 === correctAnswers.simp1 ? 1 : 0;
+    score += this.simp2 === correctAnswers.simp2 ? 1 : 0;
+    score += this.simp3 === correctAnswers.simp3 ? 1 : 0;
+    score += this.simp4 === correctAnswers.simp4 ? 1 : 0;
+    score += this.simp5 === correctAnswers.simp5 ? 1 : 0;
+    score += this.simp6 === correctAnswers.simp6 ? 1 : 0;
+    score += this.simp7 === correctAnswers.simp7 ? 1 : 0;
+    score += this.simp8 === correctAnswers.simp8 ? 1 : 0;
+    score += this.simp9 === correctAnswers.simp9 ? 1 : 0;
+    score += this.ans1 === correctAnswers.ans1 ? 1 : 0;
+    score += this.ans2 === correctAnswers.ans2 ? 1 : 0;
+    score += this.ans3 === correctAnswers.ans3 ? 1 : 0;
+    score += this.ans4 === correctAnswers.ans4 ? 1 : 0;
+    score += this.ans5 === correctAnswers.ans5 ? 1 : 0;
+    score += this.ans6 === correctAnswers.ans6 ? 1 : 0;
+    score += this.ans7 === correctAnswers.ans7 ? 1 : 0;
+  
+    // Set the result message
+    const resultMessage = score === Object.keys(correctAnswers).length ? 'Correct!' : 'Incorrect. Please try again.';
+  
+    if (score > 0) {
+      this.scoreService.addScore(score); }
+  
     const alert = await this.alertController.create({
       header: 'Result',
       message: resultMessage,
@@ -108,8 +118,10 @@ export class Questions210Page implements OnInit {
         {
           text: 'Next',
           handler: () => {
-            if (isCorrect) {
-              this.router.navigate(['/level-3']); // Navigate to the next page if the answer is correct
+            if (score === Object.keys(correctAnswers).length) {
+              this.router.navigate(['/final-score']); 
+            } else {
+              this.router.navigate(['/final-score']);
             }
           }
         },
@@ -123,9 +135,10 @@ export class Questions210Page implements OnInit {
       cssClass: 'custom-alert'
     });
 
+    
+  
     await alert.present();
   }
-
   resetInputs() {
     this.num1 = '';
     this.num2 = '';

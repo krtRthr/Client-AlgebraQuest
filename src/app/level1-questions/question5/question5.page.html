@@ -15,17 +15,26 @@
         <sup>p<sup>2</sup> + 5p + 6</sup>&frasl;<sub>p + 2</sub>
       </p>
     </div>
-    <button class="button" id="choice-1">
+    <button class="button" id="choice-1"
+    [ngClass]="{'selected': selectedAnswer === 'choice-1', 'correct': correctAnswer === 'choice-1'}"
+    (click)="selectAnswer('choice-1')">
       <i>p + 2 + <sup>1</sup>&frasl;<sub>p + 2</sub></i>
     </button>
-    <button class="button" id="choice-2">
+    <button class="button" id="choice-2"
+    [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
+    (click)="selectAnswer('choice-2')">
       <i>p + 5</i>
     </button>
-    <button class="button" id="choice-3">
+    <button class="button" id="choice-3"
+    [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
+    (click)="selectAnswer('choice-3')">
       <i>p + 2</i>
     </button>
-    <button class="button" id="choice-4">
+    <button class="button" id="choice-4"
+    [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
+    (click)="selectAnswer('choice-4')">
       <i>p + 3</i>
     </button>
+    <ion-button id="submit" (click)="submitAnswer()">Submit</ion-button>
   </div>
 </ion-content>

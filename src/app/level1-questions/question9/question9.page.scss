@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Game-Over";
-  src: url("../../../assets/font/game_over_2/Game\ Over.otf");
+  src: url("../../../assets/font/game_over_2/Game Over.otf");
 }
 
 @font-face {
@@ -8,11 +8,11 @@
   src: url("../../../assets/font/good_game/Good-Game.ttf");
 }
 
-.level1-question1{
-  --background: url("../../../assets/AlgebraQuest_Asset/lvl1-question-bg.png") 0 0/ 100% 100% no-repeat;
+.level1-question1 {
+  --background: url("../../../assets/AlgebraQuest_Asset/lvl1-question-bg.png") 0 0/100% 100% no-repeat;
 }
 
-.content-container{
+.content-container {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -42,56 +42,97 @@
   left: 2%;
 }
 
-#question-cont{
+#question-cont {
   width: 65%;
   height: 150px;
-  background: linear-gradient( #F1E5BA, #F2C934, #F2C934);;
+  background: linear-gradient(#F1E5BA, #F2C934, #F2C934);
   top: 25%;
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#question-cont > p{
+#question-cont > p {
   margin: 0;
   font-family: "Good-Game";
   font-size: 3rem;
   -webkit-text-stroke: 1px #000000;
 }
 
-#question{
-  top:10%;
+#question {
+  top: 10%;
 }
 
-#sub-question{
-  top:55%;
+#sub-question {
+  top: 55%;
 }
 
-#choice-1{
-  top:50%;
-}
-
-#choice-2{
-  top:60%;
-}
-
-#choice-3{
-  top:70%;
-}
-
-#choice-4{
-  top:80%;
-}
-
-#choice-1, #choice-2, #choice-3, #choice-4{
+#choice-1,
+#choice-2,
+#choice-3,
+#choice-4 {
   width: 40%;
   height: 60px;
-  background:linear-gradient( #F1E5BA, #F2C934);
-  color:#ffffff;
+  background: linear-gradient(#F1E5BA, #F2C934);
+  color: #ffffff;
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: "Good-Game";
   -webkit-text-stroke: 1px #000000;
   font-size: 1.9rem;
+  border: 4px solid transparent; /* Default transparent border */
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: #f2c934; /* Outline color on hover */
+    cursor: pointer;
+  }
+
+  &.selected {
+    border-color: rgb(255, 255, 255); /* Outline color when selected */
+  }
+
+  &.correct-reveal {
+    border-color: green; /* Outline color when correct */
+  }
+
+  &.incorrect-reveal {
+    border-color: red; /* Outline color when incorrect */
+  }
+}
+
+#choice-1 {
+  top: 50%;
+}
+
+#choice-2 {
+  top: 60%;
+}
+
+#choice-3 {
+  top: 70%;
+}
+
+#choice-4 {
+  top: 80%;
+}
+
+#submit {
+  top: 90%;
+  width: 40%;
+  height: 45px;
+  background: linear-gradient(#68e166, #45d143, #51DD4E);
+  border-radius: 15px;
+  box-shadow: 2px 4px 3px #363535;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Good-Game";
+  font-size: 1.4rem;
+  border: 2px solid transparent; /* Default transparent border */
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: #45d143; /* Outline color on hover */
+    cursor: pointer;
+  }
 }
