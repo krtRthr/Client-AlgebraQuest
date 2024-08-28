@@ -12,96 +12,79 @@
       <p class="button" id="question">Question</p>
       <br />
       <p class="button" id="sub-question">
-        <sup>7x<sup>3</sup> + 2y + 3z</sup>&frasl;<sub>x + 1</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block">
+            7x<sup>3</sup> + 2y + 3z
+          </span>
+          <span style="display: block"> x + 1 </span>
+        </span>
         <span id="arithmetic-operation"> + </span>
-        <sup>6(x + 2y + z) + 7</sup>&frasl;<sub>x + 1</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block"> 6(x + 2y + z) + 7 </span>
+          <span style="display: block"> x + 1 </span>
+        </span>
       </p>
     </div>
 
     <div class="button" id="simplify-cont">
-      <p class="button" id="simplify" (click)="checkAnswers()">1st Simplify</p>
-      <p class="button" id="simplify-question">
-        <sup>
-          <input
-            [(ngModel)]="num1"
-            class="blanks"
-            id="num1"
-            type="text"
-          />x<sup>3</sup>+
-          <input [(ngModel)]="num2" class="blanks" id="num2" type="text" />y+
-          <input [(ngModel)]="num3" class="blanks" id="num3" type="text" />z+
-          <input [(ngModel)]="num4" class="blanks" id="num4" type="text" />(
-          <input [(ngModel)]="num5" class="blanks" id="num5" type="text" />+
-          <input [(ngModel)]="num6" class="blanks" id="num6" type="text" />y+
-          <input
-            [(ngModel)]="num7"
-            class="blanks"
-            id="num7"
-            type="text"
-          />)+<input
-            [(ngModel)]="num8"
-            class="blanks"
-            id="num8"
-            type="text"
-          /> </sup
-        >&frasl;
-        <sub>
-          <input [(ngModel)]="num9" class="blanks" id="num9" type="text" />+
-          <input [(ngModel)]="num10" class="blanks" id="num10" type="text" />
-        </sub>
+      <p class="button" id="question">Simplify</p>
+      <p class="button" id="sub-question">
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block">
+            <input [(ngModel)]="num1" class="blanks" id="num1" type="text" />x<sup>3</sup> +
+            <input [(ngModel)]="num2" class="blanks" id="num2" type="text" />y +
+            <input [(ngModel)]="num3" class="blanks" id="num3" type="text" />z +
+            <input [(ngModel)]="num4" class="blanks" id="num4" type="text" />
+            (<input [(ngModel)]="num5" class="blanks" id="num5" type="text" /> +
+            <input [(ngModel)]="num6" class="blanks" id="num6" type="text" />y +
+            <input [(ngModel)]="num7" class="blanks" id="num7" type="text" />) +
+            <input [(ngModel)]="num8" class="blanks" id="num8" type="text" />
+          </span>
+          <span style="display: block">
+            <input [(ngModel)]="num9" class="blanks" id="num9" type="text" /> +
+            <input [(ngModel)]="num10" class="blanks" id="num10" type="text" />
+          </span>
+        </span>
       </p>
     </div>
 
     <div class="button" id="simplify2-cont">
-      <p class="button" id="simplify2">2nd Simplify</p>
-      <p class="button" id="simplify2-question">
-        <sup>
-          <input
-            [(ngModel)]="simp1"
-            class="blanks"
-            id="simp1"
-            type="text"
-          />x<sup>3</sup>+
-          <input [(ngModel)]="simp2" class="blanks" id="simp2" type="text" />y+
-          <input [(ngModel)]="simp3" class="blanks" id="simp3" type="text" />z+
-          <input [(ngModel)]="simp4" class="blanks" id="simp4" type="text" />x+
-          <input [(ngModel)]="simp5" class="blanks" id="simp5" type="text" />y+
-          <input [(ngModel)]="simp6" class="blanks" id="simp6" type="text" />z+
-          <input
-            [(ngModel)]="simp7"
-            class="blanks"
-            id="simp7"
-            type="text"
-          /> </sup
-        >&frasl;
-        <sub>
-          <input [(ngModel)]="simp8" class="blanks" id="simp8" type="text" />+
-          <input [(ngModel)]="simp9" class="blanks" id="simp9" type="text" />
-        </sub>
+      <p class="button" id="question">Simplify</p>
+      <p class="button" id="sub-question">
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block">
+            <input [(ngModel)]="simp1" class="blanks" id="simp1" type="text" />x<sup>3</sup> +
+            <input [(ngModel)]="simp2" class="blanks" id="simp2" type="text" />y +
+            <input [(ngModel)]="simp3" class="blanks" id="simp3" type="text" />z +
+            <input [(ngModel)]="simp4" class="blanks" id="simp4" type="text" />x +
+            <input [(ngModel)]="simp5" class="blanks" id="simp5" type="text" />y +
+            <input [(ngModel)]="simp6" class="blanks" id="simp6" type="text" />z +
+            <input [(ngModel)]="simp7" class="blanks" id="simp7" type="text" />
+          </span>
+          <span style="display: block">
+            <input [(ngModel)]="simp8" class="blanks" id="simp8" type="text" /> +
+            <input [(ngModel)]="simp9" class="blanks" id="simp9" type="text" />
+          </span>
+        </span>
       </p>
     </div>
 
     <div class="button" id="answer-cont">
-      <p class="button" id="answer">Answer</p>
-      <p class="button" id="answer-question">
-        <sup>
-          <input [(ngModel)]="ans1" class="blanks" id="ans1" type="text" />x<sup
-            >3</sup
-          >
-          + <input [(ngModel)]="ans2" class="blanks" id="ans2" type="text" />y +
-          <input [(ngModel)]="ans3" class="blanks" id="ans3" type="text" />z +
-          <input [(ngModel)]="ans4" class="blanks" id="ans4" type="text" />x +
-          <input
-            [(ngModel)]="ans5"
-            class="blanks"
-            id="ans5"
-            type="text"
-          /> </sup
-        >&frasl;
-        <sub>
-          <input [(ngModel)]="ans6" class="blanks" id="ans6" type="text" /> +
-          <input [(ngModel)]="ans7" class="blanks" id="ans7" type="text" />
-        </sub>
+      <p class="button" id="question">Answer</p>
+      <p class="button" id="sub-question">
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block">
+            <input [(ngModel)]="ans1" class="blanks" id="ans1" type="text" />x<sup>3</sup> +
+            <input [(ngModel)]="ans2" class="blanks" id="ans2" type="text" />y +
+            <input [(ngModel)]="ans3" class="blanks" id="ans3" type="text" />z +
+            <input [(ngModel)]="ans4" class="blanks" id="ans4" type="text" />x +
+            <input [(ngModel)]="ans5" class="blanks" id="ans5" type="text" />
+          </span>
+          <span style="display: block">
+            <input [(ngModel)]="ans6" class="blanks" id="ans6" type="text" /> +
+            <input [(ngModel)]="ans7" class="blanks" id="ans7" type="text" />
+          </span>
+        </span>
       </p>
     </div>
     <p class="button" id="verify" (click)="checkAnswers()">Check Answers</p>

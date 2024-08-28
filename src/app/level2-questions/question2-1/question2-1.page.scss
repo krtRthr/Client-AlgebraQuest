@@ -8,13 +8,13 @@
   src: url("../../../assets/font/good_game/Good-Game.ttf");
 }
 
-.level2-question1{
+.level2-question1 {
   --background: url("../../../assets/AlgebraQuest_Asset/lvl2-question-bg.png") 0 0/ 100% 100% no-repeat;
 }
 
-.content-container{
+.content-container {
   position: relative;
-  width: 100vw; 
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -42,110 +42,82 @@
   left: 2%;
 }
 
-#question-cont{
+#arithmetic-operation {
+  padding: 0px 12px 0px 12px;
+  font-size: 3rem;
+  color: #51DD4E;
+}
+
+#question-cont {
   width: 75%;
   height: 120px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
+  background: linear-gradient(#6ba1b8, #40AFDE, #40AFDE);
   top: 22%;
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#question-cont > p{
+#question {
+  top: 5%;
+  color: #51DD4E;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 2.5rem;
+  font-size: 2rem;
   -webkit-text-stroke: 1px #000000;
 }
 
-#arithmetic-operation{
-  padding: 0px 17px 0px 17px;
-  font-size: 4rem;
-  color:#51DD4E;
-}
- 
-#question{
-  top:5%;
-  color:#51DD4E;
+#sub-question {
+  margin: 0;
+  font-family: "Good-Game";
+  font-size: 2rem;
+  -webkit-text-stroke: 1px #000000;
+  top: 35%;
 }
 
-#sub-question{
-  top:46%;
+#simplify-cont {
+  background: linear-gradient(#6ba1b8, #40AFDE, #40AFDE);
 }
 
-#simplify-cont{
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-}
-#answer-cont{
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
+#answer-cont {
+  background: linear-gradient(#6ba1b8, #40AFDE, #40AFDE);
 }
 
-#simplify-cont{
+#simplify-cont {
   width: 75%;
   height: 120px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
+  background: linear-gradient(#6ba1b8, #40AFDE, #40AFDE);
   top: 42%;
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#simplify-cont > p{
-  margin: 0;
-  font-family: "Good-Game";
-  font-size: 2.5rem;
-  -webkit-text-stroke: 1px #000000;
-}
-
-#simplify{
-  top:5%;
-  color:#51DD4E;
-}
-
-#simplify-question{
-  top:50%;
-}
-
-#answer-cont{
+#answer-cont {
   width: 75%;
   height: 120px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
+  background: linear-gradient(#6ba1b8, #40AFDE, #40AFDE);
   top: 62%;
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#answer-cont > p{
-  margin: 0;
-  font-family: "Good-Game";
-  font-size: 2.5rem;
-  -webkit-text-stroke: 1px #000000;
-}
 
-#answer{
-  top:5%;
-  color:#51DD4E;
-}
-
-#answer-question{
-  top:50%;
-}
-
-.blanks{
-  width: 20px;
-  border-radius: 5px; 
-  border: #00000060 2px solid; 
+.blanks {
+  width: 23px;
+  height: 30px;
+  border-radius: 5px;
+  border: #00000060 2px solid;
   background: #363535;
-  margin-left: 5px;
+  text-align: center;
 }
 
-#verify{
-  top:85%;
+#verify {
+  top: 85%;
   width: 40%;
   height: 45px;
-  background:linear-gradient(#68e166, #45d143, #51DD4E);
+  background: linear-gradient(#68e166, #45d143, #51DD4E);
   border-radius: 15px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -153,4 +125,3 @@
   font-size: 1.4rem;
   -webkit-text-stroke: 1px #000000;
 }
-
