@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { ScoreService } from 'src/app/score.service'; // Import ScoreService
 
 @Component({
   selector: 'app-question3-1',
@@ -40,11 +41,15 @@ export class Question31Page implements OnInit {
   ans28: string = '';
   ans29: string = '';
 
-  constructor(private alertController: AlertController, private router: Router) {}
+  constructor(
+    private alertController: AlertController,
+    private router: Router,
+    private scoreService: ScoreService // Inject ScoreService
+  ) {}
 
   ngOnInit() {}
 
-  async checkAnswers() { 
+  async checkAnswers() {
     // Define the correct answers
     const correctAnswers = {
       lcd: '6',
@@ -79,41 +84,48 @@ export class Question31Page implements OnInit {
       ans29: '6',
     };
 
-    // Check if all answers are correct
-    const isCorrect =
-      this.lcd === correctAnswers.lcd &&
-      this.ans1 === correctAnswers.ans1 &&
-      this.ans2 === correctAnswers.ans2 &&
-      this.ans3 === correctAnswers.ans3 &&
-      this.ans4 === correctAnswers.ans4 &&
-      this.ans5 === correctAnswers.ans5 &&
-      this.ans6 === correctAnswers.ans6 &&
-      this.ans7 === correctAnswers.ans7 &&
-      this.ans8 === correctAnswers.ans8 &&
-      this.ans9 === correctAnswers.ans9 &&
-      this.ans10 === correctAnswers.ans10 &&
-      this.ans11 === correctAnswers.ans11 &&
-      this.ans12 === correctAnswers.ans12 &&
-      this.ans13 === correctAnswers.ans13 &&
-      this.ans14 === correctAnswers.ans14 &&
-      this.ans15 === correctAnswers.ans15 &&
-      this.ans16 === correctAnswers.ans16 &&
-      this.ans17 === correctAnswers.ans17 &&
-      this.ans18 === correctAnswers.ans18 &&
-      this.ans19 === correctAnswers.ans19 &&
-      this.ans20 === correctAnswers.ans20 &&
-      this.ans21 === correctAnswers.ans21 &&
-      this.ans22 === correctAnswers.ans22 &&
-      this.ans23 === correctAnswers.ans23 &&
-      this.ans24 === correctAnswers.ans24 &&
-      this.ans25 === correctAnswers.ans25 &&
-      this.ans26 === correctAnswers.ans26 &&
-      this.ans27 === correctAnswers.ans27 &&
-      this.ans28 === correctAnswers.ans28 &&
-      this.ans29 === correctAnswers.ans29;
+    // Check each answer and count the number of correct answers
+    let score = 0;
+    score += this.lcd === correctAnswers.lcd ? 1 : 0;
+    score += this.ans1 === correctAnswers.ans1 ? 1 : 0;
+    score += this.ans2 === correctAnswers.ans2 ? 1 : 0;
+    score += this.ans3 === correctAnswers.ans3 ? 1 : 0;
+    score += this.ans4 === correctAnswers.ans4 ? 1 : 0;
+    score += this.ans5 === correctAnswers.ans5 ? 1 : 0;
+    score += this.ans6 === correctAnswers.ans6 ? 1 : 0;
+    score += this.ans7 === correctAnswers.ans7 ? 1 : 0;
+    score += this.ans8 === correctAnswers.ans8 ? 1 : 0;
+    score += this.ans9 === correctAnswers.ans9 ? 1 : 0;
+    score += this.ans10 === correctAnswers.ans10 ? 1 : 0;
+    score += this.ans11 === correctAnswers.ans11 ? 1 : 0;
+    score += this.ans12 === correctAnswers.ans12 ? 1 : 0;
+    score += this.ans13 === correctAnswers.ans13 ? 1 : 0;
+    score += this.ans14 === correctAnswers.ans14 ? 1 : 0;
+    score += this.ans15 === correctAnswers.ans15 ? 1 : 0;
+    score += this.ans16 === correctAnswers.ans16 ? 1 : 0;
+    score += this.ans17 === correctAnswers.ans17 ? 1 : 0;
+    score += this.ans18 === correctAnswers.ans18 ? 1 : 0;
+    score += this.ans19 === correctAnswers.ans19 ? 1 : 0;
+    score += this.ans20 === correctAnswers.ans20 ? 1 : 0;
+    score += this.ans21 === correctAnswers.ans21 ? 1 : 0;
+    score += this.ans22 === correctAnswers.ans22 ? 1 : 0;
+    score += this.ans23 === correctAnswers.ans23 ? 1 : 0;
+    score += this.ans24 === correctAnswers.ans24 ? 1 : 0;
+    score += this.ans25 === correctAnswers.ans25 ? 1 : 0;
+    score += this.ans26 === correctAnswers.ans26 ? 1 : 0;
+    score += this.ans27 === correctAnswers.ans27 ? 1 : 0;
+    score += this.ans28 === correctAnswers.ans28 ? 1 : 0;
+    score += this.ans29 === correctAnswers.ans29 ? 1 : 0;
 
-    const resultMessage = isCorrect ? 'Correct!' : 'Incorrect. Please try again.';
+    // Set the result message
+    const resultMessage = score === Object.keys(correctAnswers).length ? 'Correct!' : 'Incorrect. Please try again.';
 
+    // Update score
+    if (score > 0) {
+      this.scoreService.addScore(score); // Add score if at least one answer is correct
+    }
+
+    // Present the alert
     const alert = await this.alertController.create({
       header: 'Result',
       message: resultMessage,
@@ -121,8 +133,8 @@ export class Question31Page implements OnInit {
         {
           text: 'Next',
           handler: () => {
-            if (isCorrect) {
-              this.router.navigate(['/question3-2']); // Navigate to the next page if the answer is correct
+            if (score === Object.keys(correctAnswers).length) {
+              this.router.navigate(['/question3-2']); // Navigate to the next page if all answers are correct
             }
           }
         },
@@ -173,5 +185,3 @@ export class Question31Page implements OnInit {
   }
 
 }
-
-

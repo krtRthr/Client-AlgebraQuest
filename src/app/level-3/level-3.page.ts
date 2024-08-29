@@ -23,7 +23,7 @@ export class Level3Page  {
  newImageSrc3 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 40 (1).png';
  newImageSrc4 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 41 (1).png';
  newImageSrc5 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 42 (1).png';
- newImageSrc6 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 43 (1).png';
+ newImageSrc6 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 48 (1).png';
  newImageSrc7 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 44 (1).png';
  newImageSrc8 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 45 (1).png';
  newImageSrc9 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 46 (1).png';

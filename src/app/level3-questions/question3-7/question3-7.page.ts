@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { ScoreService } from 'src/app/score.service';
 
 @Component({
   selector: 'app-question3-7',
@@ -68,7 +69,8 @@ export class Question37Page implements OnInit {
   ans49: string = '1';
   ans50: string = 'r';
 
-  constructor(private alertController: AlertController, private router: Router) {}
+  constructor(private alertController: AlertController, private router: Router, private scoreService: ScoreService
+  ) {}
 
   ngOnInit() {}
 
@@ -87,60 +89,65 @@ export class Question37Page implements OnInit {
     };
 
     // Check if all answers are correct
-    const isCorrect =
-      this.lcd1 === correctAnswers.lcd1 &&
-      this.ans1 === correctAnswers.ans1 &&
-      this.ans2 === correctAnswers.ans2 &&
-      this.ans3 === correctAnswers.ans3 &&
-      this.ans4 === correctAnswers.ans4 &&
-      this.ans5 === correctAnswers.ans5 &&
-      this.ans6 === correctAnswers.ans6 &&
-      this.ans7 === correctAnswers.ans7 &&
-      this.ans8 === correctAnswers.ans8 &&
-      this.ans9 === correctAnswers.ans9 &&
-      this.ans10 === correctAnswers.ans10 &&
-      this.ans11 === correctAnswers.ans11 &&
-      this.ans12 === correctAnswers.ans12 &&
-      this.ans13 === correctAnswers.ans13 &&
-      this.ans14 === correctAnswers.ans14 &&
-      this.ans15 === correctAnswers.ans15 &&
-      this.ans16 === correctAnswers.ans16 &&
-      this.ans17 === correctAnswers.ans17 &&
-      this.ans18 === correctAnswers.ans18 &&
-      this.ans19 === correctAnswers.ans19 &&
-      this.ans20 === correctAnswers.ans20 &&
-      this.ans21 === correctAnswers.ans21 &&
-      this.ans22 === correctAnswers.ans22 &&
-      this.ans23 === correctAnswers.ans23 &&
-      this.ans24 === correctAnswers.ans24 &&
-      this.ans25 === correctAnswers.ans25 &&
-      this.ans26 === correctAnswers.ans26 &&
-      this.ans27 === correctAnswers.ans27 &&
-      this.ans28 === correctAnswers.ans28 &&
-      this.ans29 === correctAnswers.ans29 &&
-      this.ans30 === correctAnswers.ans30 &&
-      this.ans31 === correctAnswers.ans31 &&
-      this.ans32 === correctAnswers.ans32 &&
-      this.ans33 === correctAnswers.ans33 &&
-      this.ans34 === correctAnswers.ans34 &&
-      this.ans35 === correctAnswers.ans35 &&
-      this.ans36 === correctAnswers.ans36 &&
-      this.ans37 === correctAnswers.ans37 &&
-      this.ans38 === correctAnswers.ans38 &&
-      this.ans39 === correctAnswers.ans39 &&
-      this.ans40 === correctAnswers.ans40 &&
-      this.ans41 === correctAnswers.ans41 &&
-      this.ans42 === correctAnswers.ans42 &&
-      this.ans43 === correctAnswers.ans43 &&
-      this.ans44 === correctAnswers.ans44 &&
-      this.ans45 === correctAnswers.ans45 &&
-      this.ans46 === correctAnswers.ans46 &&
-      this.ans47 === correctAnswers.ans47 &&
-      this.ans48 === correctAnswers.ans48 &&
-      this.ans49 === correctAnswers.ans49 &&
-      this.ans50 === correctAnswers.ans50;
+        let score = 0;
+    score += this.lcd1 === correctAnswers.lcd1 ? 1 : 0;
+    score += this.ans1 === correctAnswers.ans1 ? 1 : 0;
+    score += this.ans2 === correctAnswers.ans2 ? 1 : 0;
+    score += this.ans3 === correctAnswers.ans3 ? 1 : 0;
+    score += this.ans4 === correctAnswers.ans4 ? 1 : 0;
+    score += this.ans5 === correctAnswers.ans5 ? 1 : 0;
+    score += this.ans6 === correctAnswers.ans6 ? 1 : 0;
+    score += this.ans7 === correctAnswers.ans7 ? 1 : 0;
+    score += this.ans8 === correctAnswers.ans8 ? 1 : 0;
+    score += this.ans9 === correctAnswers.ans9 ? 1 : 0;
+    score += this.ans10 === correctAnswers.ans10 ? 1 : 0;
+    score += this.ans11 === correctAnswers.ans11 ? 1 : 0;
+    score += this.ans12 === correctAnswers.ans12 ? 1 : 0;
+    score += this.ans13 === correctAnswers.ans13 ? 1 : 0;
+    score += this.ans14 === correctAnswers.ans14 ? 1 : 0;
+    score += this.ans15 === correctAnswers.ans15 ? 1 : 0;
+    score += this.ans16 === correctAnswers.ans16 ? 1 : 0;
+    score += this.ans17 === correctAnswers.ans17 ? 1 : 0;
+    score += this.ans18 === correctAnswers.ans18 ? 1 : 0;
+    score += this.ans19 === correctAnswers.ans19 ? 1 : 0;
+    score += this.ans20 === correctAnswers.ans20 ? 1 : 0;
+    score += this.ans21 === correctAnswers.ans21 ? 1 : 0;
+    score += this.ans22 === correctAnswers.ans22 ? 1 : 0;
+    score += this.ans23 === correctAnswers.ans23 ? 1 : 0;
+    score += this.ans24 === correctAnswers.ans24 ? 1 : 0;
+    score += this.ans25 === correctAnswers.ans25 ? 1 : 0;
+    score += this.ans26 === correctAnswers.ans26 ? 1 : 0;
+    score += this.ans27 === correctAnswers.ans27 ? 1 : 0;
+    score += this.ans28 === correctAnswers.ans28 ? 1 : 0;
+    score += this.ans29 === correctAnswers.ans29 ? 1 : 0;
+    score += this.ans30 === correctAnswers.ans30 ? 1 : 0;
+    score += this.ans31 === correctAnswers.ans31 ? 1 : 0;
+    score += this.ans32 === correctAnswers.ans32 ? 1 : 0;
+    score += this.ans33 === correctAnswers.ans33 ? 1 : 0;
+    score += this.ans34 === correctAnswers.ans34 ? 1 : 0;
+    score += this.ans35 === correctAnswers.ans35 ? 1 : 0;
+    score += this.ans36 === correctAnswers.ans36 ? 1 : 0;
+    score += this.ans37 === correctAnswers.ans37 ? 1 : 0;
+    score += this.ans38 === correctAnswers.ans38 ? 1 : 0;
+    score += this.ans39 === correctAnswers.ans39 ? 1 : 0;
+    score += this.ans40 === correctAnswers.ans40 ? 1 : 0;
+    score += this.ans41 === correctAnswers.ans41 ? 1 : 0;
+    score += this.ans42 === correctAnswers.ans42 ? 1 : 0;
+    score += this.ans43 === correctAnswers.ans43 ? 1 : 0;
+    score += this.ans44 === correctAnswers.ans44 ? 1 : 0;
+    score += this.ans45 === correctAnswers.ans45 ? 1 : 0;
+    score += this.ans46 === correctAnswers.ans46 ? 1 : 0;
+    score += this.ans47 === correctAnswers.ans47 ? 1 : 0;
+    score += this.ans48 === correctAnswers.ans48 ? 1 : 0;
+    score += this.ans49 === correctAnswers.ans49 ? 1 : 0;
+    score += this.ans50 === correctAnswers.ans50 ? 1 : 0;
 
-    const resultMessage = isCorrect ? 'Correct!' : 'Incorrect. Please try again.';
+
+      const resultMessage = score === Object.keys(correctAnswers).length ? 'Correct!' : 'Incorrect. Please try again.';
+
+      if (score > 0) {
+        this.scoreService.addScore(score); // Add score if at least one answer is correct
+      }
 
     const alert = await this.alertController.create({
       header: 'Result',
@@ -149,7 +156,7 @@ export class Question37Page implements OnInit {
         {
           text: 'Next',
           handler: () => {
-            if (isCorrect) {
+            if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/question3-8']); // Navigate to the next page if the answer is correct
             }
           }
@@ -168,59 +175,58 @@ export class Question37Page implements OnInit {
   }
 
   resetInputs() {
-    this.lcd1 = 'r'; // Reset LCD input
+    this.lcd1 = ''; // Reset LCD input
 
-    this.ans1 = 'r'; // Reset answers
-    this.ans2 = '1';
-    this.ans3 = 'r';
-    this.ans4 = 'r';
-    this.ans5 = '1';
-    this.ans6 = 'r';
-    this.ans7 = '1';
-    this.ans8 = 'r';
-    this.ans9 = '1';
-    this.ans10 = 'r';
-    this.ans11 = 'r';
-    this.ans12 = 'r';
-    this.ans13 = '1';
-    this.ans14 = '1';
-    this.ans15 = 'r';
-    this.ans16 = '1';
-    this.ans17 = 'r';
-    this.ans18 = 'r';
-    this.ans19 = 'r';
-    this.ans20 = '1';
-    this.ans21 = '1';
-    this.ans22 = 'r';
-    this.ans23 = '1';
-    this.ans24 = 'r';
-    this.ans25 = 'r';
-    this.ans26 = 'r';
-    this.ans27 = 'r';
-    this.ans28 = 'r';
-    this.ans29 = '1';
-    this.ans30 = 'r';
-    this.ans31 = 'r';
-    this.ans32 = '1';
-    this.ans33 = 'r';
-    this.ans34 = 'r';
-    this.ans35 = 'r';
-    this.ans36 = 'r';
-    this.ans37 = 'r';
-    this.ans38 = 'r';
-    this.ans39 = '1';
-    this.ans40 = 'r';
-    this.ans41 = 'r';
-    this.ans42 = 'r';
-    this.ans43 = 'r';
-    this.ans44 = 'r';
-    this.ans45 = '1';
-    this.ans46 = 'r';
-    this.ans47 = 'r';
-    this.ans48 = 'r';
-    this.ans49 = '1';
-    this.ans50 = 'r';
+    // Reset answers
+    this.ans1 = '';
+    this.ans2 = '';
+    this.ans3 = '';
+    this.ans4 = '';
+    this.ans5 = '';
+    this.ans6 = '';
+    this.ans7 = '';
+    this.ans8 = '';
+    this.ans9 = '';
+    this.ans10 = '';
+    this.ans11 = '';
+    this.ans12 = '';
+    this.ans13 = '';
+    this.ans14 = '';
+    this.ans15 = '';
+    this.ans16 = '';
+    this.ans17 = '';
+    this.ans18 = '';
+    this.ans19 = '';
+    this.ans20 = '';
+    this.ans21 = '';
+    this.ans22 = '';
+    this.ans23 = '';
+    this.ans24 = '';
+    this.ans25 = '';
+    this.ans26 = '';
+    this.ans27 = '';
+    this.ans28 = '';
+    this.ans29 = '';
+    this.ans30 = '';
+    this.ans31 = '';
+    this.ans32 = '';
+    this.ans33 = '';
+    this.ans34 = '';
+    this.ans35 = '';
+    this.ans36 = '';
+    this.ans37 = '';
+    this.ans38 = '';
+    this.ans39 = '';
+    this.ans40 = '';
+    this.ans41 = '';
+    this.ans42 = '';
+    this.ans43 = '';
+    this.ans44 = '';
+    this.ans45 = '';
+    this.ans46 = '';
+    this.ans47 = '';
+    this.ans48 = '';
+    this.ans49 = '';
+    this.ans50 = '';
   }
-
 }
- 
