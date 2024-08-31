@@ -15,26 +15,38 @@
         <sup>4m<sup>2</sup> - 16</sup>&frasl;<sub>m - 2</sub>
       </p>
     </div>
-    <button class="button" id="choice-1" 
-    [ngClass]="{'selected': selectedAnswer === 'choice-1', 'correct': correctAnswer === 'choice-1'}"
-    (click)="selectAnswer('choice-1')">
-      <i>8m + 8</i>
+    <button
+      class="button"
+      id="choice-1"
+      [ngClass]="{'selected': selectedAnswer === 'choice-1', 'correct': correctAnswer === 'choice-1'}"
+      (click)="selectAnswer('choice-1')"
+    >
+      8m + 8
     </button>
-    <button class="button" id="choice-2"
-    [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
-    (click)="selectAnswer('choice-2')">
-      <i>4m + 8</i>
+    <button
+      class="button"
+      id="choice-2"
+      [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
+      (click)="selectAnswer('choice-2')"
+    >
+      4m + 8
     </button>
-    <button class="button" id="choice-3"
-    [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
-    (click)="selectAnswer('choice-3')">
-      <i>m - 2</i>
+    <button
+      class="button"
+      id="choice-3"
+      [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
+      (click)="selectAnswer('choice-3')"
+    >
+      m - 2
     </button>
-    <button class="button" id="choice-4"
-    [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
-    (click)="selectAnswer('choice-4')">
-      <i><sup>4m - 8</sup>&frasl;<sub>m - 2</sub></i>
+    <button
+      class="button"
+      id="choice-4"
+      [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
+      (click)="selectAnswer('choice-4')"
+    >
+      <sup>4m - 8</sup>&frasl;<sub>m - 2</sub>
     </button>
-    <ion-button id="submit" (click)="submitAnswer()">Submit</ion-button>
+    <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
   </div>
 </ion-content>

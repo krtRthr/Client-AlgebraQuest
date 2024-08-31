@@ -11,7 +11,7 @@
 .level1-question1 {
   --background: url("../../../assets/AlgebraQuest_Asset/lvl1-question-bg.png") 0 0/100% 100% no-repeat;
 }
-
+ 
 .content-container {
   position: relative;
   width: 100vw;
@@ -52,19 +52,20 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#question-cont > p {
+#question {
+  top: 10%;
   margin: 0;
   font-family: "Good-Game";
   font-size: 3rem;
   -webkit-text-stroke: 1px #000000;
 }
 
-#question {
-  top: 10%;
-}
-
 #sub-question {
   top: 55%;
+  margin: 0;
+  font-family: "Good-Game";
+  font-size: 3rem;
+  -webkit-text-stroke: 1px #000000;
 }
 
 #choice-1,
@@ -80,7 +81,7 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: "Good-Game";
   -webkit-text-stroke: 1px #000000;
-  font-size: 1.9rem;
+  font-size: 2rem;
   border: 4px solid transparent; /* Default transparent border */
   transition: border-color 0.3s ease;
 
@@ -126,8 +127,9 @@
   border-radius: 15px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 1px #000000;
   font-family: "Good-Game";
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   border: 2px solid transparent; /* Default transparent border */
   transition: border-color 0.3s ease;
 

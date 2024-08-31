@@ -122,7 +122,8 @@ const routes: Routes = [
   {
     path: 'question3-4',
     loadChildren: () => import('./level3-questions/question3-4/question3-4.module').then( m => m.Question34PageModule)
-  },  {
+  },
+  {
     path: 'final-score',
     loadChildren: () => import('./final-score/final-score.module').then( m => m.FinalScorePageModule)
   },
