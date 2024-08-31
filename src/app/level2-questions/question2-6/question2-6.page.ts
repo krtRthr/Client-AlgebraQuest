@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { ScoreService } from 'src/app/score.service'; // Import ScoreService
 
 @Component({
   selector: 'app-question2-6',
@@ -15,7 +16,11 @@ export class Question26Page implements OnInit {
   num4: string = '';
   num5: string = '';
 
-  constructor(private alertController: AlertController, private router: Router) {}
+  constructor(
+    private alertController: AlertController, 
+    private router: Router, 
+    private scoreService: ScoreService // Inject ScoreService
+  ) {}
 
   ngOnInit() {}
 
@@ -28,15 +33,23 @@ export class Question26Page implements OnInit {
       num5: 'z',
     };
 
-    const isCorrect = 
-      this.num1 === correctAnswers.num1 &&
-      this.num2 === correctAnswers.num2 &&
-      this.num3 === correctAnswers.num3 &&
-      this.num4 === correctAnswers.num4 &&
-      this.num5 === correctAnswers.num5;
+    // Check each answer and count the number of correct answers
+    let score = 0;
+    score += this.num1 === correctAnswers.num1 ? 1 : 0;
+    score += this.num2 === correctAnswers.num2 ? 1 : 0;
+    score += this.num3 === correctAnswers.num3 ? 1 : 0;
+    score += this.num4 === correctAnswers.num4 ? 1 : 0;
+    score += this.num5 === correctAnswers.num5 ? 1 : 0;
 
-    const resultMessage = isCorrect ? 'Correct!' : 'Incorrect. Please try again.';
+    // Set the result message
+    const resultMessage = score === Object.keys(correctAnswers).length ? 'Correct!' : 'Incorrect. Please try again.';
 
+    // Update score
+    if (score > 0) {
+      this.scoreService.addScore(score); // Add score if at least one answer is correct
+    }
+
+    // Present the alert
     const alert = await this.alertController.create({
       header: 'Result',
       message: resultMessage,
@@ -44,8 +57,8 @@ export class Question26Page implements OnInit {
         {
           text: 'Next',
           handler: () => {
-            if (isCorrect) {
-              this.router.navigate(['/question2-7']); // Navigate to the next page if the answer is correct
+            if (score === Object.keys(correctAnswers).length) {
+              this.router.navigate(['/question2-7']); // Navigate to the next page if all answers are correct
             }
           }
         },
