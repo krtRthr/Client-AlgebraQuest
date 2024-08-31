@@ -43,7 +43,7 @@ export class Question2Page{
       const alert = await this.alertController.create({
         header: 'No Answer Selected',
         message: 'Please select an answer before submitting.',
-        buttons: ['OK']
+        buttons: ['OK'] 
       });
       await alert.present();
     }
@@ -58,7 +58,12 @@ export class Question2Page{
         handler: () => {
           this.router.navigate(['/question3']);
         }
-      }]
+      },
+      {
+        text: 'Try Again'
+      }
+    ], 
+      cssClass: 'custom-alert'
     });
     await alert.present();
   }

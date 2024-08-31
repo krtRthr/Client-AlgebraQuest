@@ -58,7 +58,12 @@ export class Question10Page {
         handler: () => {
           this.router.navigate(['/final-score']);
         }
-      }]
+      },
+      {
+        text: 'Try Again'
+      }
+    ], 
+      cssClass: 'custom-alert'
     });
     await alert.present();
   }

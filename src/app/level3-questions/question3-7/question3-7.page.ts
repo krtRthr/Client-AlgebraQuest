@@ -10,64 +10,65 @@ import { ScoreService } from 'src/app/score.service';
 })
 export class Question37Page implements OnInit {
 
-  lcd1: string = 'r'; // Updated LCD input
+  lcd1: string = ''; // Updated LCD input
 
-  ans1: string = 'r'; // 1st Simplify
-  ans2: string = '1';
-  ans3: string = 'r';
-  ans4: string = 'r';
-  ans5: string = '1';
-  ans6: string = 'r';
-  ans7: string = '1';
-  ans8: string = 'r';
-  ans9: string = '1';
-  ans10: string = 'r';
+  ans1: string = ''; // 1st Simplify
+  ans2: string = '';
+  ans3: string = '';
+  ans4: string = '';
+  ans5: string = '';
+  ans6: string = '';
+  ans7: string = '';
+  ans8: string = '';
+  ans9: string = '';
+  ans10: string = '';
 
-  ans11: string = 'r'; // 2nd Simplify
-  ans12: string = 'r';
-  ans13: string = '1';
-  ans14: string = '1';
-  ans15: string = 'r';
-  ans16: string = '1';
-  ans17: string = 'r';
+  ans11: string = ''; // 2nd Simplify
+  ans12: string = '';
+  ans13: string = '';
+  ans14: string = '';
+  ans15: string = '';
+  ans16: string = '';
+  ans17: string = '';
 
-  ans18: string = 'r'; // 3rd Simplify
-  ans19: string = 'r';
-  ans20: string = '1';
-  ans21: string = '1';
-  ans22: string = 'r';
-  ans23: string = '1';
-  ans24: string = 'r';
-  ans25: string = 'r';
+  ans18: string = ''; // 3rd Simplify
+  ans19: string = '';
+  ans20: string = '';
+  ans21: string = '';
+  ans22: string = '';
+  ans23: string = '';
+  ans24: string = '';
+  ans25: string = '';
 
-  ans26: string = 'r'; // 4th Simplify
-  ans27: string = 'r';
-  ans28: string = 'r';
-  ans29: string = '1';
-  ans30: string = 'r';
-  ans31: string = 'r';
-  ans32: string = '1';
-  ans33: string = 'r';
+  ans26: string = ''; // 4th Simplify
+  ans27: string = '';
+  ans28: string = '';
+  ans29: string = '';
+  ans30: string = '';
+  ans31: string = '';
+  ans32: string = '';
+  ans33: string = '';
 
-  ans34: string = 'r'; // 5th Simplify
-  ans35: string = 'r';
-  ans36: string = 'r';
-  ans37: string = 'r';
-  ans38: string = 'r';
-  ans39: string = '1';
-  ans40: string = 'r';
+  ans34: string = ''; // 5th Simplify
+  ans35: string = '';
+  ans36: string = '';
+  ans37: string = '';
+  ans38: string = '';
+  ans39: string = '';
+  ans40: string = '';
 
-  ans41: string = 'r'; // 6th Simplify
-  ans42: string = 'r';
-  ans43: string = 'r';
-  ans44: string = 'r';
-  ans45: string = '1';
-  ans46: string = 'r';
+  ans41: string = ''; // 6th Simplify
+  ans42: string = '';
+  ans43: string = '';
+  ans44: string = '';
+  ans45: string = '';
+  ans46: string = '';
 
-  ans47: string = 'r'; // Final Answer
-  ans48: string = 'r';
-  ans49: string = '1';
-  ans50: string = 'r';
+  ans47: string = ''; // Final Answer
+  ans48: string = '';
+  ans49: string = '';
+  ans50: string = '';
+
 
   constructor(private alertController: AlertController, private router: Router, private scoreService: ScoreService
   ) {}

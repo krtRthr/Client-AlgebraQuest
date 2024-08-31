@@ -58,7 +58,12 @@ export class Question5Page {
         handler: () => {
           this.router.navigate(['/question6']);
         }
-      }]
+      },
+      {
+        text: 'Try Again'
+      }
+    ], 
+      cssClass: 'custom-alert'
     });
     await alert.present();
   }
