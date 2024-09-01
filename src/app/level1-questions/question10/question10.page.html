@@ -5,6 +5,7 @@
       id="back-button"
       routerLink="/level-1"
       src="../../../assets/AlgebraQuest_Asset/back btn (1).png"
+      (click)="playButton()"
     />
     <p class="button" id="title">Level 1-10</p>
     <div class="button" id="question-cont">
@@ -17,24 +18,25 @@
     </div>
     <button class="button" id="choice-1" 
     [ngClass]="{'selected': selectedAnswer === 'choice-1', 'correct': correctAnswer === 'choice-1'}"
-    (click)="selectAnswer('choice-1')">
+    (click)="selectAnswer('choice-1')" (click)="choose_button()">
+    
       <sup>r<sup> 3</sup></sup>&frasl;<sub>2(r<sup> 2</sup> + 2r + 4)</sub>
     </button>
     <button class="button" id="choice-2" 
     [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
-    (click)="selectAnswer('choice-2')">
+    (click)="selectAnswer('choice-2')" (click)="choose_button()">
       4m + 8
     </button>
     <button class="button" id="choice-3"
     [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
-    (click)="selectAnswer('choice-3')">
+    (click)="selectAnswer('choice-3')" (click)="choose_button()">
       r - 2
     </button>
     <button class="button" id="choice-4"
     [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
-    (click)="selectAnswer('choice-4')">
+    (click)="selectAnswer('choice-4')" (click)="choose_button()">
       <sup>r - 2</sup>&frasl;<sub>2</sub>
     </button>
-    <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
+    <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">Submit</button>
   </div>
 </ion-content>

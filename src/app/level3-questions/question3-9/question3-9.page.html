@@ -5,6 +5,7 @@
       id="back-button"
       routerLink="/level-3"
       src="../../../assets/AlgebraQuest_Asset/back btn (1).png"
+      (click)="playButton()"
     />
     <p class="button" id="title">Level 3-9</p>
     <div class="button" id="question-cont">
@@ -403,7 +404,7 @@
       </p>
     </div>
 
-    <p class="button" id="verify" (check)="checkAnswers()">Check Answers</p>
+    <p class="button" id="verify" (check)="checkAnswers()" (click)="playButton()">Check Answers</p>
     <div class="button" id="filler"></div>
   </div>
 </ion-content>

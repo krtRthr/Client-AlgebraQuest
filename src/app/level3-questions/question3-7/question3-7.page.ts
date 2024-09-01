@@ -10,9 +10,9 @@ import { ScoreService } from 'src/app/score.service';
 })
 export class Question37Page implements OnInit {
 
-  lcd1: string = 'r'; // Updated LCD input
+  lcd1: string = ''; // Updated LCD input
 
-  ans1: string = 'r'; // 1st Simplify
+  ans1: string = ''; // 1st Simplify
   ans2: string = '1';
   ans3: string = 'r';
   ans4: string = 'r';
@@ -158,6 +158,7 @@ export class Question37Page implements OnInit {
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/question3-8']); // Navigate to the next page if the answer is correct
+              this.correctAudio()
             }
           }
         },
@@ -165,6 +166,7 @@ export class Question37Page implements OnInit {
           text: 'Try Again',
           handler: () => {
             this.resetInputs(); // Reset the input fields
+            this.incorrectAudio()
           }
         }
       ],
@@ -229,4 +231,22 @@ export class Question37Page implements OnInit {
     this.ans49 = '';
     this.ans50 = '';
   }
+  playButton(){
+    let audio = new Audio();
+    audio.src = "../assets/audio/button-124476.mp3";
+    audio.load();
+    audio.play();
+   }
+   correctAudio(){
+    let audio = new Audio();
+    audio.src ="../assets/audio/win.wav"
+    audio.load();
+    audio.play();
+   }
+   incorrectAudio(){
+    let audio = new Audio();
+    audio.src="../assets/audio/lose.wav"
+    audio.load();
+    audio.play();
+   }
 }

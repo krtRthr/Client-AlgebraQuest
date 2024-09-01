@@ -2,7 +2,7 @@
   <div class="final-score-container">
     <h1>Congratulations!</h1>
     <p>Your final score is: {{ finalScore }}</p>
-    <ion-button (click)="resetGame()" routerLink="/landing-page">Play Again</ion-button>
-    <ion-button routerLink="/level-2">Next Level</ion-button>
+    <ion-button (click)="resetGame()" routerLink="/landing-page" (click)="playButton()">Play Again</ion-button>
+    <ion-button routerLink="/level-2" (click)="playButton()">Next Level</ion-button>
   </div>
 </ion-content> 
