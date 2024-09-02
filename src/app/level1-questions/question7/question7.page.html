@@ -5,6 +5,7 @@
       id="back-button"
       routerLink="/level-1"
       src="../../../assets/AlgebraQuest_Asset/back btn (1).png"
+      (click)="playButton()"
     />
     <p class="button" id="title">Level 1-7</p>
     <div class="button" id="question-cont">
@@ -25,6 +26,7 @@
       id="choice-1"
       [ngClass]="{'selected': selectedAnswer === 'choice-1', 'correct': correctAnswer === 'choice-1'}"
       (click)="selectAnswer('choice-1')"
+      (click)="choose_button()"
     >
       <span style="display: inline-block; text-align: center">
         <span style="border-bottom: 5px solid white; display: block; margin-bottom: 2px">
@@ -38,6 +40,7 @@
       id="choice-2"
       [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
       (click)="selectAnswer('choice-2')"
+      (click)="choose_button()"
     >
       <span style="display: inline-block; text-align: center">
         <span style="border-bottom: 5px solid white; display: block; margin-bottom: 2px">
@@ -51,6 +54,7 @@
       id="choice-3"
       [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
       (click)="selectAnswer('choice-3')"
+      (click)="choose_button()"
     >
       <span style="display: inline-block; text-align: center">
         <span style="border-bottom: 5px solid white; display: block; margin-bottom: 2px">
@@ -64,6 +68,7 @@
       id="choice-4"
       [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
       (click)="selectAnswer('choice-4')"
+      (click)="choose_button()"
     >
       <span style="display: inline-block; text-align: center">
         <span style="border-bottom: 5px solid white; display: block; margin-bottom: 2px">
@@ -72,6 +77,6 @@
         <span style="display: block"> 5x - 2 </span>
       </span>
     </button>
-    <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
+    <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">Submit</button>
   </div>
 </ion-content>

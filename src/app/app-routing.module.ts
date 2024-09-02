@@ -151,6 +151,11 @@ const routes: Routes = [
     path: 'final-score',
     loadChildren: () => import('./final-score/final-score.module').then( m => m.FinalScorePageModule)
   },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
+
 
 ];
 

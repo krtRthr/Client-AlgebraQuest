@@ -117,9 +117,11 @@ export class Questions210Page implements OnInit {
       buttons: [
         {
           text: 'Next',
+         
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/final-score']); 
+              this.correctAudio();
             } else {
               this.router.navigate(['/final-score']);
             }
@@ -129,6 +131,7 @@ export class Questions210Page implements OnInit {
           text: 'Try Again',
           handler: () => {
             this.resetInputs(); // Reset the input fields
+            this.incorrectAudio();
           }
         }
       ],
@@ -167,4 +170,32 @@ export class Questions210Page implements OnInit {
     this.ans6 = '';
     this.ans7 = '';
   }
+  choose_button(){
+    let audio = new Audio;
+    audio.src="../assets/audio/choose_button.mp3"
+    audio.load();
+    audio.play();
+  }
+  playButton(){
+    let audio = new Audio();
+    audio.src = "../assets/audio/button-124476.mp3";
+    audio.load();
+    audio.play();
+   }
+   correctAudio(){
+    let audio = new Audio();
+    audio.src ="../assets/audio/win.wav"
+    audio.load();
+    audio.play();
+   }
+   incorrectAudio(){
+    let audio = new Audio();
+    audio.src="../assets/audio/lose.wav"
+    audio.load();
+    audio.play();
+   }
+   bgMusic(){
+    let audio = new Audio();
+    audio.src="../assets/audio/background.mp3"
+   }
 }

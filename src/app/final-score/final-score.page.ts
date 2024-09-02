@@ -17,6 +17,11 @@ export class FinalScorePage implements OnInit {
   resetGame() {
     this.scoreService.resetScore();  // Reset the score for a new game
   }
-
+  playButton(){
+    let audio = new Audio();
+    audio.src = "../assets/audio/button-124476.mp3";
+    audio.load();
+    audio.play();
+   }
   
 }

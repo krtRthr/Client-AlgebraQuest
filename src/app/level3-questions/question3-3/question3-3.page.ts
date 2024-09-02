@@ -140,6 +140,7 @@ export class Question33Page implements OnInit {
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/question3-4']); // Navigate to the next page if all answers are correct
+              this.correctAudio();
             }
           }
         },
@@ -147,6 +148,7 @@ export class Question33Page implements OnInit {
           text: 'Try Again',
           handler: () => {
             this.resetInputs(); // Reset the input fields
+            this.incorrectAudio();
           }
         }
       ],
@@ -203,5 +205,22 @@ export class Question33Page implements OnInit {
     this.ans40 = '';
     this.ans41 = '';
   }
-
+  playButton(){
+    let audio = new Audio();
+    audio.src = "../assets/audio/button-124476.mp3";
+    audio.load();
+    audio.play();
+   }
+   correctAudio(){
+    let audio = new Audio();
+    audio.src ="../assets/audio/win.wav"
+    audio.load();
+    audio.play();
+   }
+   incorrectAudio(){
+    let audio = new Audio();
+    audio.src="../assets/audio/lose.wav"
+    audio.load();
+    audio.play();
+   }
 }

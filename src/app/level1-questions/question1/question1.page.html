@@ -5,6 +5,7 @@
       id="back-button"
       routerLink="/level-1"
       src="../../../assets/AlgebraQuest_Asset/back btn (1).png"
+      (click)="playButton()"
     />
 
     <p class="button" id="title">Level 1-1</p>
@@ -22,6 +23,7 @@
       id="choice-1"
       [ngClass]="getClass('choice-1')"
       (click)="selectAnswer('choice-1')"
+      (click)="choose_button()"
     >
       <sup>8a</sup>&frasl;<sub>14b</sub>
     </button>
@@ -31,6 +33,7 @@
       id="choice-2"
       [ngClass]="getClass('choice-2')"
       (click)="selectAnswer('choice-2')"
+      (click)="choose_button()"
     >
       <sup>16a</sup>&frasl;<sub>28b</sub>
     </button>
@@ -40,6 +43,7 @@
       id="choice-3"
       [ngClass]="getClass('choice-3')"
       (click)="selectAnswer('choice-3')"
+      (click)="choose_button()"
     >
       <sup>4a</sup>&frasl;<sub>7b</sub>
     </button>
@@ -49,10 +53,11 @@
       id="choice-4"
       [ngClass]="getClass('choice-4')"
       (click)="selectAnswer('choice-4')"
+      (click)="choose_button()"
     >
       <sup>12a</sup>&frasl;<sub>21b</sub>
     </button>
 
-    <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
+    <ion-button id="submit" (click)="submitAnswer()">Submit</ion-button>
   </div>
 </ion-content>

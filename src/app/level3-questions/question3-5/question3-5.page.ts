@@ -219,6 +219,7 @@ score += this.ans77 === correctAnswers.ans77 ? 1 : 0;
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/question3-6']); // Navigate to the next page if the answer is correct
+              this.correctAudio();
             }
           }
         },
@@ -226,6 +227,7 @@ score += this.ans77 === correctAnswers.ans77 ? 1 : 0;
           text: 'Try Again',
           handler: () => {
             this.resetInputs(); // Reset the input fields
+            this.incorrectAudio();
           }
         }
       ],
@@ -319,5 +321,22 @@ score += this.ans77 === correctAnswers.ans77 ? 1 : 0;
     this.ans76 = '';
     this.ans77 = '';
   }
-
+  playButton(){
+    let audio = new Audio();
+    audio.src = "../assets/audio/button-124476.mp3";
+    audio.load();
+    audio.play();
+   }
+   correctAudio(){
+    let audio = new Audio();
+    audio.src ="../assets/audio/win.wav"
+    audio.load();
+    audio.play();
+   }
+   incorrectAudio(){
+    let audio = new Audio();
+    audio.src="../assets/audio/lose.wav"
+    audio.load();
+    audio.play();
+   }
 }

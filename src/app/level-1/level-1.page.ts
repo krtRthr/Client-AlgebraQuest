@@ -68,6 +68,14 @@ export class Level1Page {
         break;
     }
   }
+
+  playButton(){
+    let audio = new Audio();
+    audio.src = "../assets/audio/button-124476.mp3";
+    audio.load();
+    audio.play();
+   }
+  
 }
 
 

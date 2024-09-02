@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Settings</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="light">
+  <ion-list>
+    <ion-item>
+      <ion-label>Sound</ion-label>
+      <ion-range [(ngModel)]="settings.sound"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Music</ion-label>
+      <ion-range [(ngModel)]="settings.music"></ion-range>
+    </ion-item>
+  </ion-list>
+
+  
+</ion-content>

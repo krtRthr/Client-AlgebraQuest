@@ -72,13 +72,19 @@ export class Question24Page implements OnInit {
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/question2-5']); // Navigate to the next page if all answers are correct
+              this.correctAudio();
             }
+            else{ 
+              this.router.navigate(['/question2-5']);
+            }
+           
           }
         },
         {
           text: 'Try Again',
           handler: () => {
             this.resetInputs(); // Reset the input fields
+            this.incorrectAudio();
           }
         }
       ],
@@ -99,4 +105,29 @@ export class Question24Page implements OnInit {
     this.ans3 = '';
     this.ans4 = '';
   }
+  choose_button(){
+    let audio = new Audio;
+    audio.src="../assets/audio/choose_button.mp3"
+    audio.load();
+    audio.play();
+  }
+  playButton(){
+    let audio = new Audio();
+    audio.src = "../assets/audio/button-124476.mp3";
+    audio.load();
+    audio.play();
+   }
+   correctAudio(){
+    let audio = new Audio();
+    audio.src ="../assets/audio/win.wav"
+    audio.load();
+    audio.play();
+   }
+   incorrectAudio(){
+    let audio = new Audio();
+    audio.src="../assets/audio/lose.wav"
+    audio.load();
+    audio.play();
+   }
+   
 }
