@@ -17,6 +17,13 @@ export class Question27Page implements OnInit {
   num5: string = '';
   num6: string = '';
   num7: string = '';
+  num8: string = '';
+  num9: string = '';
+  num10: string = '';
+  num11: string = '';
+  num12: string = '';
+  num13: string = '';
+  num14: string = '';
 
   ans1: string = '';
   ans2: string = '';
@@ -24,6 +31,13 @@ export class Question27Page implements OnInit {
   ans4: string = '';
   ans5: string = '';
   ans6: string = '';
+  ans7: string = '';
+  ans8: string = '';
+  ans9: string = '';
+  ans10: string = '';
+  ans11: string = '';
+  ans12: string = '';
+  ans13: string = '';
 
   constructor(
     private alertController: AlertController, 
@@ -37,17 +51,31 @@ export class Question27Page implements OnInit {
     const correctAnswers = {
       num1: 'x',
       num2: '1',
-      num3: '2',
-      num4: '2',
+      num3: 'x',
+      num4: '1',
       num5: 'x',
-      num6: '2',
-      num7: '1',
-      ans1: 'x',
-      ans2: '2',
+      num6: '1',
+      num7: 'x',
+      num8: '2',
+      num9: '1',
+      num10: 'x',
+      num11: '1',
+      num12: 'x',
+      num13: '1',
+      num14: 'x',
+      ans1: '1',
+      ans2: 'x',
       ans3: '1',
       ans4: 'x',
-      ans5: '2',
-      ans6: '1',
+      ans5: '1',
+      ans6: 'x',
+      ans7: '1',
+      ans8: 'x',
+      ans9: '1',
+      ans10: '2',
+      ans11: '2',
+      ans12: 'x',
+      ans13: '1',
     };
 
     // Check each answer and count the number of correct answers
@@ -59,12 +87,26 @@ export class Question27Page implements OnInit {
     score += this.num5 === correctAnswers.num5 ? 1 : 0;
     score += this.num6 === correctAnswers.num6 ? 1 : 0;
     score += this.num7 === correctAnswers.num7 ? 1 : 0;
+    score += this.num8 === correctAnswers.num8 ? 1 : 0;
+    score += this.num9 === correctAnswers.num9 ? 1 : 0;
+    score += this.num10 === correctAnswers.num10 ? 1 : 0;
+    score += this.num11 === correctAnswers.num11 ? 1 : 0;
+    score += this.num12 === correctAnswers.num12 ? 1 : 0;
+    score += this.num13 === correctAnswers.num13 ? 1 : 0;
+    score += this.num14 === correctAnswers.num14 ? 1 : 0;
     score += this.ans1 === correctAnswers.ans1 ? 1 : 0;
     score += this.ans2 === correctAnswers.ans2 ? 1 : 0;
     score += this.ans3 === correctAnswers.ans3 ? 1 : 0;
     score += this.ans4 === correctAnswers.ans4 ? 1 : 0;
     score += this.ans5 === correctAnswers.ans5 ? 1 : 0;
     score += this.ans6 === correctAnswers.ans6 ? 1 : 0;
+    score += this.ans7 === correctAnswers.ans7 ? 1 : 0;
+    score += this.ans8 === correctAnswers.ans8 ? 1 : 0;
+    score += this.ans9 === correctAnswers.ans9 ? 1 : 0;
+    score += this.ans10 === correctAnswers.ans10 ? 1 : 0;
+    score += this.ans11 === correctAnswers.ans11 ? 1 : 0;
+    score += this.ans12 === correctAnswers.ans12 ? 1 : 0;
+    score += this.ans13 === correctAnswers.ans13 ? 1 : 0;
 
     // Set the result message
     const resultMessage = score === Object.keys(correctAnswers).length ? 'Correct!' : 'Incorrect. Please try again.';
@@ -85,9 +127,8 @@ export class Question27Page implements OnInit {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/question2-8']); // Navigate to the next page if all answers are correct
               this.correctAudio();
-            }
-            else{
-              this.router.navigate(['/question2-8']);
+            } else {
+              this.router.navigate(['/question2-7']); // Stay on the same page if answers are incorrect
             }
           }
         },
@@ -113,39 +154,61 @@ export class Question27Page implements OnInit {
     this.num5 = '';
     this.num6 = '';
     this.num7 = '';
+    this.num8 = '';
+    this.num9 = '';
+    this.num10 = '';
+    this.num11 = '';
+    this.num12 = '';
+    this.num13 = '';
+    this.num14 = '';
+
     this.ans1 = '';
     this.ans2 = '';
     this.ans3 = '';
     this.ans4 = '';
     this.ans5 = '';
     this.ans6 = '';
+    this.ans7 = '';
+    this.ans8 = '';
+    this.ans9 = '';
+    this.ans10 = '';
+    this.ans11 = '';
+    this.ans12 = '';
+    this.ans13 = '';
   }
-  choose_button(){
-    let audio = new Audio;
-    audio.src="../assets/audio/choose_button.mp3"
+
+  choose_button() {
+    let audio = new Audio();
+    audio.src = "../assets/audio/choose_button.mp3";
     audio.load();
     audio.play();
   }
-  playButton(){
+
+  playButton() {
     let audio = new Audio();
     audio.src = "../assets/audio/button-124476.mp3";
     audio.load();
     audio.play();
-   }
-   correctAudio(){
+  }
+
+  correctAudio() {
     let audio = new Audio();
-    audio.src ="../assets/audio/win.wav"
+    audio.src = "../assets/audio/win.wav";
     audio.load();
     audio.play();
-   }
-   incorrectAudio(){
+  }
+
+  incorrectAudio() {
     let audio = new Audio();
-    audio.src="../assets/audio/lose.wav"
+    audio.src = "../assets/audio/lose.wav";
     audio.load();
     audio.play();
-   }
-   bgMusic(){
+  }
+
+  bgMusic() {
     let audio = new Audio();
-    audio.src="../assets/audio/background.mp3"
-   }
+    audio.src = "../assets/audio/background.mp3";
+    audio.loop = true; // Play background music on loop
+    audio.play();
+  }
 }

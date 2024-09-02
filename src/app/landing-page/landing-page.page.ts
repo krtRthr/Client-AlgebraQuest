@@ -16,12 +16,7 @@ export class LandingPagePage implements OnInit {
     audio.play();
    }  
   
-   background() {
-    const audio = document.getElementById('background-music') as HTMLAudioElement;
-    if (audio) {
-      audio.play();  
-    }
-  }
+   
   ngOnInit() {
   }
 }
