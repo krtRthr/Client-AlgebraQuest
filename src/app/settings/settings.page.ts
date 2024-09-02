@@ -9,16 +9,12 @@ import { Router } from '@angular/router';
 })
   export class SettingsPage {
 
-    settings = {
-      sound: true,
-      music: true
-    };
-  
-    constructor(private navCtrl: NavController) {}
-  
-    close() {
-      this.navCtrl.back();
+    playButton(){
+      let audio = new Audio();
+      audio.src = "../assets/audio/button-124476.mp3";
+      audio.load();
+      audio.play();
     }
-  
+
   
   }

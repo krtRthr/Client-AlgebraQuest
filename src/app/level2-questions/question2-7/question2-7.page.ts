@@ -17,6 +17,22 @@ export class Question27Page implements OnInit {
   num5: string = '';
   num6: string = '';
   num7: string = '';
+  num8: string = '';
+  num9: string = '';
+  num10: string = '';
+  num11: string = '';
+  num12: string = '';
+  num13: string = '';
+  num14: string = '';
+  num15: string = '';
+  num16: string = '';
+  num17: string = '';
+  num18: string = '';
+  num19: string = '';
+  num20: string = '';
+  num21: string = '';
+  num22: string = '';
+  num23: string = '';
 
   ans1: string = '';
   ans2: string = '';
@@ -42,6 +58,23 @@ export class Question27Page implements OnInit {
       num5: 'x',
       num6: '2',
       num7: '1',
+      num8: '',
+      num9: '',
+      num10: '',
+      num11: '',
+      num12: '',
+      num13: '',
+      num14: '',
+      num15: '',
+      num16: '',
+      num17: '',
+      num18: '',
+      num19: '',
+      num20: '',
+      num21: '',
+      num22: '',
+      num23: '',
+
       ans1: 'x',
       ans2: '2',
       ans3: '1',

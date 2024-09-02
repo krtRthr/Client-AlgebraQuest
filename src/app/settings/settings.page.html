@@ -1,26 +1,27 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Settings</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="close()">
-        <ion-icon name="close-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="settings-page">
+  <div class="settings-container">
+    <img
+      class="button"
+      id="back-button"
+      routerLink="/landing-page"
+      src="../../assets/AlgebraQuest_Asset/back btn (1).png"
+      (click)="playButton()"
+    />
+    <audio autoplay loop>
+      <source src="../../assets/audio/background.mp3" type="audio/mpeg" />
+    </audio>
 
-<ion-content class="ion-padding" color="light">
-  <ion-list>
-    <ion-item>
-      <ion-label>Sound</ion-label>
-      <ion-range [(ngModel)]="settings.sound"></ion-range>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Music</ion-label>
-      <ion-range [(ngModel)]="settings.music"></ion-range>
-    </ion-item>
-  </ion-list>
-
-  
+    <p class="button" id="title-music">Music</p>
+    <div class="button" id="music">
+      <img src="../../assets/AlgebraQuest_Asset/music.png" height="50" style="padding: 5px" />
+      <input type="range" />
+    </div>
+    <p class="button" id="title-brightness">Brightness</p>
+    <div class="button" id="brightness">
+      <img src="../../assets/AlgebraQuest_Asset/brightness.png" height="50" style="padding: 5px" />
+      <input type="range" />
+    </div>
+    <img class="button" id="info" height="50" src="../../assets/AlgebraQuest_Asset/INFO.png" />
+    <img class="button" id="policy" height="50" src="../../assets/AlgebraQuest_Asset/POLICY.png" />
+  </div>
 </ion-content>
