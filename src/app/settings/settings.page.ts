@@ -40,4 +40,11 @@ export class SettingsPage {
     this.settings.music = event.detail.value;
     this.audio.volume = this.settings.music / 100; 
   }
+
+  playButton(){
+    let audio = new Audio();
+    audio.src = "../assets/audio/button-124476.mp3";
+    audio.load();
+    audio.play();
+  }
 }
