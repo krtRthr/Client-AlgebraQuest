@@ -73,7 +73,7 @@ export class Question21Page implements OnInit {
               this.router.navigate(['/question2-2']); // Navigate to the next page if all answers are correct
               this.correctAudio();
             }
-            else{
+            else{ 
               this.router.navigate(['/question2-2']);
             }
           }

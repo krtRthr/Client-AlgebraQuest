@@ -101,6 +101,9 @@ export class Question29Page implements OnInit {
               this.router.navigate(['/question2-10']); // Navigate to the next page if all answers are correct
               this.correctAudio();
             }
+            else{  
+              this.router.navigate(['/question2-10']);
+            }
           }
         },
         {

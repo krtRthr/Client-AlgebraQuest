@@ -6,12 +6,13 @@ import { NavController } from '@ionic/angular';
   templateUrl: './settings.page.html',
   styleUrls: ['./settings.page.scss'],
 })
-  export class SettingsPage {
+export class SettingsPage {
+  settings = {
+    sound: true,
+    music: 100 
+  };
 
-    settings = {
-      sound: true,
-      music: true
-    };
+  private audio: HTMLAudioElement;
   
   constructor(private navCtrl: NavController) {
     
@@ -47,3 +48,4 @@ import { NavController } from '@ionic/angular';
     audio.play();
   }
 }
+

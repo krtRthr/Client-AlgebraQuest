@@ -77,15 +77,18 @@ export class Question22Page implements OnInit {
           text: 'Next',
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
-              this.router.navigate(['/final-score']); 
+              this.router.navigate(['/question2-3']); // Navigate to the next page if all answers are correct
               this.correctAudio();
+            }
+            else{  
+              this.router.navigate(['/question2-3']);
             }
           }
         },
         {
           text: 'Try Again',
           handler: () => {
-            this.resetInputs();
+            this.resetInputs(); // Reset the input fields
             this.incorrectAudio();
           }
         }
