@@ -88,7 +88,7 @@ export class Question27Page implements OnInit {
     score += this.num6 === correctAnswers.num6 ? 1 : 0;
     score += this.num7 === correctAnswers.num7 ? 1 : 0;
     score += this.num8 === correctAnswers.num8 ? 1 : 0;
-    score += this.num9 === correctAnswers.num9 ? 1 : 0;
+    score += this.num9 === correctAnswers.num9 ? 1 : 0; 
     score += this.num10 === correctAnswers.num10 ? 1 : 0;
     score += this.num11 === correctAnswers.num11 ? 1 : 0;
     score += this.num12 === correctAnswers.num12 ? 1 : 0;

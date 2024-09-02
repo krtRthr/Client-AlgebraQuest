@@ -11,9 +11,7 @@ export class SettingsPage {
     sound: true,
     music: 100 
   };
-
   private audio: HTMLAudioElement;
-  
   constructor(private navCtrl: NavController) {
     
     this.audio = new Audio();
@@ -48,4 +46,3 @@ export class SettingsPage {
     audio.play();
   }
 }
-
