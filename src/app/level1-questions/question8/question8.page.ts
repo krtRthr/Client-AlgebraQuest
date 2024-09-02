@@ -45,8 +45,7 @@ export class Question8Page  {
       const alert = await this.alertController.create({
         header: 'No Answer Selected',
         message: 'Please select an answer before submitting.',
-        buttons: ['OK'], 
-        cssClass: 'custom-alert'
+        buttons: ['OK']
       });
       await alert.present();
       this.incorrectAudio();
