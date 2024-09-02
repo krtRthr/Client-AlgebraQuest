@@ -12,16 +12,16 @@ export class Question37Page implements OnInit {
 
   lcd1: string = ''; // Updated LCD input
 
-  ans1: string = 'r'; // 1st Simplify
-  ans2: string = '1';
-  ans3: string = 'r';
-  ans4: string = 'r';
-  ans5: string = '1';
-  ans6: string = 'r';
-  ans7: string = '1';
-  ans8: string = 'r';
-  ans9: string = '1';
-  ans10: string = 'r';
+  ans1: string = ''; // 1st Simplify
+  ans2: string = '';
+  ans3: string = '';
+  ans4: string = '';
+  ans5: string = '';
+  ans6: string = '';
+  ans7: string = '';
+  ans8: string = '';
+  ans9: string = '';
+  ans10: string = '';
 
   ans11: string = ''; // 2nd Simplify
   ans12: string = '';
