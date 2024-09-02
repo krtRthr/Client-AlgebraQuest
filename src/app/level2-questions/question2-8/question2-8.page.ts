@@ -46,8 +46,8 @@ export class Question28Page implements OnInit {
       num7: 'a',
       num8: 'b',
       ans1: '3',
-      ans2: 'y',
-      ans3: 'z',
+      ans2: '7',
+      ans3: '5',
       ans4: '2',
       ans5: 'a',
       ans6: 'b'

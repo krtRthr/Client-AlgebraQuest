@@ -40,10 +40,6 @@ const routes: Routes = [
     loadChildren: () => import('./level1-questions/question3/question3.module').then( m => m.Question3PageModule)
   },
   {
-    path: 'question4',
-    loadChildren: () => import('./level1-questions/question4/question4.module').then( m => m.Question4PageModule)
-  },
-  {
     path: 'question5',
     loadChildren: () => import('./level1-questions/question5/question5.module').then( m => m.Question5PageModule)
   },
@@ -155,7 +151,10 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
-
+  {
+    path: 'question4',
+    loadChildren: () => import('./level1-questions/question4/question4.module').then( m => m.Question4PageModule)
+  }
 
 ];
 

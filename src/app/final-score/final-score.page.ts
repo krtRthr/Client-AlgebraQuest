@@ -23,5 +23,10 @@ export class FinalScorePage implements OnInit {
     audio.load();
     audio.play();
    }
-  
+   background() {
+    const audio = document.getElementById('background-music') as HTMLAudioElement;
+    if (audio) {
+      audio.play();  
+    }
+  }
 }
