@@ -23,10 +23,10 @@ export class FinalScorePage implements OnInit {
     audio.load();
     audio.play();
    }
-  resultWin(){
-   let audio = new Audio();
-   audio.src = "../assets/audio/you-win.mp3"
-    audio.load();
-    audio.play();
+   background() {
+    const audio = document.getElementById('background-music') as HTMLAudioElement;
+    if (audio) {
+      audio.play();  
+    }
   }
 }
