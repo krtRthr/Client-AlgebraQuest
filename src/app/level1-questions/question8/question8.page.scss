@@ -44,7 +44,7 @@
 
 #question-cont {
   width: 65%;
-  height: 150px;
+  height: 130px;
   background: linear-gradient(#F1E5BA, #F2C934, #F2C934);
   top: 25%;
   border-radius: 10px;
@@ -53,18 +53,18 @@
 }
 
 #question {
-  top: 6%;
+  top: 3%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 3rem;
+  font-size: 2.5rem;
   -webkit-text-stroke: 1px #000000;
 }
 
 #sub-question {
-  top: 48%;
+  top: 45%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 2rem;
+  font-size: 1.8rem;
   -webkit-text-stroke: 1px #000000;
 }
 
@@ -73,7 +73,8 @@
 #choice-3,
 #choice-4 {
   width: 40%;
-  height: 60px;
+  height: 55px;
+  padding-top:0.1em;
   background: linear-gradient(#F1E5BA, #F2C934);
   color: #ffffff;
   border-radius: 10px;

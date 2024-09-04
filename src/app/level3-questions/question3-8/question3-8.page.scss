@@ -43,7 +43,7 @@
 }
 
 #question-cont{
-  width: 80%;
+  width: 90%;
   height: 120px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 22%;
@@ -70,8 +70,8 @@
 }
 
 #arithmetic-operation{
-  padding: 0px 8px 0px 8px;
-  font-size: 2.5rem;
+  padding: 0px 4px 0px 4px;
+  font-size: 2rem;
   color:#51DD4E;
 }
 
@@ -82,7 +82,7 @@
 }
 
 #answer1-cont{
-  width: 80%;
+  width: 90%;
   height: 120px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 42%;
@@ -92,7 +92,7 @@
 }
 
 #answer2-cont{
-  width: 80%;
+  width: 90%;
   height: 120px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 62%;
@@ -102,7 +102,7 @@
 }
 
 #answer3-cont{
-  width: 80%;
+  width:90%;
   height: 120px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 82%;
@@ -112,7 +112,7 @@
 }
 
 #answer4-cont{
-  width: 80%;
+  width: 90%;
   height: 120px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 102%;
@@ -122,7 +122,7 @@
 }
 
 #answer5-cont{
-  width: 80%;
+  width: 90%;
   height: 120px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 122%;
@@ -132,7 +132,7 @@
 }
 
 #answer6-cont{
-  width: 80%;
+  width: 90%;
   height: 120px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 142%;
@@ -142,7 +142,7 @@
 }
 
 #answer7-cont{
-  width: 80%;
+  width: 90%;
   height: 120px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 162%;
@@ -152,7 +152,7 @@
 }
 
 #answer8-cont{
-  width: 80%;
+  width: 90%;
   height: 120px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 182%;
@@ -162,7 +162,7 @@
 }
 
 #answer9-cont{
-  width: 80%;
+  width: 90%;
   height: 120px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 202%;
@@ -212,7 +212,16 @@
 } 
 
 #answer6-cont > #question{
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+}
+
+#ans35, #ans36, #ans37, #ans38, #ans39, #ans40, #ans41, #ans42, #ans43, #ans44, #ans45 {
+  width: 15px;
+  height: 25px;
+  border-radius: 5px;
+  border: #00000060 2px solid; 
+  background: #363535;
+  text-align: center;
 }
 
 .blanks{
