@@ -31,7 +31,7 @@ export class Level1Page {
   newImageSrc10 = '../../assets/AlgebraQuest_Asset/lvl-buttons/lvl1-buttons/Group 47 (1).png';
 
   
-  changeImage(event: Event, buttonId: number) {
+  changeImage(event: Event, buttonId: number) { 
     const target = event.target as HTMLImageElement;
     switch (buttonId) {
       case 1:

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './level-3.page.html',
   styleUrls: ['./level-3.page.scss'],
 })
-export class Level3Page  {
+export class Level3Page  { 
 
  imageSrc1 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 49 (1).png';
  imageSrc2 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 50 (1).png';
@@ -30,7 +30,7 @@ export class Level3Page  {
  newImageSrc10 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 47 (1).png';
   
 
-changeImage(event:Event, buttonId: number){
+changeImage(event: Event, buttonId: number){
   const target = event.target as HTMLImageElement;
       switch (buttonId) {
         case 1:
