@@ -66,9 +66,13 @@
   top:40%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   -webkit-text-stroke: 1px #000000;
   color: #ffffff;
+}
+
+#answer4-cont > #question, #answer5-cont > #question, #answer8-cont > #question{
+  font-size: 1.2rem;
 }
 
 #arithmetic-operation{
@@ -131,6 +135,7 @@
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size:1.2rem;
 }
 
 #answer6-cont{
@@ -141,6 +146,7 @@
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 1.3rem;
 }
 
 #answer7-cont{
@@ -171,6 +177,7 @@
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 1.7rem;
 }
 
 #answer10-cont{
@@ -215,19 +222,6 @@
   height: 40px;
   border-radius: 10px;
   text-align: center;
-}
-
-#answer5-cont > #question, 
-#answer8-cont > #question{
-  font-size:1.2rem;
-}
-#answer4-cont > #question,
-#answer6-cont > #question{
-  font-size: 1.3rem;
-} 
-
-#answer9-cont > #question{
-  font-size: 1.7rem;
 }
 
 .blanks{
