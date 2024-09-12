@@ -44,7 +44,7 @@
   color: #305C2F;
   -webkit-text-stroke: 1.6px #000000;
 }
-
+ 
 .page-start-button {
   height: 100%;
   display: flex;
@@ -52,11 +52,12 @@
   justify-content: center;
 }
 
-.page-start-button #start-button {
+#start-button {
   font-family: "Good-Game";
   font-size: 4rem;
   width: 65%;
   height: 9%;
+  color: #ffffff;
   border-radius: 20px;
   background: linear-gradient(#F2C934, #F2C934, #FCFDFC);
   text-shadow: 2px 2px 4px #252529;

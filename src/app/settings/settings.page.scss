@@ -5,7 +5,7 @@
   //background-repeat: no-repeat;
 }
 
-.settings-container {
+.settings-container { 
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -38,6 +38,7 @@ div > p{
 #title-music{
   top:22%;
   -webkit-text-stroke: 1.5px #000000;
+  color: #fff;
 }
 
 #brightness{
@@ -47,12 +48,15 @@ div > p{
 #title-brightness{
   top:37%;
   -webkit-text-stroke: 1.5px #000000;
+  color: #fff;
 }
 
 #info{
   top:62%;
+  color: #fff;
 }
 
 #policy{
   top:68%;
+  color: #fff;
 }
