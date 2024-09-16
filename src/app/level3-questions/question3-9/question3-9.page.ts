@@ -210,19 +210,15 @@ export class Question39Page implements OnInit {
       message: resultMessage,
       buttons: [
         {
-          text: 'Next',
+          text: 'Next Question',
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/question3-10']); // Navigate to the next page if the answer is correct
               this.correctAudio();
+            } else {
+              this.router.navigate(['/question3-10']);
+              this.incorrectAudio();
             }
-          }
-        },
-        {
-          text: 'Try Again',
-          handler: () => {
-            this.resetInputs(); // Reset the input fields
-            this.incorrectAudio();
           }
         }
       ],

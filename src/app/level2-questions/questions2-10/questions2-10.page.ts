@@ -116,8 +116,7 @@ export class Questions210Page implements OnInit {
       message: resultMessage,
       buttons: [
         {
-          text: 'Next',
-         
+          text: 'Next Question',
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/final-score']); 
@@ -125,13 +124,6 @@ export class Questions210Page implements OnInit {
             } else {
               this.router.navigate(['/final-score']);
             }
-          }
-        },
-        {
-          text: 'Try Again',
-          handler: () => {
-            this.resetInputs(); // Reset the input fields
-            this.incorrectAudio();
           }
         }
       ],

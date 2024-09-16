@@ -215,19 +215,15 @@ score += this.ans77 === correctAnswers.ans77 ? 1 : 0;
       message: resultMessage,
       buttons: [
         {
-          text: 'Next',
+          text: 'Next Question',
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/question3-6']); // Navigate to the next page if the answer is correct
               this.correctAudio();
+            } else {
+              this.router.navigate(['/question3-6']);
+              this.incorrectAudio();
             }
-          }
-        },
-        {
-          text: 'Try Again',
-          handler: () => {
-            this.resetInputs(); // Reset the input fields
-            this.incorrectAudio();
           }
         }
       ],

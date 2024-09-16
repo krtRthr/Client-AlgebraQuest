@@ -295,19 +295,14 @@ export class Question310Page implements OnInit {
       message: resultMessage,
       buttons: [
         {
-          text: 'Next',
+          text: 'Next Question',
           handler: () => {
              if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/final-score']); // Navigate to the next page if the answer is correct
               this.correctAudio();
+            } else {
+              this.router.navigate(['/final-score']);
             }
-          }
-        },
-        {
-          text: 'Try Again',
-          handler: () => {
-            this.resetInputs(); // Reset the input fields
-            this.incorrectAudio();
           }
         }
       ],

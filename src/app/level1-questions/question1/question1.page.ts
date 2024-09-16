@@ -68,7 +68,7 @@ export class Question1Page {
       }
     }
     return '';
-  }
+  } 
 
   async presentAlert(header: string, message: string) {
     const alert = await this.alertController.create({
@@ -79,9 +79,6 @@ export class Question1Page {
         handler: () => {
           this.router.navigate(['/question2']);
         }
-      }, 
-      {
-        text: 'Try Again'
       }
     ],
       cssClass: 'custom-alert'

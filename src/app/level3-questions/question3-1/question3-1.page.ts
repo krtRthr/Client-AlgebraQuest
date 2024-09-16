@@ -131,19 +131,15 @@ export class Question31Page implements OnInit {
       message: resultMessage,
       buttons: [
         {
-          text: 'Next',
+          text: 'Next Question',
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/question3-2']); // Navigate to the next page if all answers are correct
               this.correctAudio();
+            } else {
+              this.router.navigate(['/question3-2']);
+              this.incorrectAudio();
             }
-          }
-        },
-        {
-          text: 'Try Again',
-          handler: () => {
-            this.resetInputs(); // Reset the input fields
-            this.incorrectAudio();
           }
         }
       ],

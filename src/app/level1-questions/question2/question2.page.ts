@@ -61,9 +61,6 @@ export class Question2Page{
         handler: () => {
           this.router.navigate(['/question3']);
         }
-      },
-      {
-        text: 'Try Again'
       }
     ], 
       cssClass: 'custom-alert'

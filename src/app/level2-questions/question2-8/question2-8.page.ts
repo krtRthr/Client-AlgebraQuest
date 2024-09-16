@@ -84,7 +84,7 @@ export class Question28Page implements OnInit {
       message: resultMessage,
       buttons: [
         {
-          text: 'Next',
+          text: 'Next Question',
           handler: () => {
             if (score === Object.keys(correctAnswers).length) {
               this.router.navigate(['/question2-9']); // Navigate to the next page if all answers are correct
@@ -92,15 +92,8 @@ export class Question28Page implements OnInit {
             }
             else{
               this.router.navigate(['/question2-9']);
+              this.incorrectAudio();
             }
-          }
-        },
-        {
-          text: 'Try Again',
-          handler: () => {
-            this.resetInputs(); // Reset the input fields
-            this.incorrectAudio();
-            
           }
         }
       ],
