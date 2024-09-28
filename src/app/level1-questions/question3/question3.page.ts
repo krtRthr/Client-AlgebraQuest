@@ -68,7 +68,7 @@ export class Question3Page  {
     });
     await alert.present();
     
-  }
+  } 
   
   choose_button(){
     let audio = new Audio;

@@ -50,7 +50,7 @@
 
 #question-cont {
   width: 75%;
-  height: 120px;
+  height: 105px;
   background: linear-gradient(#6ba1b8, #40AFDE, #40AFDE);
   top: 22%;
   border-radius: 10px;
@@ -63,14 +63,14 @@
   color: #51DD4E;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 2rem;
+  font-size: 1.8rem;
   -webkit-text-stroke: 1px #000000;
 }
 
 #sub-question {
   margin: 0;
   font-family: "Good-Game";
-  font-size: 2rem;
+  font-size: 1.8rem;
   -webkit-text-stroke: 1px #000000;
   top: 35%;
 }
@@ -85,7 +85,7 @@
 
 #simplify-cont {
   width: 75%;
-  height: 120px;
+  height: 105px;
   background: linear-gradient(#6ba1b8, #40AFDE, #40AFDE);
   top: 42%;
   border-radius: 10px;
@@ -95,7 +95,7 @@
 
 #answer-cont {
   width: 75%;
-  height: 120px;
+  height: 105px;
   background: linear-gradient(#6ba1b8, #40AFDE, #40AFDE);
   top: 62%;
   border-radius: 10px;
@@ -105,11 +105,12 @@
 
 .blanks {
   width: 23px;
-  height: 30px;
+  height: 28px;
   border-radius: 5px;
   border: #00000060 2px solid;
   background: #363535;
   text-align: center;
+  font-size: 1.6rem;
 }
 
 #verify {

@@ -47,7 +47,7 @@ export class Question23Page implements OnInit {
     // Update score
     if (score > 0) {
       this.scoreService.addScore(score); // Add score if at least one answer is correct
-    }
+    } 
 
     // Present the alert
     const alert = await this.alertController.create({

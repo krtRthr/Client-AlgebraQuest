@@ -13,7 +13,12 @@
       <p class="button" id="question">Simplify</p>
       <br />
       <p class="button" id="sub-question">
-        <sup>4i<sup>2</sup> - 12i</sup>&frasl;<sub>2i</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid white; display: block; margin-bottom: 2px">
+            4l<sup>2</sup> - 12l
+          </span>
+          <span style="display: block"> 2l </span>
+        </span>
       </p>
     </div>
 
@@ -24,7 +29,7 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <sup>2i</sup>&frasl;<sub> -6</sub>
+      (2l - 6)
     </button>
     <button
       class="button"
@@ -54,6 +59,8 @@
       <sup>2i<sup>2</sup></sup
       >&frasl;<sub>-6</sub>
     </button>
-    <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">Submit</button>
+    <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
+      Submit
+    </button>
   </div>
 </ion-content>

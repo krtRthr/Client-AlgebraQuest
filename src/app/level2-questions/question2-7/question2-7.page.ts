@@ -54,28 +54,14 @@ export class Question27Page implements OnInit {
       num3: 'x',
       num4: '1',
       num5: 'x',
-      num6: '1',
-      num7: 'x',
-      num8: '2',
-      num9: '1',
-      num10: 'x',
-      num11: '1',
-      num12: 'x',
-      num13: '1',
-      num14: 'x',
-      ans1: '1',
+      num6: '2',
+      num7: '1',
+      ans1: 'x',
       ans2: 'x',
-      ans3: '1',
+      ans3: '2',
       ans4: 'x',
-      ans5: '1',
-      ans6: 'x',
-      ans7: '1',
-      ans8: 'x',
-      ans9: '1',
-      ans10: '2',
-      ans11: '2',
-      ans12: 'x',
-      ans13: '1',
+      ans5: '2',
+      ans6: '1',
     };
 
     // Check each answer and count the number of correct answers
@@ -87,26 +73,13 @@ export class Question27Page implements OnInit {
     score += this.num5 === correctAnswers.num5 ? 1 : 0;
     score += this.num6 === correctAnswers.num6 ? 1 : 0;
     score += this.num7 === correctAnswers.num7 ? 1 : 0;
-    score += this.num8 === correctAnswers.num8 ? 1 : 0;
-    score += this.num9 === correctAnswers.num9 ? 1 : 0; 
-    score += this.num10 === correctAnswers.num10 ? 1 : 0;
-    score += this.num11 === correctAnswers.num11 ? 1 : 0;
-    score += this.num12 === correctAnswers.num12 ? 1 : 0;
-    score += this.num13 === correctAnswers.num13 ? 1 : 0;
-    score += this.num14 === correctAnswers.num14 ? 1 : 0;
     score += this.ans1 === correctAnswers.ans1 ? 1 : 0;
     score += this.ans2 === correctAnswers.ans2 ? 1 : 0;
     score += this.ans3 === correctAnswers.ans3 ? 1 : 0;
     score += this.ans4 === correctAnswers.ans4 ? 1 : 0;
     score += this.ans5 === correctAnswers.ans5 ? 1 : 0;
     score += this.ans6 === correctAnswers.ans6 ? 1 : 0;
-    score += this.ans7 === correctAnswers.ans7 ? 1 : 0;
-    score += this.ans8 === correctAnswers.ans8 ? 1 : 0;
-    score += this.ans9 === correctAnswers.ans9 ? 1 : 0;
-    score += this.ans10 === correctAnswers.ans10 ? 1 : 0;
-    score += this.ans11 === correctAnswers.ans11 ? 1 : 0;
-    score += this.ans12 === correctAnswers.ans12 ? 1 : 0;
-    score += this.ans13 === correctAnswers.ans13 ? 1 : 0;
+    
 
     // Set the result message
     const resultMessage = score === Object.keys(correctAnswers).length ? 'Correct!' : 'Incorrect. Please try again.';

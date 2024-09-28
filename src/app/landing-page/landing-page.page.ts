@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.page.scss'],
 })
 export class LandingPagePage {
-
+ 
   /*
   imageSrc1 = '../../assets/AlgebraQuest_Asset/level 2 card unlocked.png';
   imageSrc2 = '../../assets/AlgebraQuest_Asset/level 3 card unlocked.png';
@@ -27,6 +27,19 @@ export class LandingPagePage {
         break;
     }
   }*/
+
+  cardUnlocked = [true, false, false]; 
+
+
+  isCardDisabled(cardIndex: number): boolean {
+    return !this.cardUnlocked[cardIndex];
+  }
+
+  unlockCard(cardIndex: number) {
+    if (cardIndex >= 0 && cardIndex < this.cardUnlocked.length - 1) { 
+      this.cardUnlocked[cardIndex + 1] = true; 
+    }
+  }
 
   playButton(){
     let audio = new Audio();

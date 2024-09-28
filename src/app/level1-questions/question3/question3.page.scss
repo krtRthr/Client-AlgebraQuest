@@ -52,19 +52,26 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#question-cont > p {
+#question{
+  top: 10%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 2.5rem;
+  font-size: 2rem;
   -webkit-text-stroke: 1px #000000;
 }
 
-#question {
-  top: 10%;
+#sub-question {
+  top: 45%;
+  margin: 0;
+  font-family: "Good-Game";
+  font-size: 2rem;
+  -webkit-text-stroke: 1px #000000;
 }
 
-#sub-question {
-  top: 55%;
+#arithmetic-operation{
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 2rem;
 }
 
 #choice-1,
@@ -141,4 +148,4 @@
 
 #title, #question, #sub-question, #submit{
   color: #ffffff;
-}
+} 
