@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "Game-Over";
-  src: url("../../../assets/font/game_over_2/Game\ Over.otf");
-}
-
-@font-face {
   font-family: "Good-Game";
   src: url("../../../assets/font/good_game/Good-Game.ttf");
 }
@@ -93,12 +88,6 @@
   padding: 0px 3px 0px 3px;
   font-size: 1.8rem;
   color:#51DD4E;
-}
-
-#answer1-cont, #answer2-cont, 
-#answer3-cont,#answer4-cont,
-#answer5-cont, #answer6-cont{
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
 }
 
 #answer1-cont{
@@ -251,17 +240,7 @@
   font-size: 1.1rem;
 }
 
-#ans23, #ans24, #ans25, #ans26, #ans27, #ans28, #ans29, #ans30, #ans31, #ans32, #ans33, #ans34{
-  width: 17px;
-  height: 25px;
-  border-radius: 5px;
-  border: #00000060 2px solid; 
-  background: #363535;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-#ans53, #ans54, #ans55, #ans56, #ans57, #ans58, #ans59, #ans60, #ans61, #ans62, #ans63{
+#ans23, #ans24, #ans25, #ans26, #ans27, #ans28, #ans29, #ans30, #ans31, #ans32, #ans33, #ans34, #ans53, #ans54, #ans55, #ans56, #ans57, #ans58, #ans59, #ans60, #ans61, #ans62, #ans63{
   width: 17px;
   height: 25px;
   border-radius: 5px;
