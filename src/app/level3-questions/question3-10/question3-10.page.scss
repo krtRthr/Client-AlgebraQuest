@@ -8,6 +8,15 @@
   src: url("../../../assets/font/good_game/Good-Game.ttf");
 }
 
+@font-face {
+  font-family: "Snackid";
+  src: url("../../../assets/font/snackid/SNACKID.ttf");
+}
+
+*{
+  font-family: "Snackid";
+}
+
 .level3-question10{
   --background: url("../../../assets/AlgebraQuest_Asset/lvl3-question-bg.png") 0 0/ 100% 100% no-repeat;
 }
@@ -58,22 +67,22 @@
   color:#51DD4E;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   -webkit-text-stroke: 1px #000000;
 }
 
 #question{
-  top:36%;
+  top:30%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   -webkit-text-stroke: 1px #000000;
   color: #ffffff;
 }
 
 #answer4-cont > #question, #answer5-cont > #question, #answer8-cont > #question{
-  font-size: 1.2rem;
-  top:36%;
+  font-size: 1.1rem;
+  top:30%;
   margin: 0;
   font-family: "Good-Game";
   -webkit-text-stroke: 1px #000000;

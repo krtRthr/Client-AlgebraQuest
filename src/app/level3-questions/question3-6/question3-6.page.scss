@@ -8,6 +8,15 @@
   src: url("../../../assets/font/good_game/Good-Game.ttf");
 }
 
+@font-face {
+  font-family: "Snackid";
+  src: url("../../../assets/font/snackid/SNACKID.ttf");
+}
+
+*{
+  font-family: "Snackid";
+}
+
 .level3-question6{
   --background: url("../../../assets/AlgebraQuest_Asset/lvl3-question-bg.png") 0 0/ 100% 100% no-repeat;
 } 
@@ -57,15 +66,15 @@
   color:#51DD4E;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   -webkit-text-stroke: 1px #000000;
 }
 
 #question{
-  top:35%;
+  top:30%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   -webkit-text-stroke: 1px #000000;
 }
 
@@ -207,16 +216,16 @@
 }
 
 #answer1-cont > #question{
-  font-size: 1.4rem;
-  top:35%;
+  font-size: 1.3rem;
+  top:30%;
   margin: 0;
   font-family: "Good-Game";
   -webkit-text-stroke: 1px #000000;
 }
 
 #answer2-cont > #question{
-  font-size: 1.5rem;
-  top:30%;
+  font-size: 1.3rem;
+  top:25%;
   margin: 0;
   font-family: "Good-Game";
   -webkit-text-stroke: 1px #000000;
@@ -224,7 +233,7 @@
 
 #answer4-cont > #question{
   font-size: 1.3rem;
-  top:35%;
+  top:30%;
   margin: 0;
   font-family: "Good-Game";
   -webkit-text-stroke: 1px #000000;
@@ -233,7 +242,7 @@
 #answer5-cont > #question, 
 #answer6-cont > #question{
   font-size:1.2rem;
-  top:35%;
+  top:30%;
   margin: 0;
   font-family: "Good-Game";
   -webkit-text-stroke: 1px #000000;
@@ -246,7 +255,7 @@
   border: #00000060 2px solid; 
   background: #363535;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 #title, #question, #verify, #lcd-cont{

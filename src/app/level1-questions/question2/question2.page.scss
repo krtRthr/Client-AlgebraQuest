@@ -8,6 +8,15 @@
   src: url("../../../assets/font/good_game/Good-Game.ttf");
 }
 
+@font-face {
+  font-family: "Snackid";
+  src: url("../../../assets/font/snackid/SNACKID.ttf");
+}
+
+*{
+  font-family: "Snackid";
+}
+
 .level1-question1 {
   --background: url("../../../assets/AlgebraQuest_Asset/lvl1-question-bg.png") 0 0/100% 100% no-repeat;
 }

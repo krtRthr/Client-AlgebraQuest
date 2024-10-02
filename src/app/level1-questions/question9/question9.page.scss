@@ -8,6 +8,15 @@
   src: url("../../../assets/font/good_game/Good-Game.ttf");
 }
 
+@font-face {
+  font-family: "Snackid";
+  src: url("../../../assets/font/snackid/SNACKID.ttf");
+}
+
+*{
+  font-family: "Snackid";
+}
+
 .level1-question1 {
   --background: url("../../../assets/AlgebraQuest_Asset/lvl1-question-bg.png") 0 0/100% 100% no-repeat;
 }
@@ -72,7 +81,7 @@
 #choice-3,
 #choice-4 {
   width: 40%;
-  height: 53px;
+  height: 50px;
   background: linear-gradient(#F1E5BA, #F2C934);
   color: #ffffff;
   border-radius: 10px;
