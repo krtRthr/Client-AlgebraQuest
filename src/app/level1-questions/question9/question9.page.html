@@ -12,7 +12,10 @@
       <p class="button" id="question">Simplify</p>
       <br />
       <p class="button" id="sub-question">
-        <sup>4m<sup>2</sup> - 16</sup>&frasl;<sub>m - 2</sub>
+        <span>
+          To subtract two fractions with ____ denominators, subtract their numerator and keep the
+          denominator.
+        </span>
       </p>
     </div>
     <button
@@ -21,7 +24,7 @@
       [ngClass]="{'selected': selectedAnswer === 'choice-1', 'correct': correctAnswer === 'choice-1'}"
       (click)="selectAnswer('choice-1')"
     >
-      8m + 8
+      <span style="display: inline-block; text-align: center"> A. Algebraic </span>
     </button>
     <button
       class="button"
@@ -29,7 +32,7 @@
       [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
       (click)="selectAnswer('choice-2')"
     >
-      4(m + 2)
+      <span style="display: inline-block; text-align: center"> B. Rational Algebraic </span>
     </button>
     <button
       class="button"
@@ -37,7 +40,7 @@
       [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
       (click)="selectAnswer('choice-3')"
     >
-      m - 2
+      <span style="display: inline-block; text-align: center"> C. Like </span>
     </button>
     <button
       class="button"
@@ -45,8 +48,10 @@
       [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
       (click)="selectAnswer('choice-4')"
     >
-      <sup>4m - 8</sup>&frasl;<sub>m - 2</sub>
+      <span style="display: inline-block; text-align: center"> D. Unlike </span>
     </button>
-    <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">Submit</button>
+    <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
+      Submit
+    </button>
   </div>
 </ion-content>

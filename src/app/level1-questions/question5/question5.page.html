@@ -13,7 +13,9 @@
       <p class="button" id="question">Simplify</p>
       <br />
       <p class="button" id="sub-question">
-        <sup>p<sup>2</sup> + 5p + 6</sup>&frasl;<sub>p + 2</sub>
+        <sup>-1</sup>&frasl;<sub>2y</sub>
+        <span id="arithmetic-operation"> + </span>
+        <sup>3</sup>&frasl;<sub>2y</sub>
       </p>
     </div>
     <button
@@ -23,11 +25,7 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      p + 2 +
-      <span style="display: inline-block; text-align: center; padding-left: 3px">
-        <span style="border-bottom: 3px solid white; display: block"> 1 </span>
-        <span style="display: block"> p + 2 </span>
-      </span>
+      <sup>1</sup>&frasl;<sub>2y</sub>
     </button>
     <button
       class="button"
@@ -36,7 +34,7 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      p + 5
+      1y + 2y
     </button>
     <button
       class="button"
@@ -45,7 +43,7 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      p + 2
+    <sup>1</sup>&frasl;<sub>y</sub>
     </button>
     <button
       class="button"
@@ -54,7 +52,7 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      p + 3
+    <sup>-1</sup>&frasl;<sub>y</sub>
     </button>
     <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">Submit</button>
   </div>

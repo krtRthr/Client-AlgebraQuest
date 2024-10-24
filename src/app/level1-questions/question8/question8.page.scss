@@ -52,7 +52,7 @@
 }
 
 #question-cont {
-  width: 65%;
+  width: 83%;
   height: 130px;
   background: linear-gradient(#F1E5BA, #F2C934, #F2C934);
   top: 25%;
@@ -62,10 +62,10 @@
 }
 
 #question {
-  top: 3%;
+  top: 5%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 2.5rem;
+  font-size: 2rem;
   -webkit-text-stroke: 1px #000000;
 }
 
@@ -73,8 +73,9 @@
   top: 35%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.6rem;
-  -webkit-text-stroke: 1px #000000;
+  font-size: 1rem;
+  -webkit-text-stroke: 0.8px #000000;
+  text-align: center;
 }
 
 #choice-1,
@@ -83,7 +84,6 @@
 #choice-4 {
   width: 40%;
   height: 52px;
-  padding-top:0.1em;
   background: linear-gradient(#F1E5BA, #F2C934);
   color: #ffffff;
   border-radius: 10px;

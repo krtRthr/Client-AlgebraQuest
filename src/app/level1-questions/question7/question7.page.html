@@ -10,14 +10,11 @@
     <p class="button" id="title">Level 1-7</p>
     <div class="button" id="question-cont">
       <!--fraction-->
-      <p class="button" id="question">Simplify</p>
+      <p class="button" id="question">Question</p>
       <br />
       <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            12x<sup>2</sup> + 11x - 15
-          </span>
-          <span style="display: block">20x<sup>2</sup>y - 23x + 16y </span>
+        <span>
+          To add two fractions with like denominators, ____ their numerator and keep the denominator
         </span>
       </p>
     </div>
@@ -28,10 +25,7 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <span style="display: inline-block; text-align: center">
-        <span style="border-bottom: 2px solid white; display: block"> (12x - 5)(x + 3) </span>
-        <span style="display: block"> (4x - 1)(5x - 4) </span>
-      </span>
+      <span style="display: inline-block; text-align: center"> A. Add </span>
     </button>
     <button
       class="button"
@@ -40,10 +34,7 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <span style="display: inline-block; text-align: center">
-        <span style="border-bottom: 2px solid white; display: block"> 2x + 5 </span>
-        <span style="display: block"> 5x - 3 </span>
-      </span>
+      <span style="display: inline-block; text-align: center"> B. Subtract </span>
     </button>
     <button
       class="button"
@@ -52,10 +43,7 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      <span style="display: inline-block; text-align: center">
-        <span style="border-bottom: 2px solid white; display: block"> (12x + 5)(x - 3) </span>
-        <span style="display: block"> (4x + 1)(5x + 4) </span>
-      </span>
+      <span style="display: inline-block; text-align: center"> C. Multiply </span>
     </button>
     <button
       class="button"
@@ -64,10 +52,7 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      <span style="display: inline-block; text-align: center">
-        <span style="border-bottom: 2px solid white; display: block"> 3x + 5 </span>
-        <span style="display: block"> 5x - 2 </span>
-      </span>
+      <span style="display: inline-block; text-align: center"> D. Divide </span>
     </button>
     <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
       Submit

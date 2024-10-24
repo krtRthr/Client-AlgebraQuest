@@ -13,11 +13,10 @@
       <p class="button" id="question">Simplify</p>
       <br />
       <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            2x<sup>2</sup> - 5x - 42
-          </span>
-          <span style="display: block">-2x<sup>2</sup> + 15x - 18 </span>
+        <span>
+          When <span style="font-size: 1.3rem"><sup>10</sup>&frasl;<sub>z</sub></span> is subtracted
+          to <span style="font-size: 1.3rem"><sup>-1</sup>&frasl;<sub>z</sub>,</span> the numerator
+          of the difference is?
         </span>
       </p>
     </div>
@@ -28,7 +27,7 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <sup>2x + 7</sup>&frasl;<sub>3 - 2x</sub>
+      <span style="display: inline-block; text-align: center"> A. -9 </span>
     </button>
     <button
       class="button"
@@ -37,7 +36,7 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <sup>2x + 7</sup>&frasl;<sub>2x - 3</sub>
+      <span style="display: inline-block; text-align: center"> B. 9 </span>
     </button>
     <button
       class="button"
@@ -46,7 +45,7 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      <sup>2x - 7</sup>&frasl;<sub>3 + 2x</sub>
+      <span style="display: inline-block; text-align: center"> C. 10 </span>
     </button>
     <button
       class="button"
@@ -55,7 +54,7 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      <sup>7x - 2</sup>&frasl;<sub>2x - 3</sub>
+      <span style="display: inline-block; text-align: center"> D. 11 </span>
     </button>
     <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
       Submit

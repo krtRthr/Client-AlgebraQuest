@@ -13,7 +13,12 @@
       <p class="button" id="question">Simplify</p>
       <br />
       <p class="button" id="sub-question">
-        <sup>r<sup>3</sup> - 8</sup>&frasl;<sub>2r<sup>2</sup> + 4r + 8</sub>
+        <span>
+          If <span style="font-size: 1.4rem"><sup>_</sup>&frasl;<sub>_</sub></span> +
+          <span style="font-size: 1.4rem"><sup>2</sup>&frasl;<sub>x - 2</sub></span> =
+          <span style="font-size: 1.4rem"><sup>5</sup>&frasl;<sub>x - 2</sub>,</span> then what is
+          the missing Rational Algebraic Expression?
+        </span>
       </p>
     </div>
     <button
@@ -23,8 +28,9 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <sup>r<sup> 3</sup></sup
-      >&frasl;<sub>2(r<sup> 2</sup> + 2r + 4)</sub>
+      <span style="display: inline-block; text-align: center">
+        A. <sup>3</sup>&frasl;<sub>x - 1</sub>
+      </span>
     </button>
     <button
       class="button"
@@ -33,7 +39,9 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <sup>r - 2</sup>&frasl;<sub>2</sub>
+      <span style="display: inline-block; text-align: center">
+        B. <sup>-3</sup>&frasl;<sub>x - 2</sub>
+      </span>
     </button>
     <button
       class="button"
@@ -42,7 +50,9 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      r - 2
+      <span style="display: inline-block; text-align: center">
+        C. <sup>-3</sup>&frasl;<sub>x - 1</sub>
+      </span>
     </button>
     <button
       class="button"
@@ -51,7 +61,9 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      <sup>r + 2</sup>&frasl;<sub>6</sub>
+      <span style="display: inline-block; text-align: center">
+        D. <sup>3</sup>&frasl;<sub>x - 2</sub>
+      </span>
     </button>
     <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
       Submit

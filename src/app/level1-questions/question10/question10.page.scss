@@ -52,8 +52,8 @@
 }
 
 #question-cont {
-  width: 65%;
-  height: 130px;
+  width: 83%;
+  height: 140px;
   background: linear-gradient(#F1E5BA, #F2C934, #F2C934);
   top: 25%;
   border-radius: 10px;
@@ -65,25 +65,27 @@
   top: 6%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 2.5rem;
+  font-size: 2rem;
   -webkit-text-stroke: 1px #000000;
 }
 
 #sub-question {
-  top: 52%;
+  top: 32%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 2.1rem;
-  -webkit-text-stroke: 1px #000000;
+  font-size: 1rem;
+  -webkit-text-stroke: 0.8px #000000;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #choice-1,
 #choice-2,
 #choice-3,
 #choice-4 {
-  width: 46%;
+  width: 40%;
   height: 52px;
-  padding-top:0.1em;
   background: linear-gradient(#F1E5BA, #F2C934);
   color: #ffffff;
   border-radius: 10px;
@@ -131,7 +133,7 @@
 
 #submit {
   top: 90%;
-  width: 45%;
+  width: 40%;
   height: 45px;
   background: linear-gradient(#68e166, #45d143, #51DD4E);
   border-radius: 15px;

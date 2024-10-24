@@ -37,6 +37,12 @@
   position: absolute;
 }
 
+#arithmetic-operation {
+  padding: 0px 10px 0px 10px;
+  font-size: 2rem;
+  color: #fff;
+}
+
 #title {
   font-family: "Good-Game";
   font-size: 4rem;
@@ -65,15 +71,15 @@
   top: 5%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   -webkit-text-stroke: 1px #000000;
 }
 
 #sub-question {
-  top: 55%;
+  top: 45%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   -webkit-text-stroke: 1px #000000;
 }
 
@@ -81,9 +87,8 @@
 #choice-2,
 #choice-3,
 #choice-4 {
-  width: 58%;
+  width: 52%;
   height: 52px;
-  padding-top:0.1em;
   background: linear-gradient(#F1E5BA, #F2C934);
   color: #ffffff;
   border-radius: 10px;
@@ -131,7 +136,7 @@
 
 #submit {
   top: 90%;
-  width: 58%;
+  width: 52%;
   height: 45px;
   background: linear-gradient(#68e166, #45d143, #51DD4E);
   border-radius: 15px;

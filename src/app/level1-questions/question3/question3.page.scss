@@ -37,6 +37,12 @@
   position: absolute;
 }
 
+#arithmetic-operation {
+  padding: 0px 12px 0px 12px;
+  font-size: 3rem;
+  color: #45d143;
+}
+
 #title {
   font-family: "Good-Game";
   font-size: 4rem;
@@ -73,21 +79,14 @@
   top: 35%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   -webkit-text-stroke: 1px #000000;
-}
-
-#arithmetic-operation{
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 2rem;
 }
 
 #choice-1,
 #choice-2,
 #choice-3,
 #choice-4 {
-  padding-top:0.24em;
   width: 35%;
   height: 50px;
   background: linear-gradient(#F1E5BA, #F2C934);

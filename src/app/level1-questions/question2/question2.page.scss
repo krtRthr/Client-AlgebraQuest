@@ -37,6 +37,12 @@
   position: absolute;
 }
 
+#arithmetic-operation {
+  padding: 0px 12px 0px 12px;
+  font-size: 3rem;
+  color: #45d143;
+}
+
 #title {
   font-family: "Good-Game";
   font-size: 4rem;
@@ -73,14 +79,13 @@
 }
 
 #sub-question {
-  top: 52%;
+  top: 42%;
 }
 
 #choice-1,
 #choice-2,
 #choice-3,
 #choice-4 {
-  padding-top:0.24em;
   width: 35%;
   height: 48px;
   background: linear-gradient(#F1E5BA, #F2C934);
