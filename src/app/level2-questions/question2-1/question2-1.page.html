@@ -9,53 +9,55 @@
     />
     <p class="button" id="title">Level 2-1</p>
     <div class="button" id="question-cont">
-      <!--fraction-->
-      <p class="button" id="question">Question</p>
+      <p class="button" id="question">Simplify</p>
       <br />
       <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block"> 3x + 1 </span>
-          <span style="display: block"> x + 3 </span>
-        </span>
+        <sup>x + 1</sup>&frasl;<sub>y + 1</sub>
         <span id="arithmetic-operation"> + </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block"> 2 </span>
-          <span style="display: block"> x + 3 </span>
-        </span>
-      </p> 
-    </div>
-    <div class="button" id="simplify-cont">
-      <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input [(ngModel)]="num1" class="blanks" type="text" />x +
-            <input [(ngModel)]="num2" class="blanks" type="text" /> +
-            <input [(ngModel)]="num3" class="blanks" type="text" />
-          </span>
-          <span style="display: block">
-            <input [(ngModel)]="num4" class="blanks" type="text" /> +
-            <input [(ngModel)]="num5" class="blanks" type="text" />
-          </span>
-        </span>
+        <sup>x + 2</sup>&frasl;<sub>y + 1</sub>
       </p>
     </div>
-    <div class="button" id="answer-cont">
-      <p class="button" id="question">Answer</p>
-      <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input [(ngModel)]="ans1" class="blanks" type="text" />x +
-            <input [(ngModel)]="ans2" class="blanks" type="text" />
-          </span>
-          <span style="display: block">
-            <input [(ngModel)]="ans3" class="blanks" type="text" /> +
-            <input [(ngModel)]="ans4" class="blanks" type="text" />
-          </span>
-        </span>
-      </p>
-    </div>
-    <button class="button" id="verify" (click)="checkAnswers()" (click)="playButton()">
-      Check Answers
+    <!-- Answer Choices -->
+    <button
+      class="button"
+      id="choice-1"
+      [ngClass]="getClass('choice-1')"
+      (click)="selectAnswer('choice-1')"
+      (click)="choose_button()"
+    >
+      <sup>2x + 3</sup>&frasl;<sub>y + 1</sub>
     </button>
+
+    <button
+      class="button"
+      id="choice-2"
+      [ngClass]="getClass('choice-2')"
+      (click)="selectAnswer('choice-2')"
+      (click)="choose_button()"
+    >
+      <sup>14</sup>&frasl;<sub>x</sub>
+    </button>
+
+    <button
+      class="button"
+      id="choice-3"
+      [ngClass]="getClass('choice-3')"
+      (click)="selectAnswer('choice-3')"
+      (click)="choose_button()"
+    >
+      <sup>9</sup>&frasl;<sub>x</sub>
+    </button>
+
+    <button
+      class="button"
+      id="choice-4"
+      [ngClass]="getClass('choice-4')"
+      (click)="selectAnswer('choice-4')"
+      (click)="choose_button()"
+    >
+      <sup>12</sup>&frasl;<sub>x</sub>
+    </button>
+
+    <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
   </div>
 </ion-content>

@@ -82,7 +82,7 @@ export class Question1Page {
       }
     ],
       cssClass: 'custom-alert'
-    });
+    }); 
     await alert.present();
   }
   choose_button(){

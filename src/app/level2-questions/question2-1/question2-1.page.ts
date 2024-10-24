@@ -10,93 +10,82 @@ import { ScoreService } from 'src/app/score.service';
 })
 export class Question21Page implements OnInit {
 
-  // Define properties for each input
-  num1: string = '';
-  num2: string = '';
-  num3: string = '';
-  num4: string = '';
-  num5: string = '';
-
-  ans1: string = '';
-  ans2: string = '';
-  ans3: string = '';
-  ans4: string = '';
-
-  constructor(
-    private alertController: AlertController, 
-    private router: Router, 
-    private scoreService: ScoreService // Correctly injected ScoreService
-  ) {}
-
   ngOnInit() {}
 
-  async checkAnswers() {
-    const correctAnswers = {
-      num1: '3',
-      num2: '1',
-      num3: '2',
-      num4: 'x',
-      num5: '3',
-      ans1: '3',
-      ans2: '3',
-      ans3: 'x',
-      ans4: '3'
-    };
+  correctAnswer: string = 'choice-1';
+  selectedAnswer: string = '';
+  showResult: boolean = false;
 
-    // Check each answer and count the number of correct answers
-    let score = 0;
-    score += this.num1 === correctAnswers.num1 ? 1 : 0;
-    score += this.num2 === correctAnswers.num2 ? 1 : 0;
-    score += this.num3 === correctAnswers.num3 ? 1 : 0;
-    score += this.num4 === correctAnswers.num4 ? 1 : 0;
-    score += this.num5 === correctAnswers.num5 ? 1 : 0;
-    score += this.ans1 === correctAnswers.ans1 ? 1 : 0;
-    score += this.ans2 === correctAnswers.ans2 ? 1 : 0;
-    score += this.ans3 === correctAnswers.ans3 ? 1 : 0;
-    score += this.ans4 === correctAnswers.ans4 ? 1 : 0;
+  constructor(
+    private alertController: AlertController,
+    private router: Router,
+    private scoreService: ScoreService 
+  ) {}
 
-    // Set the result message
-    const resultMessage = score === Object.keys(correctAnswers).length ? 'Correct!' : 'Incorrect. Please try again.';
-
-    if (score > 0) {
-      this.scoreService.addScore(score); // Add score if at least one answer is correct
+  selectAnswer(answer: string) {
+    if (!this.showResult) {
+      this.selectedAnswer = answer;
     }
-
-    const alert = await this.alertController.create({
-      header: 'Result',
-      message: resultMessage,
-      buttons: [
-        {
-          text: 'Next Question',
-          handler: () => {
-            if (score === Object.keys(correctAnswers).length) {
-              this.router.navigate(['/question2-2']); // Navigate to the next page if all answers are correct
-              this.correctAudio();
-            }
-            else{ 
-              this.router.navigate(['/question2-2']);
-              this.incorrectAudio();
-            }
-          }
-        }
-      ],
-      cssClass: 'custom-alert'
-    });
-
-    await alert.present();
-    
   }
 
-  resetInputs() {
-    this.num1 = '';
-    this.num2 = '';
-    this.num3 = '';
-    this.num4 = '';
-    this.num5 = '';
-    this.ans1 = '';
-    this.ans2 = '';
-    this.ans3 = '';
-    this.ans4 = '';
+  async submitAnswer() {
+    if (this.selectedAnswer) {
+      this.showResult = true;
+
+      let header: string;
+      let message: string;
+
+      if (this.selectedAnswer === this.correctAnswer) {
+        this.scoreService.incrementScore();
+        header = 'Correct';
+        message = 'You selected the correct answer.';
+        this.correctAudio();
+      } else {
+        header = 'Incorrect';
+        message = 'You selected the wrong answer.';
+        this.incorrectAudio();
+      }
+
+      await this.presentAlert(header, message);
+    } else {
+      const alert = await this.alertController.create({
+        header: 'No Answer Selected',
+        message: 'Please select an answer before submitting.',
+        buttons: ['OK']
+        
+      });
+      await alert.present();
+      this.incorrectAudio();
+    }
+  }
+
+  getClass(answer: string) {
+    if (!this.showResult) {
+      return this.selectedAnswer === answer ? 'selected' : '';
+    } else {
+      if (answer === this.correctAnswer) {
+        return 'correct';
+      } else if (this.selectedAnswer === answer) {
+        return 'incorrect';
+      }
+    }
+    return '';
+  } 
+
+  async presentAlert(header: string, message: string) {
+    const alert = await this.alertController.create({
+      header: header,
+      message: message,
+      buttons: [{
+        text: 'Next Question',
+        handler: () => {
+          this.router.navigate(['/question2-2']);
+        }
+      }
+    ],
+      cssClass: 'custom-alert'
+    }); 
+    await alert.present();
   }
   choose_button(){
     let audio = new Audio;
@@ -122,5 +111,5 @@ export class Question21Page implements OnInit {
     audio.load();
     audio.play();
    }
-  
+
 }

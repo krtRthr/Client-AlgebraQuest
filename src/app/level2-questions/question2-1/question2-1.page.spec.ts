@@ -14,4 +14,4 @@ describe('Question21Page', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+}); 
