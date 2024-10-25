@@ -9,7 +9,6 @@ import { ScoreService } from 'src/app/score.service';
 })
 export class Question9Page  {
 
-  
   correctAnswer: string = 'choice-3';
   selectedAnswer: string = '';
 

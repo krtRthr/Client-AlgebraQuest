@@ -10,76 +10,82 @@ import { ScoreService } from 'src/app/score.service'; // Import ScoreService
 })
 export class Question26Page implements OnInit {
 
-  num1: string = '';
-  num2: string = '';
-  num3: string = '';
-  num4: string = '';
-  num5: string = '';
-
-  constructor(
-    private alertController: AlertController, 
-    private router: Router, 
-    private scoreService: ScoreService // Inject ScoreService
-  ) {}
-
   ngOnInit() {}
 
-  async checkAnswers() {
-    const correctAnswers = {
-      num1: 'x',
-      num2: 'y',
-      num3: 'x',
-      num4: '3',
-      num5: 'z',
-    };
+  correctAnswer: string = 'choice-2';
+  selectedAnswer: string = '';
+  showResult: boolean = false;
 
-    // Check each answer and count the number of correct answers
-    let score = 0;
-    score += this.num1 === correctAnswers.num1 ? 1 : 0;
-    score += this.num2 === correctAnswers.num2 ? 1 : 0;
-    score += this.num3 === correctAnswers.num3 ? 1 : 0;
-    score += this.num4 === correctAnswers.num4 ? 1 : 0;
-    score += this.num5 === correctAnswers.num5 ? 1 : 0;
+  constructor(
+    private alertController: AlertController,
+    private router: Router,
+    private scoreService: ScoreService 
+  ) {}
 
-    // Set the result message
-    const resultMessage = score === Object.keys(correctAnswers).length ? 'Correct!' : 'Incorrect. Please try again.';
-
-    // Update score
-    if (score > 0) {
-      this.scoreService.addScore(score); // Add score if at least one answer is correct
+  selectAnswer(answer: string) {
+    if (!this.showResult) {
+      this.selectedAnswer = answer;
     }
-
-    // Present the alert
-    const alert = await this.alertController.create({
-      header: 'Result',
-      message: resultMessage,
-      buttons: [
-        {
-          text: 'Next Question',
-          handler: () => {
-            if (score === Object.keys(correctAnswers).length) {
-              this.router.navigate(['/question2-7']); // Navigate to the next page if all answers are correct
-              this.correctAudio();
-            }
-            else{
-              this.router.navigate(['/question2-7']);
-              this.incorrectAudio();
-            }
-          }
-        }
-      ],
-      cssClass: 'custom-alert'
-    });
-
-    await alert.present();
   }
 
-  resetInputs() {
-    this.num1 = '';
-    this.num2 = '';
-    this.num3 = '';
-    this.num4 = '';
-    this.num5 = '';
+  async submitAnswer() {
+    if (this.selectedAnswer) {
+      this.showResult = true;
+
+      let header: string;
+      let message: string;
+
+      if (this.selectedAnswer === this.correctAnswer) {
+        this.scoreService.incrementScore();
+        header = 'Correct';
+        message = 'You selected the correct answer.';
+        this.correctAudio();
+      } else {
+        header = 'Incorrect';
+        message = 'You selected the wrong answer.';
+        this.incorrectAudio();
+      }
+
+      await this.presentAlert(header, message);
+    } else {
+      const alert = await this.alertController.create({
+        header: 'No Answer Selected',
+        message: 'Please select an answer before submitting.',
+        buttons: ['OK']
+        
+      });
+      await alert.present();
+      this.incorrectAudio();
+    }
+  }
+
+  getClass(answer: string) {
+    if (!this.showResult) {
+      return this.selectedAnswer === answer ? 'selected' : '';
+    } else {
+      if (answer === this.correctAnswer) {
+        return 'correct';
+      } else if (this.selectedAnswer === answer) {
+        return 'incorrect';
+      }
+    }
+    return '';
+  } 
+
+  async presentAlert(header: string, message: string) {
+    const alert = await this.alertController.create({
+      header: header,
+      message: message,
+      buttons: [{
+        text: 'Next Question',
+        handler: () => {
+          this.router.navigate(['/question2-7']);
+        }
+      }
+    ],
+      cssClass: 'custom-alert'
+    }); 
+    await alert.present();
   }
   choose_button(){
     let audio = new Audio;

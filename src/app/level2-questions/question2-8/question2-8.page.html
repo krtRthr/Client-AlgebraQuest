@@ -13,59 +13,47 @@
       <p class="button" id="question">Question</p>
       <br />
       <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block;">
-            3x<sup>2</sup> + 2y - 3z<sup>2</sup>
-          </span>
-          <span style="display: block"> ab<sup>2</sup> </span>
-        </span>
-        <span id="arithmetic-operation"> - </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block;">
-            2x - 3y + 4z<sup>2</sup>
-          </span>
-          <span style="display: block"> ab<sup>2</sup> </span>
+        <span>
+          What is the last step in adding and subtracting rational algebraic expressions with like
+          denominators?
         </span>
       </p>
     </div>
 
-    <div class="button" id="simplify-cont">
-      <br />
-      <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block;">
-            <input [(ngModel)]="num1" class="blanks" id="num1" type="text" />x<sup>2</sup> +
-            <input [(ngModel)]="num2" class="blanks" id="num2" type="text" />y -
-            <input [(ngModel)]="num3" class="blanks" id="num3" type="text" />z<sup>2</sup> -
-            <input [(ngModel)]="num4" class="blanks" id="num4" type="text" />x +
-            <input [(ngModel)]="num5" class="blanks" id="num5" type="text" />y -
-            <input [(ngModel)]="num6" class="blanks" id="num6" type="text" />z<sup>2</sup>
-          </span>
-          <span style="display: block">
-            <input [(ngModel)]="num7" class="blanks" id="num7" type="text" />
-            <input [(ngModel)]="num8" class="blanks" id="num8" type="text" /><sup>2</sup>
-          </span>
-        </span>
-      </p>
-    </div>
-
-    <div class="button" id="answer-cont">
-      <p class="button" id="question">Answer</p>
-      <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block;">
-            <input [(ngModel)]="ans1" class="blanks" id="ans1" type="text" />x<sup>2</sup> -
-            <input [(ngModel)]="ans2" class="blanks" id="ans2" type="text" />z<sup>2</sup> +
-            <input [(ngModel)]="ans3" class="blanks" id="ans3" type="text" />y -
-            <input [(ngModel)]="ans4" class="blanks" id="ans4" type="text" />x
-          </span>
-          <span style="display: block">
-            <input [(ngModel)]="ans5" class="blanks" id="ans5" type="text" />
-            <input [(ngModel)]="ans6" class="blanks" id="ans6" type="text" /><sup>2</sup>
-          </span>
-        </span>
-      </p>
-    </div>
-    <p class="button" id="verify" (click)="checkAnswers()" (click)="playButton()">Check Answers</p>
+    <button
+      class="button"
+      id="choice-1"
+      [ngClass]="{'selected': selectedAnswer === 'choice-1', 'correct': correctAnswer === 'choice-1'}"
+      (click)="selectAnswer('choice-1')"
+    >
+      <span style="display: inline-block; text-align: center"> A. Add or subtract the numerators </span>
+    </button>
+    <button
+      class="button"
+      id="choice-2"
+      [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
+      (click)="selectAnswer('choice-2')"
+    >
+      <span style="display: inline-block; text-align: center"> B. Simplify the result </span>
+    </button>
+    <button
+      class="button"
+      id="choice-3"
+      [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
+      (click)="selectAnswer('choice-3')"
+    >
+      <span style="display: inline-block; text-align: center"> C. Copy the common denominator </span>
+    </button>
+    <button
+      class="button"
+      id="choice-4"
+      [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
+      (click)="selectAnswer('choice-4')"
+    >
+      <span style="display: inline-block; text-align: center"> D. Cancel out the common factor </span>
+    </button>
+    <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
+      Submit
+    </button>
   </div>
 </ion-content>

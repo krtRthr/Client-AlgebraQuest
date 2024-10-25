@@ -10,172 +10,87 @@ import { ScoreService } from 'src/app/score.service'; // Import ScoreService
 })
 export class Question27Page implements OnInit {
 
-  num1: string = '';
-  num2: string = '';
-  num3: string = '';
-  num4: string = '';
-  num5: string = '';
-  num6: string = '';
-  num7: string = '';
-  num8: string = '';
-  num9: string = '';
-  num10: string = '';
-  num11: string = '';
-  num12: string = '';
-  num13: string = '';
-  num14: string = '';
-
-  ans1: string = '';
-  ans2: string = '';
-  ans3: string = '';
-  ans4: string = '';
-  ans5: string = '';
-  ans6: string = '';
-  ans7: string = '';
-  ans8: string = '';
-  ans9: string = '';
-  ans10: string = '';
-  ans11: string = '';
-  ans12: string = '';
-  ans13: string = '';
-
-  constructor(
-    private alertController: AlertController, 
-    private router: Router, 
-    private scoreService: ScoreService // Inject ScoreService
-  ) {}
-
   ngOnInit() {}
 
-  async checkAnswers() {
-    const correctAnswers = {
-      num1: 'x',
-      num2: '1',
-      num3: 'x',
-      num4: '1',
-      num5: 'x',
-      num6: '2',
-      num7: '1',
-      ans1: 'x',
-      ans2: 'x',
-      ans3: '2',
-      ans4: 'x',
-      ans5: '2',
-      ans6: '1',
-    };
+  correctAnswer: string = 'choice-1';
+  selectedAnswer: string = '';
 
-    // Check each answer and count the number of correct answers
-    let score = 0;
-    score += this.num1 === correctAnswers.num1 ? 1 : 0;
-    score += this.num2 === correctAnswers.num2 ? 1 : 0;
-    score += this.num3 === correctAnswers.num3 ? 1 : 0;
-    score += this.num4 === correctAnswers.num4 ? 1 : 0;
-    score += this.num5 === correctAnswers.num5 ? 1 : 0;
-    score += this.num6 === correctAnswers.num6 ? 1 : 0;
-    score += this.num7 === correctAnswers.num7 ? 1 : 0;
-    score += this.ans1 === correctAnswers.ans1 ? 1 : 0;
-    score += this.ans2 === correctAnswers.ans2 ? 1 : 0;
-    score += this.ans3 === correctAnswers.ans3 ? 1 : 0;
-    score += this.ans4 === correctAnswers.ans4 ? 1 : 0;
-    score += this.ans5 === correctAnswers.ans5 ? 1 : 0;
-    score += this.ans6 === correctAnswers.ans6 ? 1 : 0;
-    
+  constructor(
+    private alertController: AlertController,
+    private router: Router,
+    private scoreService: ScoreService 
 
-    // Set the result message
-    const resultMessage = score === Object.keys(correctAnswers).length ? 'Correct!' : 'Incorrect. Please try again.';
+  ) {}
 
-    // Update score
-    if (score > 0) {
-      this.scoreService.addScore(score); // Add score if at least one answer is correct
+  selectAnswer(answer: string) {
+    this.selectedAnswer = answer;
+  }
+
+  async submitAnswer() {
+    if (this.selectedAnswer) {
+      let header: string;
+      let message: string;
+
+      if (this.selectedAnswer === this.correctAnswer) {
+        this.scoreService.incrementScore();
+        header = 'Correct';
+        message = 'You selected the correct answer.';
+        this.correctAudio();
+      } else {
+        header = 'Incorrect';
+        message = 'You selected the wrong answer.';
+        this.incorrectAudio();
+      }
+
+      await this.presentAlert(header, message);
+    } else {
+      const alert = await this.alertController.create({
+        header: 'No Answer Selected',
+        message: 'Please select an answer before submitting.',
+        buttons: ['OK']
+      });
+      await alert.present();
+      this.incorrectAudio();
     }
+  }
 
-    // Present the alert
+  async presentAlert(header: string, message: string) {
     const alert = await this.alertController.create({
-      header: 'Result',
-      message: resultMessage,
-      buttons: [
-        {
-          text: 'Next Question',
-          handler: () => {
-            if (score === Object.keys(correctAnswers).length) {
-              this.router.navigate(['/question2-8']); // Navigate to the next page if all answers are correct
-              this.correctAudio();
-            } else {
-              this.router.navigate(['/question2-8']); // Stay on the same page if answers are incorrect
-              this.incorrectAudio();
-            }
-          }
+      header: header,
+      message: message,
+      buttons: [{
+        text: 'Next Question',
+        handler: () => {
+          this.router.navigate(['/question2-8']);
         }
-      ],
+      }
+    ], 
       cssClass: 'custom-alert'
     });
-
     await alert.present();
   }
-
-  resetInputs() {
-    this.num1 = '';
-    this.num2 = '';
-    this.num3 = '';
-    this.num4 = '';
-    this.num5 = '';
-    this.num6 = '';
-    this.num7 = '';
-    this.num8 = '';
-    this.num9 = '';
-    this.num10 = '';
-    this.num11 = '';
-    this.num12 = '';
-    this.num13 = '';
-    this.num14 = '';
-
-    this.ans1 = '';
-    this.ans2 = '';
-    this.ans3 = '';
-    this.ans4 = '';
-    this.ans5 = '';
-    this.ans6 = '';
-    this.ans7 = '';
-    this.ans8 = '';
-    this.ans9 = '';
-    this.ans10 = '';
-    this.ans11 = '';
-    this.ans12 = '';
-    this.ans13 = '';
-  }
-
-  choose_button() {
-    let audio = new Audio();
-    audio.src = "../assets/audio/choose_button.mp3";
+  choose_button(){
+    let audio = new Audio;
+    audio.src="../assets/audio/choose_button.mp3"
     audio.load();
     audio.play();
   }
-
-  playButton() {
+  playButton(){
     let audio = new Audio();
     audio.src = "../assets/audio/button-124476.mp3";
     audio.load();
     audio.play();
-  }
-
-  correctAudio() {
+   }
+   correctAudio(){
     let audio = new Audio();
-    audio.src = "../assets/audio/win.wav";
+    audio.src ="../assets/audio/win.wav"
     audio.load();
     audio.play();
-  }
-
-  incorrectAudio() {
+   }
+   incorrectAudio(){
     let audio = new Audio();
-    audio.src = "../assets/audio/lose.wav";
+    audio.src="../assets/audio/lose.wav"
     audio.load();
     audio.play();
-  }
-
-  bgMusic() {
-    let audio = new Audio();
-    audio.src = "../assets/audio/background.mp3";
-    audio.loop = true; // Play background music on loop
-    audio.play();
-  }
+   }
 }

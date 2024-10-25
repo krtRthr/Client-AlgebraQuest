@@ -13,72 +13,54 @@
       <p class="button" id="question">Question</p>
       <br />
       <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block"> 3(x<sup>2</sup> + 3) </span>
-          <span style="display: block"> 7 + x </span>
-        </span>
-        <span id="arithmetic-operation"> + </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block"> 2(y + 2) </span>
-          <span style="display: block"> 7 + x </span>
-        </span>
-      </p>
-    </div> 
-
-    <div class="button" id="simplify-cont">
-      <br />
-      <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input [(ngModel)]="num1" class="blanks" id="num1" type="text" />
-            (x<sup>2</sup> + <input [(ngModel)]="num2" class="blanks" id="num2" type="text" />) +
-            <input [(ngModel)]="num3" class="blanks" id="num3" type="text" />
-            (<input [(ngModel)]="num4" class="blanks" id="num4" type="text" /> +
-            <input [(ngModel)]="num5" class="blanks" id="num5" type="text" />)
-          </span>
-          <span style="display: inline-block; text-align: center">
-            <input [(ngModel)]="num6" class="blanks" id="num6" type="text" /> +
-            <input [(ngModel)]="num7" class="blanks" id="num7" type="text" />
-          </span>
-        </span>
+        <span> Which of the following is false regarding rational algebraic expression? </span>
       </p>
     </div>
 
-    <div class="button" id="simplify2-cont">
-      <br />
-      <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input [(ngModel)]="simp1" class="blanks" id="simp1" type="text" />x<sup>2</sup> +
-            <input [(ngModel)]="simp2" class="blanks" id="simp2" type="text" /> +
-            <input [(ngModel)]="simp3" class="blanks" id="simp3" type="text" />y +
-            <input [(ngModel)]="simp4" class="blanks" id="simp4" type="text" />
-          </span>
-          <span style="display: inline-block; text-align: center">
-            <input [(ngModel)]="simp5" class="blanks" id="simp5" type="text" /> +
-            <input [(ngModel)]="simp6" class="blanks" id="simp6" type="text" />
-          </span>
-        </span>
-      </p>
-    </div>
-
-    <div class="button" id="answer-cont">
-      <p class="button" id="question">Answer</p>
-      <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input [(ngModel)]="ans1" class="blanks" id="ans1" type="text" />x<sup>2</sup> +
-            <input [(ngModel)]="ans2" class="blanks" id="ans2" type="text" />y +
-            <input [(ngModel)]="ans3" class="blanks" id="ans3" type="text" />
-          </span>
-          <span style="display: inline-block; text-align: center">
-            <input [(ngModel)]="ans4" class="blanks" id="ans4" type="text" /> +
-            <input [(ngModel)]="ans5" class="blanks" id="ans5" type="text" />
-          </span>
-        </span>
-      </p>
-    </div>
-    <p class="button" id="verify" (click)="checkAnswers()" (click)="playButton()">Check Answers</p>
-    <div class="button" id="filler"></div>
+    <button
+      class="button"
+      id="choice-1"
+      [ngClass]="{'selected': selectedAnswer === 'choice-1', 'correct': correctAnswer === 'choice-1'}"
+      (click)="selectAnswer('choice-1')"
+    >
+      <span style="display: inline-block; text-align: center">
+        A. Rational algebraic expressions can be written as a quotient of polynomials.
+      </span>
+    </button>
+    <button
+      class="button"
+      id="choice-2"
+      [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
+      (click)="selectAnswer('choice-2')"
+    >
+      <span style="display: inline-block; text-align: center">
+        B. Rational Algebraic expressions are expressed in the form
+        <span style="font-size: 1.2rem"><sup>p</sup>&frasl;<sub>q</sub></span>
+      </span>
+    </button>
+    <button
+      class="button"
+      id="choice-3"
+      [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
+      (click)="selectAnswer('choice-3')"
+    >
+      <span style="display: inline-block; text-align: center">
+        C. q should not be equal to zero.
+      </span>
+    </button>
+    <button
+      class="button"
+      id="choice-4"
+      [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
+      (click)="selectAnswer('choice-4')"
+    >
+      <span style="display: inline-block; text-align: center">
+        D. <span style="font-size: 1.2rem"><sup>x + 5</sup>&frasl;<sub>5</sub></span> is not a
+        rational algebraic expression.
+      </span>
+    </button>
+    <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
+      Submit
+    </button>
   </div>
 </ion-content>
