@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true" class="level2-question3">
   <div class="content-container">
-    <img 
+    <img
       class="button"
       id="back-button"
       routerLink="/level-2"
@@ -9,44 +9,55 @@
     />
     <p class="button" id="title">Level 2-3</p>
     <div class="button" id="question-cont">
-      <!--fraction-->
       <p class="button" id="question">Question</p>
       <br />
       <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block; ">
-            4z<sup>2</sup> + 3x<sup>2</sup>
-          </span>
-          <span style="display: block"> 7y<sup>3</sup> </span>
-        </span>
+        <sup>z - 7</sup>&frasl;<sub>2z + 5</sub>
         <span id="arithmetic-operation"> + </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block; ">
-            8z + 6x
-          </span>
-          <span style="display: block"> 7y<sup>3</sup> </span>
-        </span>
+        <sup>z - 6</sup>&frasl;<sub>z - 6</sub>
       </p>
     </div>
 
-    <div class="button" id="simplify-cont">
-      <p class="button" id="question">Answer</p>
-      <br />
-      <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block; ">
-            <input [(ngModel)]="num1" class="blanks" id="num1" type="text" />z<sup>2</sup>
-            +
-            <input [(ngModel)]="num2" class="blanks" id="num2" type="text" />x<sup>2</sup> +
-            <input [(ngModel)]="num3" class="blanks" id="num3" type="text" />z + 6x
-          </span>
-          <span style="display: block">
-            <input [(ngModel)]="num4" class="blanks" id="num4" type="text" />x +
-            <input [(ngModel)]="num5" class="blanks" id="num5" type="text" />
-          </span>
-        </span>
-      </p>
-    </div>
-    <p class="button" id="verify" (click)="checkAnswers()"  (click)="playButton()">Check Answers</p>
+    <button
+      class="button"
+      id="choice-1"
+      [ngClass]="getClass('choice-1')"
+      (click)="selectAnswer('choice-1')"
+      (click)="choose_button()"
+    >
+      <sup>z - 6</sup>&frasl;<sub>z - 3</sub>
+    </button>
+
+    <button
+      class="button"
+      id="choice-2"
+      [ngClass]="getClass('choice-2')"
+      (click)="selectAnswer('choice-2')"
+      (click)="choose_button()"
+    >
+      <sup>z + 4</sup>&frasl;<sub>z + 3</sub>
+    </button>
+
+    <button
+      class="button"
+      id="choice-3"
+      [ngClass]="getClass('choice-3')"
+      (click)="selectAnswer('choice-3')"
+      (click)="choose_button()"
+    >
+      <sup>z - 7</sup>&frasl;<sub>2z - 6</sub>
+    </button>
+
+    <button
+      class="button"
+      id="choice-4"
+      [ngClass]="getClass('choice-4')"
+      (click)="selectAnswer('choice-4')"
+      (click)="choose_button()"
+    >
+      <sup>-z - 12</sup>&frasl;<sub>z - 6</sub>
+    </button>
+
+    <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
   </div>
 </ion-content>

@@ -9,38 +9,55 @@
     />
     <p class="button" id="title">Level 2-5</p>
     <div class="button" id="question-cont">
-      <!--fraction-->
       <p class="button" id="question">Question</p>
       <br />
       <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block"> xy </span>
-          <span style="display: block">z</span>
-        </span>
-        <span id="arithmetic-operation"> + </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block"> 7 </span>
-          <span style="display: block">z</span>
-        </span>
+        <sup>7x + 2y</sup>&frasl;<sub>xy</sub>
+        <span id="arithmetic-operation"> - </span>
+        <sup>-8x + 5y</sup>&frasl;<sub>xy</sub>
       </p>
     </div>
 
-    <div class="button" id="simplify-cont">
-      <p class="button" id="question">Answer</p>
-      <br />
-      <p class="button" id="sub-question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input [(ngModel)]="num1" class="blanks" id="num1" type="text" />
-            <input [(ngModel)]="num2" class="blanks" id="num2" type="text" /> +
-            <input [(ngModel)]="num3" class="blanks" id="num3" type="text" />
-          </span>
-          <span style="display: block">
-            <input [(ngModel)]="num4" class="blanks" id="num4" type="text" />
-          </span>
-        </span>
-      </p>
-    </div>
-    <p class="button" id="verify" (click)="checkAnswers()"  (click)="playButton()">Check Answers</p>
+    <button
+      class="button"
+      id="choice-1"
+      [ngClass]="getClass('choice-1')"
+      (click)="selectAnswer('choice-1')"
+      (click)="choose_button()"
+    >
+      <sup>15x - 3y</sup>&frasl;<sub>xy</sub>
+    </button>
+
+    <button
+      class="button"
+      id="choice-2"
+      [ngClass]="getClass('choice-2')"
+      (click)="selectAnswer('choice-2')"
+      (click)="choose_button()"
+    >
+      <sup>9xy</sup>&frasl;<sub>xy</sub>
+    </button>
+
+    <button
+      class="button"
+      id="choice-3"
+      [ngClass]="getClass('choice-3')"
+      (click)="selectAnswer('choice-3')"
+      (click)="choose_button()"
+    >
+      <sup>-13y</sup>&frasl;<sub>xy</sub>
+    </button>
+
+    <button
+      class="button"
+      id="choice-4"
+      [ngClass]="getClass('choice-4')"
+      (click)="selectAnswer('choice-4')"
+      (click)="choose_button()"
+    >
+      <sup>9x - 13y</sup>&frasl;<sub>xy</sub>
+    </button>
+
+    <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
   </div>
 </ion-content>
