@@ -9,401 +9,65 @@
     />
     <p class="button" id="title">Level 3-4</p>
     <div class="button" id="question-cont">
-      <!--fraction-->
-      <p class="button" id="question-title">Question</p>
+      <p class="button" id="question">Question</p>
       <br />
-      <p class="button" id="question">
+      <p class="button" id="sub-question">
         <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            a + 1
+          <span style="border-bottom: 3px solid black; display: block; padding-bottom: 3px">
+            2x<sup>2</sup> + 10x + 3
           </span>
-          <span style="display: block"> a </span>
+          <span style="display: block"> x + 1 </span>
         </span>
         <span id="arithmetic-operation"> + </span>
         <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            2
+          <span style="border-bottom: 3px solid black; display: block; padding-bottom: 3px">
+            3x<sup>2</sup> - 4x + 11
           </span>
-          <span style="display: block"> a + 1 </span>
+          <span style="display: block"> x + 1 </span>
         </span>
       </p>
     </div>
 
-    <div class="button" id="answer1-cont">
-      <p class="button" id="question-title">Guess the LCD</p>
-      <p class="button" id="lcd-cont">
-        ( <input class="blanks" id="ans1" type="text" [(ngModel)]="lcd1" />
-        <sup>2</sup> -
-        <input class="blanks" id="lcd2" type="text" [(ngModel)]="lcd2" /> ) (
-        <input class="blanks" id="lcd3" type="text" [(ngModel)]="lcd3" /> -
-        <input class="blanks" id="lcd4" type="text" [(ngModel)]="lcd4" />)
-      </p>
-    </div>
-    <div class="button" id="answer2-cont">
-      <p class="button" id="question-title">Rewrite</p>
-      <p class="button" id="question">
-        <span style="font-size: 2rem; font-family: Arial; margin-right: 2px"
-          >(</span
-        >
-        <span style="display: inline-block; text-align: center">
-          <span
-            style="
-              border-bottom: 3px solid white;
-              display: block;
-              margin-bottom: 5px;
-            "
-          >
-            <input class="blanks" id="ans1" type="text" [(ngModel)]="ans1" />a -
-            <input class="blanks" id="ans2" type="text" [(ngModel)]="ans2" />
-          </span>
-          <span style="display: block">
-            <input
-              class="blanks"
-              id="ans3"
-              type="text"
-              [(ngModel)]="ans3"
-            /><sup>2</sup> -
-            <input class="blanks" id="ans4" type="text" [(ngModel)]="ans4" />
-          </span>
-        </span>
-        <span id="arithmetic-operation"> - </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input class="blanks" id="ans5" type="text" [(ngModel)]="ans5" />
-          </span>
-          <span style="display: block">
-            <input class="blanks" id="ans6" type="text" [(ngModel)]="ans6" /> -
-            <input class="blanks" id="ans7" type="text" [(ngModel)]="ans7" />
-          </span>
-        </span>
-        <span style="font-size: 2rem; font-family: Arial; margin-left: 2px"
-          >)</span
-        >
-        <span>
-          (<input class="blanks" id="ans8" type="text" [(ngModel)]="ans8" /><sup
-            >2</sup
-          >
-          -
-          <input
-            class="blanks"
-            id="ans9"
-            type="text"
-            [(ngModel)]="ans9"
-          />)(<input
-            class="blanks"
-            id="ans10"
-            type="text"
-            [(ngModel)]="ans10"
-          />
-          - <input class="blanks" id="ans11" type="text" [(ngModel)]="ans11" />)
-        </span>
-      </p>
-    </div>
+    <button
+      class="button"
+      id="choice-1"
+      [ngClass]="getClass('choice-1')"
+      (click)="selectAnswer('choice-1')"
+      (click)="choose_button()"
+    >
+      <sup>5x<sup>2</sup> + 13x + 3</sup>&frasl;<sub>x + 1</sub>
+    </button>
 
-    <div class="button" id="answer3-cont">
-      <p class="button" id="question-title">Multiply</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span
-            style="
-              border-bottom: 3px solid white;
-              display: block;
-              margin-bottom: 5px;
-            "
-          >
-            (<input
-              class="blanks"
-              id="ans12"
-              type="text"
-              [(ngModel)]="ans12"
-            />a -
-            <input
-              class="blanks"
-              id="ans13"
-              type="text"
-              [(ngModel)]="ans13"
-            />)(<input
-              class="blanks"
-              id="ans14"
-              type="text"
-              [(ngModel)]="ans14"
-            />
-            -
-            <input class="blanks" id="ans15" type="text" [(ngModel)]="ans15" />)
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans16" type="text" [(ngModel)]="ans16" />
-            -
-            <input
-              class="blanks"
-              id="ans17"
-              type="text"
-              [(ngModel)]="ans17"
-            />)(<input
-              class="blanks"
-              id="ans18"
-              type="text"
-              [(ngModel)]="ans18"
-            /><sup>2</sup> -
-            <input class="blanks" id="ans19" type="text" [(ngModel)]="ans19" />)
-          </span>
-        </span>
-        <span id="arithmetic-operation"> + </span>
-        <span style="display: inline-block; text-align: center">
-          <span
-            style="
-              border-bottom: 3px solid white;
-              display: block;
-              margin-bottom: 5px;
-            "
-          >
-            <input
-              class="blanks"
-              id="ans20"
-              type="text"
-              [(ngModel)]="ans20"
-            />(<input
-              class="blanks"
-              id="ans21"
-              type="text"
-              [(ngModel)]="ans21"
-            /><sup>2</sup> -
-            <input class="blanks" id="ans22" type="text" [(ngModel)]="ans22" />)
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans23" type="text" [(ngModel)]="ans23" />
-            -
-            <input
-              class="blanks"
-              id="ans24"
-              type="text"
-              [(ngModel)]="ans24"
-            />)(<input
-              class="blanks"
-              id="ans25"
-              type="text"
-              [(ngModel)]="ans25"
-            /><sup>2</sup> -
-            <input class="blanks" id="ans26" type="text" [(ngModel)]="ans26" />)
-          </span>
-        </span>
-      </p>
-    </div>
+    <button
+      class="button"
+      id="choice-2"
+      [ngClass]="getClass('choice-2')"
+      (click)="selectAnswer('choice-2')"
+      (click)="choose_button()"
+    >
+      <sup>x<sup>2</sup> + 14 + 8</sup>&frasl;<sub>x + 1</sub>
+    </button>
 
-    <div class="button" id="answer4-cont">
-      <p class="button" id="question-title">Subtract</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span
-            style="
-              border-bottom: 3px solid white;
-              display: block;
-              margin-bottom: 5px;
-            "
-          >
-            <input
-              class="blanks"
-              id="ans27"
-              type="text"
-              [(ngModel)]="ans27"
-            />a<sup>2</sup> -
-            <input class="blanks" id="ans28" type="text" [(ngModel)]="ans28" />a
-            +
-            <input class="blanks" id="ans29" type="text" [(ngModel)]="ans29" />
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans30" type="text" [(ngModel)]="ans30" />
-            -
-            <input
-              class="blanks"
-              id="ans31"
-              type="text"
-              [(ngModel)]="ans31"
-            />)(<input
-              class="blanks"
-              id="ans32"
-              type="text"
-              [(ngModel)]="ans32"
-            /><sup>2</sup> -
-            <input class="blanks" id="ans33" type="text" [(ngModel)]="ans33" />)
-          </span>
-        </span>
-        <span id="arithmetic-operation"> + </span>
-        <span style="display: inline-block; text-align: center">
-          <span
-            style="
-              border-bottom: 3px solid white;
-              display: block;
-              margin-bottom: 5px;
-            "
-          >
-            <input
-              class="blanks"
-              id="ans34"
-              type="text"
-              [(ngModel)]="ans34"
-            />a<sup>2</sup> -
-            <input class="blanks" id="ans35" type="text" [(ngModel)]="ans35" />
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans36" type="text" [(ngModel)]="ans36" />
-            -
-            <input
-              class="blanks"
-              id="ans37"
-              type="text"
-              [(ngModel)]="ans37"
-            />)(<input
-              class="blanks"
-              id="ans38"
-              type="text"
-              [(ngModel)]="ans38"
-            /><sup>2</sup> -
-            <input class="blanks" id="ans39" type="text" [(ngModel)]="ans39" />)
-          </span>
-        </span>
-      </p>
-    </div>
+    <button
+      class="button"
+      id="choice-3"
+      [ngClass]="getClass('choice-3')"
+      (click)="selectAnswer('choice-3')"
+      (click)="choose_button()"
+    >
+      <sup>-x<sup>2</sup> + 14x - 8</sup>&frasl;<sub>x + 1</sub>
+    </button>
 
-    <div class="button" id="answer5-cont">
-      <p class="button" id="question-title">Distribute</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span
-            style="
-              border-bottom: 3px solid white;
-              display: block;
-              margin-bottom: 5px;
-            "
-          >
-            (<input
-              class="blanks"
-              id="ans40"
-              type="text"
-              [(ngModel)]="ans40"
-            />a<sup>2</sup> +
-            <input class="blanks" id="ans41" type="text" [(ngModel)]="ans41" />a
-            +
-            <input class="blanks" id="ans42" type="text" [(ngModel)]="ans42" />)
-            - (<input
-              class="blanks"
-              id="ans43"
-              type="text"
-              [(ngModel)]="ans43"
-            />a<sup>2</sup> -
-            <input class="blanks" id="ans44" type="text" [(ngModel)]="ans44" />)
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans45" type="text" [(ngModel)]="ans45" />
-            -
-            <input
-              class="blanks"
-              id="ans46"
-              type="text"
-              [(ngModel)]="ans46"
-            />)(<input
-              class="blanks"
-              id="ans47"
-              type="text"
-              [(ngModel)]="ans47"
-            /><sup>2</sup> -
-            <input class="blanks" id="ans48" type="text" [(ngModel)]="ans48" />)
-          </span>
-        </span>
-      </p>
-    </div>
+    <button
+      class="button"
+      id="choice-4"
+      [ngClass]="getClass('choice-4')"
+      (click)="selectAnswer('choice-4')"
+      (click)="choose_button()"
+    >
+      <sup>12x<sup>2</sup> + 3</sup>&frasl;<sub>x + 1</sub>
+    </button>
 
-    <div class="button" id="answer6-cont">
-      <p class="button" id="question-title">Combine Like Terms</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span
-            style="
-              border-bottom: 3px solid white;
-              display: block;
-              margin-bottom: 5px;
-            "
-          >
-            <input
-              class="blanks"
-              id="ans49"
-              type="text"
-              [(ngModel)]="ans49"
-            />a<sup>2</sup> +
-            <input class="blanks" id="ans50" type="text" [(ngModel)]="ans50" />a
-            +
-            <input class="blanks" id="ans51" type="text" [(ngModel)]="ans51" />
-            -
-            <input
-              class="blanks"
-              id="ans52"
-              type="text"
-              [(ngModel)]="ans52"
-            />a<sup>2</sup> +
-            <input class="blanks" id="ans53" type="text" [(ngModel)]="ans53" />
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans54" type="text" [(ngModel)]="ans54" />
-            -
-            <input
-              class="blanks"
-              id="ans55"
-              type="text"
-              [(ngModel)]="ans55"
-            />)(<input
-              class="blanks"
-              id="ans56"
-              type="text"
-              [(ngModel)]="ans56"
-            /><sup>2</sup> -
-            <input class="blanks" id="ans57" type="text" [(ngModel)]="ans57" />)
-          </span>
-        </span>
-      </p>
-    </div>
-
-    <div class="button" id="answer7-cont">
-      <p class="button" id="question-title">Answer</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span
-            style="
-              border-bottom: 3px solid white;
-              display: block;
-              margin-bottom: 5px;
-            "
-          >
-            <input
-              class="blanks"
-              id="ans58"
-              type="text"
-              [(ngModel)]="ans58"
-            /><sup>2</sup> -
-            <input class="blanks" id="ans59" type="text" [(ngModel)]="ans59" />a
-            +
-            <input class="blanks" id="ans60" type="text" [(ngModel)]="ans60" />
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans61" type="text" [(ngModel)]="ans61" />
-            -
-            <input
-              class="blanks"
-              id="ans62"
-              type="text"
-              [(ngModel)]="ans62"
-            />)(<input
-              class="blanks"
-              id="ans63"
-              type="text"
-              [(ngModel)]="ans63"
-            /><sup>2</sup> -
-            <input class="blanks" id="ans64" type="text" [(ngModel)]="ans64" />)
-          </span>
-        </span>
-      </p>
-    </div>
-
-    <p class="button" id="verify" (click)="checkAnswers()" (click)="playButton();">Check Answers</p>
-    <div class="button" id="filler"></div>
+    <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
   </div>
 </ion-content>

@@ -25,7 +25,7 @@
 .content-container{ 
   position: relative;
   width: 100vw; 
-  height: 100vh;
+  height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,6 +36,12 @@
   justify-content: center;
   align-items: center;
   position: absolute;
+}
+
+#arithmetic-operation {
+  padding: 0px 8px 0px 8px;
+  font-size: 2rem;
+  color: #51DD4E;
 }
 
 #title {
@@ -53,8 +59,8 @@
 }
 
 #question-cont{
-  width: 90%;
-  height: 108px;
+  width: 70%;
+  height: 130px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 22%;
   border-radius: 10px;
@@ -62,180 +68,94 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#question-title{
-  top:5%;
-  color:#51DD4E;
+#question {
+  top: 5%;
+  color: #51DD4E;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.6rem;
-  -webkit-text-stroke: 1px #000000;
-}
-
-#question{
-  top:30%;
-  margin: 0;
-  font-family: "Good-Game";
-  font-size: 1.3rem;
-  -webkit-text-stroke: 1px #000000;
-}
-
-#arithmetic-operation{
-  padding: 0px 5px 0px 5px;
   font-size: 2rem;
-  color:#51DD4E;
+  -webkit-text-stroke: 1px #000000;
 }
 
-#answer1-cont, #answer2-cont, 
-#answer3-cont,#answer4-cont,
-#answer5-cont, #answer6-cont{
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-}
-
-#answer1-cont{
-  width: 90%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 42%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#answer2-cont{
-  width: 90%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 62%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#answer3-cont{
-  width: 90%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 82%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#answer4-cont{
-  width: 90%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 102%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#answer5-cont{
-  width: 90%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 122%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#answer6-cont{
-  width: 90%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 142%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#answer7-cont{
-  width: 90%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 162%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#answer8-cont{
-  width: 90%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 182%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#answer9-cont{
-  width: 90%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 202%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#verify{
-  top:202%;
-  width: 40%;
-  height: 45px;
-  background:linear-gradient(#68e166, #45d143, #51DD4E);
-  border-radius: 15px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+#sub-question {
+  margin: 0;
   font-family: "Good-Game";
   font-size: 1.4rem;
   -webkit-text-stroke: 1px #000000;
+  top: 33%;
 }
-
-#filler{ 
-  top:212%;
+#choice-1,
+#choice-2,
+#choice-3,
+#choice-4 { 
   width: 40%;
-  height: 45px;
-}
-
-#lcd-cont{
-  top:15%;
-  font-family: "Good-Game";
-  font-size: 1.8rem;
-}
-
-#lcd-cont > input{
-  width: 30px;
-  height: 40px;
+  height: 50px;
+  background: linear-gradient(#acd5e7, #40AFDE);
+  color: #ffffff;
   border-radius: 10px;
-  text-align: center;
-  margin-left:3px;
-  margin-right:3px; 
+  box-shadow: 2px 4px 3px #363535;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Good-Game";
+  -webkit-text-stroke: 1px #000000;
   font-size: 1.6rem;
+  border: 4px solid transparent; /* Default transparent border */
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: #f2c934; /* Outline color on hover */
+    cursor: pointer;
+  }
+
+  &.selected {
+    border-color: rgb(255, 255, 255); /* Outline color when selected */
+  }
+
+  &.correct-reveal {
+    border-color: green; /* Outline color when correct */
+  }
+
+  &.incorrect-reveal {
+    border-color: red; /* Outline color when incorrect */
+  }
 }
 
-#answer4-cont > #question, #answer5-cont > #question, #answer6-cont > #question{
-  font-size: 1.2rem;
-  top:30%;
+#choice-1 {
+  top: 50%;
+}
+
+#choice-2 {
+  top: 60%;
+}
+
+#choice-3 {
+  top: 70%;
+}
+
+#choice-4 {
+  top: 80%;
+}
+
+.content-container #submit {
+  top: 90%;
+  width: 40%;
+  height: 42px;
+  background: linear-gradient(#68e166, #45d143, #51DD4E);
+  border-radius: 15px;
+  box-shadow: 2px 4px 3px #363535;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 1px #000000;
+  font-family: "Good-Game";
+  font-size: 1.6rem;
+  border: 2px solid transparent; /* Default transparent border */
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: #45d143; /* Outline color on hover */
+    cursor: pointer;
+  }
 } 
 
-#answer7-cont > #question, #answer8-cont > #question{
-  font-size:1.3rem;
-  top:30%;
-}
-
-.blanks{
-  width: 18px;
-  height: 24px;
-  border-radius: 5px;
-  border: #00000060 2px solid; 
-  background: #363535;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-#title, #question, #verify, #lcd-cont{
+//ito pala problema pre kaya ayaw yung font
+#title, #sub-question, #submit{
   color: #ffffff;
 }

@@ -24,7 +24,7 @@
 .content-container{ 
   position: relative;
   width: 100vw; 
-  height: 100vh;
+  height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,6 +35,12 @@
   justify-content: center;
   align-items: center;
   position: absolute;
+}
+
+#arithmetic-operation {
+  padding: 0px 8px 0px 8px;
+  font-size: 2rem;
+  color: #51DD4E;
 }
 
 #title {
@@ -52,8 +58,8 @@
 }
 
 #question-cont{
-  width: 87%;
-  height: 108px;
+  width: 80%;
+  height: 130px;
   background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
   top: 22%;
   border-radius: 10px;
@@ -61,172 +67,94 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#question-title{
-  top:5%;
-  color:#51DD4E;
+#question {
+  top: 5%;
+  color: #51DD4E;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.6rem;
+  font-size: 2rem;
   -webkit-text-stroke: 1px #000000;
 }
 
-#question{
-  top:30%;
+#sub-question {
   margin: 0;
   font-family: "Good-Game";
   font-size: 1.3rem;
   -webkit-text-stroke: 1px #000000;
+  top: 35%;
 }
-
-#arithmetic-operation{
-  padding: 0px 4px 0px 4px;
-  font-size: 2rem;
-  color:#51DD4E;
-}
-
-#answer1-cont, #answer2-cont, 
-#answer3-cont,#answer4-cont,
-#answer5-cont, #answer6-cont{
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-}
-
-#answer1-cont{
-  width: 87%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 42%;
+#choice-1,
+#choice-2,
+#choice-3,
+#choice-4 { 
+  width: 50%;
+  height: 50px;
+  background: linear-gradient(#acd5e7, #40AFDE);
+  color: #ffffff;
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Good-Game";
+  -webkit-text-stroke: 1px #000000;
+  font-size: 1.5rem;
+  border: 4px solid transparent; /* Default transparent border */
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: #f2c934; /* Outline color on hover */
+    cursor: pointer;
+  }
+
+  &.selected {
+    border-color: rgb(255, 255, 255); /* Outline color when selected */
+  }
+
+  &.correct-reveal {
+    border-color: green; /* Outline color when correct */
+  }
+
+  &.incorrect-reveal {
+    border-color: red; /* Outline color when incorrect */
+  }
 }
 
-#answer2-cont{
-  width: 87%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 62%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+#choice-1 {
+  top: 50%;
 }
 
-#answer3-cont{
-  width: 87%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 82%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+#choice-2 {
+  top: 60%;
 }
 
-#answer4-cont{
-  width: 87%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 102%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+#choice-3 {
+  top: 70%;
 }
 
-#answer5-cont{
-  width: 87%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 122%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+#choice-4 {
+  top: 80%;
 }
 
-#answer6-cont{
-  width: 87%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 142%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#answer6-cont{
-  width: 87%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 142%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#answer7-cont{
-  width: 87%;
-  height: 108px;
-  background: linear-gradient( #6ba1b8, #40AFDE, #40AFDE);
-  top: 162%;
-  border-radius: 10px;
-  box-shadow: 2px 4px 3px #363535;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-
-#verify{
-  top:182%;
-  width: 40%;
-  height: 45px;
-  background:linear-gradient(#68e166, #45d143, #51DD4E);
+.content-container #submit {
+  top: 90%;
+  width: 50%;
+  height: 42px;
+  background: linear-gradient(#68e166, #45d143, #51DD4E);
   border-radius: 15px;
   box-shadow: 2px 4px 3px #363535;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Good-Game";
-  font-size: 1.4rem;
   -webkit-text-stroke: 1px #000000;
-}
-
-#filler{
-  top:190%;
-  width: 40%;
-  height: 45px;
-}
-
-#lcd-cont{
-  top:18%;
   font-family: "Good-Game";
-  font-size: 1.8rem;
-}
-
-#lcd-cont > input{
-  width: 30px;
-  height: 40px;
-  border-radius: 10px;
-  text-align: center;
-  margin-left:3px;
-  margin-right:3px;
   font-size: 1.6rem;
-}
+  border: 2px solid transparent; /* Default transparent border */
+  transition: border-color 0.3s ease;
 
-.blanks{
-  width: 17px;
-  height: 23px;
-  border-radius: 5px;
-  border: #00000060 2px solid; 
-  background: #363535;
-  text-align: center;
-  font-size: 1.1rem;
-}
+  &:hover {
+    border-color: #45d143; /* Outline color on hover */
+    cursor: pointer;
+  }
+} 
 
-#answer2-cont > #question, #answer3-cont > #question,  #answer4-cont > #question{
-  font-size: 1.2rem;
-}
-
-#ans28{
-  width: 27px;
-}
- #ans41, #ans50, #ans59{
-  width: 25px;
-}
-
-#title, #question, #verify, #lcd-cont{
+//ito pala problema pre kaya ayaw yung font
+#title, #sub-question, #submit{
   color: #ffffff;
 }
