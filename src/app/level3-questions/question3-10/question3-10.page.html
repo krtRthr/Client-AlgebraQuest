@@ -9,269 +9,83 @@
     />
     <p class="button" id="title">Level 3-10</p>
     <div class="button" id="question-cont">
-      <!--fraction-->
-      <p class="button" id="question-title">Question</p>
+      <p class="button" id="question">Question</p>
       <br />
-      <p class="button" id="question">
+      <p class="button" id="is">
+        <span style="padding-right: 5px">Is</span>
         <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            4y<sup>2</sup> 8yz + 4z<sup>2</sup>
+          <span style="border-bottom: 3px solid black; display: block">
+            3x<sup>2</sup> + 3x + 9
           </span>
-          <span style="display: block"> 4yz </span>
-        </span>
-        <span id="arithmetic-operation"> - </span>
+          <span style="display: block"> x<sup>2</sup> + 9 </span></span
+        >
+        <span style="padding-left: 5px">equal to</span>
+      </p>
+      <p class="button" id="sub-question">
         <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block"> y </span>
-          <span style="display: block"> y + z </span>
+          <span style="border-bottom: 3px solid black; display: block"> 3x<sup>2</sup> </span>
+          <span style="display: block"> x<sup>2</sup> + 9 </span>
+        </span>
+        <span id="arithmetic-operation"> + </span>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> 3x </span>
+          <span style="display: block"> x<sup>2</sup> + 9 </span>
+        </span>
+        <span id="arithmetic-operation"> + </span>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> 9 </span>
+          <span style="display: block"> x<sup>2</sup> + 9 </span>
         </span>
       </p>
     </div>
-    <div class="button" id="answer1-cont">
-      <p class="button" id="question-title">Factor Out</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input class="blanks" id="ans1" type="text" [(ngModel)]="ans1" />(
-            <input class="blanks" id="ans2" type="text" [(ngModel)]="ans2" /><sup>2</sup> +
-            <input class="blanks" id="ans3" type="text" [(ngModel)]="ans3" />yz +
-            <input class="blanks" id="ans4" type="text" [(ngModel)]="ans4" /><sup>2</sup>)
-          </span>
-          <span style="display: block">
-            <input class="blanks" id="ans5" type="text" [(ngModel)]="ans5" />yz
-          </span>
-        </span>
-        <span id="arithmetic-operation"> - </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input class="blanks" id="ans6" type="text" [(ngModel)]="ans6" />
-          </span>
-          <span style="display: block">
-            <input class="blanks" id="ans7" type="text" [(ngModel)]="ans7" /> +
-            <input class="blanks" id="ans8" type="text" [(ngModel)]="ans8" />
-          </span>
-        </span>
-      </p>
-    </div>
-    <div class="button" id="answer2-cont">
-      <p class="button" id="question-title">Simplify</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input class="blanks" id="ans9" type="text" [(ngModel)]="ans9" /><sup>2</sup> +
-            <input class="blanks" id="ans10" type="text" [(ngModel)]="ans10" />yz +
-            <input class="blanks" id="ans11" type="text" [(ngModel)]="ans11" /><sup>2</sup>
-          </span>
-          <span style="display: block">
-            <input class="blanks" id="ans12" type="text" [(ngModel)]="ans12" />z
-          </span>
-        </span>
-        <span id="arithmetic-operation"> - </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block; margin-bottom: 5px">
-            <input class="blanks" id="ans13" type="text" [(ngModel)]="ans13" />
-          </span>
-          <span style="display: block">
-            <input class="blanks" id="ans14" type="text" [(ngModel)]="ans14" />
-            +
-            <input class="blanks" id="ans15" type="text" [(ngModel)]="ans15" />
-          </span>
-        </span>
-      </p>
-    </div>
-    <div class="button" id="answer3-cont">
-      <p class="button" id="question-title">Guess the LCD</p>
-      <p class="button" id="lcd-cont">
-        (<input class="blanks" id="lcd1" type="text" [(ngModel)]="lcd1" />
-        <input class="blanks" id="lcd2" type="text" [(ngModel)]="lcd2" />)(
-        <input class="blanks" id="lcd3" type="text" [(ngModel)]="lcd3" /> +
-        <input class="blanks" id="lcd4" type="text" [(ngModel)]="lcd4" /> )
-      </p>
-    </div>
-    <div class="button" id="answer4-cont">
-      <p class="button" id="question-title">Rewrite</p>
-      <p class="button" id="question">
-        <span style="font-size: 2rem; font-family: Arial; margin-right: 2px"> (</span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input class="blanks" id="ans16" type="text" [(ngModel)]="ans16" /><sup>2</sup> +
-            <input class="blanks" id="ans17" type="text" [(ngModel)]="ans17" />yz +
-            <input class="blanks" id="ans18" type="text" [(ngModel)]="ans18" /><sup>2</sup>)
-          </span>
-          <span style="display: block">
-            <input class="blanks" id="ans19" type="text" [(ngModel)]="ans19" />z</span
-          >
-        </span>
-        <span id="arithmetic-operation"> - </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input class="blanks" id="ans20" type="text" [(ngModel)]="ans20" />
-          </span>
-          <span style="display: block"
-            ><input class="blanks" id="ans21" type="text" [(ngModel)]="ans21" /> +
-            <input class="blanks" id="ans22" type="text" [(ngModel)]="ans22"
-          /></span>
-        </span>
-        <span style="font-size: 2rem; font-family: Arial; margin-left: 2px">)</span>
-        <span>(LCD)</span>
-      </p>
-    </div>
-    <div class="button" id="answer5-cont">
-      <p class="button" id="question-title">Multiply</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            (<input class="blanks" id="ans23" type="text" [(ngModel)]="ans23" /><sup>2</sup> +
-            <input class="blanks" id="ans24" type="text" [(ngModel)]="ans24" />yz +
-            <input class="blanks" id="ans25" type="text" [(ngModel)]="ans25" /> <sup>2</sup>)
-            (<input class="blanks" id="ans26" type="text" [(ngModel)]="ans26" /> +
-            <input class="blanks" id="ans27" type="text" [(ngModel)]="ans27" />)
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans28" type="text" [(ngModel)]="ans28" /> z ) (
-            <input class="blanks" id="ans29" type="text" [(ngModel)]="ans29" /> +
-            <input class="blanks" id="ans30" type="text" [(ngModel)]="ans30" />)
-          </span>
-        </span>
-        <span id="arithmetic-operation"> - </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input class="blanks" id="ans31" type="text" [(ngModel)]="ans31" />(
-            <input class="blanks" id="ans32" type="text" [(ngModel)]="ans32" />z)
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans33" type="text" [(ngModel)]="ans33" /> +
-            <input class="blanks" id="ans34" type="text" [(ngModel)]="ans34" />)(yz)
-          </span>
-        </span>
-      </p>
-    </div>
-    <div class="button" id="answer6-cont">
-      <p class="button" id="question-title">Simplify</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            (<input class="blanks" id="ans35" type="text" [(ngModel)]="ans35" /> +
-            <input class="blanks" id="ans36" type="text" [(ngModel)]="ans36" />)
-            <sup>2</sup> (<input class="blanks" id="ans37" type="text" [(ngModel)]="ans37" /> +
-            <input class="blanks" id="ans38" type="text" [(ngModel)]="ans38" />)
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans39" type="text" [(ngModel)]="ans39" />z) (
-            <input class="blanks" id="ans40" type="text" [(ngModel)]="ans40" /> +
-            <input class="blanks" id="ans41" type="text" [(ngModel)]="ans41" />)
-          </span>
-        </span>
-        <span id="arithmetic-operation"> - </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            <input class="blanks" id="ans42" type="text" [(ngModel)]="ans42" />(yz)
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans43" type="text" [(ngModel)]="ans43" /> +
-            <input class="blanks" id="ans44" type="text" [(ngModel)]="ans44" />)(yz)
-          </span>
-        </span>
-      </p>
-    </div>
-    <div class="button" id="answer7-cont">
-      <p class="button" id="question-title">Expand</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block">
-            (<input class="blanks" id="ans45" type="text" [(ngModel)]="ans45" /> +
-            <input class="blanks" id="ans46" type="text" [(ngModel)]="ans46" />)<sup>3</sup>
-          </span>
-          <span style="display: block"
-            >(yz)(<input class="blanks" id="ans47" type="text" [(ngModel)]="ans47" />
-            +
-            <input class="blanks" id="ans48" type="text" [(ngModel)]="ans48" />)</span
-          >
-        </span>
-        <span id="arithmetic-operation"> - </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block; margin-bottom: 5px">
-            <input class="blanks" id="ans49" type="text" [(ngModel)]="ans49" /><sup>2</sup
-            ><input class="blanks" id="ans50" type="text" [(ngModel)]="ans50" />
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans51" type="text" [(ngModel)]="ans51" />
-            +
-            <input class="blanks" id="ans52" type="text" [(ngModel)]="ans52" />)(yz)
-          </span>
-        </span>
-      </p>
-    </div>
-    <div class="button" id="answer8-cont">
-      <p class="button" id="question-title">Subtract</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block; margin-bottom: 5px">
-            <input class="blanks" id="ans53" type="text" [(ngModel)]="ans53" /><sup>3</sup> +
-            <input class="blanks" id="ans54" type="text" [(ngModel)]="ans54" />y<sup>2</sup>
-            <input class="blanks" id="ans55" type="text" [(ngModel)]="ans55" />
-            +
-            <input class="blanks" id="ans56" type="text" [(ngModel)]="ans56" />yz<sup>2</sup> +
-            <input class="blanks" id="ans57" type="text" [(ngModel)]="ans57" /><sup>3</sup>
-          </span>
-          <span style="display: block"
-            >(yz)(<input class="blanks" id="ans58" type="text" [(ngModel)]="ans58" />
-            +
-            <input class="blanks" id="ans59" type="text" [(ngModel)]="ans59" />)</span
-          >
-        </span>
-        <span id="arithmetic-operation"> - </span>
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block; margin-bottom: 5px">
-            <input class="blanks" id="ans60" type="text" [(ngModel)]="ans60" /><sup>2</sup>
-            <input class="blanks" id="ans61" type="text" [(ngModel)]="ans61" />
-          </span>
-          <span style="display: block">
-            (<input class="blanks" id="ans62" type="text" [(ngModel)]="ans62" />
-            +
-            <input class="blanks" id="ans63" type="text" [(ngModel)]="ans63" />)(yz)
-          </span>
-        </span>
-      </p>
-    </div>
-    <div class="button" id="answer9-cont">
-      <p class="button" id="question-title">Combine Like Terms</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block; margin-bottom: 5px">
-            <input class="blanks" id="ans64" type="text" [(ngModel)]="ans64" /><sup>3</sup> +
-            <input class="blanks" id="ans65" type="text" [(ngModel)]="ans65" />y<sup>2</sup>z +
-            <input class="blanks" id="ans66" type="text" [(ngModel)]="ans66" />yz<sup>2</sup> +
-            <input class="blanks" id="ans67" type="text" [(ngModel)]="ans67" /><sup>3</sup> -
-            <input class="blanks" id="ans68" type="text" [(ngModel)]="ans68" /><sup>2</sup>z
-          </span>
-          <span style="display: block"
-            >(yz)(<input class="blanks" id="ans69" type="text" [(ngModel)]="ans69" />
-            +
-            <input class="blanks" id="ans70" type="text" [(ngModel)]="ans70" />)</span
-          >
-        </span>
-      </p>
-    </div>
-    <div class="button" id="answer10-cont">
-      <p class="button" id="question-title">Answer</p>
-      <p class="button" id="question">
-        <span style="display: inline-block; text-align: center">
-          <span style="border-bottom: 3px solid white; display: block; margin-bottom: 5px">
-            <input class="blanks" id="ans71" type="text" [(ngModel)]="ans71" /><sup>3</sup> +
-            <input class="blanks" id="ans72" type="text" [(ngModel)]="ans72" />y<sup>2</sup>z +
-            <input class="blanks" id="ans73" type="text" [(ngModel)]="ans73" />yz<sup>2</sup> +
-            <input class="blanks" id="ans74" type="text" [(ngModel)]="ans74" /><sup>3</sup>
-          </span>
-          <span style="display: block"
-            >(yz)(<input class="blanks" id="ans75" type="text" [(ngModel)]="ans75" />
-            +
-            <input class="blanks" id="ans76" type="text" [(ngModel)]="ans76" />)</span
-          >
-        </span>
-      </p>
-    </div>
+    <button
+      class="button"
+      id="choice-1"
+      [ngClass]="getClass('choice-1')"
+      (click)="selectAnswer('choice-1')"
+      (click)="choose_button()"
+    >
+      <span style="display: inline-block; text-align: center">
+        A. Yes, because when you add them, they are equal to the original expression.
+      </span>
+    </button>
 
-    <p class="button" id="verify" (click)="checkAnswers()" (click)="playButton()">Check Answers</p>
-    <div class="button" id="filler"></div>
+    <button
+      class="button"
+      id="choice-2"
+      [ngClass]="getClass('choice-2')"
+      (click)="selectAnswer('choice-2')"
+      (click)="choose_button()"
+    >
+      <span style="display: inline-block; text-align: center">
+        B. Yes, because they have the same numerator.
+      </span>
+    </button>
+
+    <button
+      class="button"
+      id="choice-3"
+      [ngClass]="getClass('choice-3')"
+      (click)="selectAnswer('choice-3')"
+      (click)="choose_button()"
+    >
+      <span style="display: inline-block; text-align: center">
+        C. No, because you cannot separate a rational algebraic expression.
+      </span>
+    </button>
+
+    <button
+      class="button"
+      id="choice-4"
+      [ngClass]="getClass('choice-4')"
+      (click)="selectAnswer('choice-4')"
+      (click)="choose_button()"
+    >
+      <span style="display: inline-block; text-align: center">
+        D. No, because the expression can be simplified.
+      </span>
+    </button>
+
+    <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
   </div>
 </ion-content>
