@@ -1,30 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-level1',
   templateUrl: './level-1.page.html',
   styleUrls: ['./level-1.page.scss'],
 })
-export class Level1Page implements OnInit {
-  showTutorial: boolean = false;
-  
-  ngOnInit() {
-    // Check if tutorial has been shown this session
-    if (!sessionStorage.getItem('tutorialShown')) {
-      this.showTutorial = true;
-      sessionStorage.setItem('tutorialShown', 'true');
-    }
-  }
-
-  openTutorial() {
-    this.showTutorial = true;
-  }
-
-  closeTutorial() {
-    this.showTutorial = false;
-  }
-
-  
+export class Level1Page {
   // Initial image sources for each button
   imageSrc1 = '../../assets/AlgebraQuest_Asset/lvl-buttons/lvl1-buttons/Group 49 (1).png';
   imageSrc2 = '../../assets/AlgebraQuest_Asset/lvl-buttons/lvl1-buttons/Group 50 (1).png';
