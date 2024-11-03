@@ -89,5 +89,28 @@
       id="button10"
       (click)="playButton()"
     />
+  <div id="tutorial-popup" class="tutorial-popup" *ngIf="showTutorial">
+      <div class="speech-bubble">
+        <p>Welcome to Level 1! Here’s what you need to know...</p>
+        </div>
+        <div class="nextbutton"> 
+        <button 
+        id="next-button" 
+        (click)="closeTutorial()" 
+        routerLink="/tutorial1-page" s>Next</button>
+        </div>
+        <img src="../../assets/AlgebraQuest_Asset/prof.png" class="character-img" />
+      </div>
+    </div>
+
+
+  <div class="tutorial-button-container">
+    <img
+      class="button"
+      id="tutorial-button"
+      src="../../assets/AlgebraQuest_Asset/btn.png"
+      alt="Show Tutorial"
+      (click)="openTutorial()"
+    />
   </div>
 </ion-content>

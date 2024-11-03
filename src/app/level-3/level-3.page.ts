@@ -5,7 +5,30 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './level-3.page.html',
   styleUrls: ['./level-3.page.scss'],
 })
+<<<<<<< Updated upstream
 export class Level3Page  {
+=======
+export class Level3Page implements OnInit { 
+
+
+  showTutorial: boolean = false;
+  
+  ngOnInit() {
+    // Check if tutorial has been shown this session
+    if (!sessionStorage.getItem('tutorialShown')) {
+      this.showTutorial = true;
+      sessionStorage.setItem('tutorialShown', 'true');
+    }
+  }
+
+  openTutorial() {
+    this.showTutorial = true;
+  }
+
+  closeTutorial() {
+    this.showTutorial = false;
+  }
+>>>>>>> Stashed changes
 
  imageSrc1 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 49 (1).png';
  imageSrc2 = '../../assets/AlgebraQuest_Asset/lvl-buttons//lvl3-buttons/Group 50 (1).png';
