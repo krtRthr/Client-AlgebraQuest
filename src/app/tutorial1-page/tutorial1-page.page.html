@@ -1,0 +1,64 @@
+<ion-content [fullscreen]="true" class="tutorial-page">
+  <div class="tutorial-container">
+
+    <ng-container *ngIf="currentStep === 1">
+      <div class="section" id="welcome-section">
+        <h2>Welcome, Students!</h2>
+        <p>In today’s tutorial, we’ll learn to add and subtract rational algebraic expressions with like denominators.</p>
+        <ion-button expand="block" (click)="nextStep()">Next</ion-button>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="currentStep === 2">
+      <div class="section" id="concept-section">
+        <p>Rational expressions are like fractions, but instead of numbers, they include variables. It might sound tricky, but once you understand the steps, it’ll be simple!</p>
+        <ion-button expand="block" (click)="nextStep()">Next</ion-button>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="currentStep === 3">
+      <div class="section" id="steps-section">
+        <h3>Steps for Adding or Subtracting Rational Algebraic Expressions:</h3>
+        <ol>
+          <li><strong>Add (or subtract) the numerators.</strong></li>
+          <li><strong>Copy the common denominator.</strong></li>
+          <li><strong>Simplify the result.</strong></li>
+        </ol>
+        <ion-button expand="block" (click)="nextStep()">Next</ion-button>
+      </div>
+    </ng-container>
+    
+   
+    <div class="section example-section" *ngIf="currentStep === 4" id="example-section">
+      <h3>Example</h3>
+      
+      <ng-container *ngIf="exampleStep >= 1">
+        <p>Given the example:</p>
+        <p class="expression" [innerHTML]="'\\( \\frac{1}{2x} + \\frac{1}{2x} \\)'"></p>
+      </ng-container>
+
+      <ng-container *ngIf="exampleStep >= 2">
+        <p>Notice the denominators are the same, so focus on adding the numerators.</p>
+        <p class="expression" [innerHTML]="'\\( \\frac{1 + 1}{2x} = \\frac{2}{2x} \\)'"></p>
+      </ng-container>
+
+      <ng-container *ngIf="exampleStep >= 3">
+        <p>Simplify by dividing the numerator and denominator by 2:</p>
+        <p class="expression" [innerHTML]="'\\( \\frac{2}{2x} \\div \\frac{2}{2} = \\frac{1}{x} \\)'"></p>
+      </ng-container>
+
+      <ng-container *ngIf="exampleStep >= 4">
+        <p>Easy as that, right?</p>
+      </ng-container>
+
+      <ion-button expand="block" (click)="nextExampleStep()">Next</ion-button>
+    </div>
+
+    <ng-container *ngIf="currentStep === 5">
+      <div class="section" id="prompt-section">
+        <p>Now, it’s your turn! Ready to begin Level 1?</p>
+        <ion-button expand="block" color="primary" routerLink="/level-1">Start Level 1</ion-button>
+      </div>
+    </ng-container>
+  </div>
+</ion-content>
