@@ -14,64 +14,7 @@
   //background-size: 100% 100%;
   //background-repeat: no-repeat;
 }
-.tutorial-popup {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8); 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  z-index: 1000; 
-}
 
-.speech-bubble {
-  background-image: url('../../assets/AlgebraQuest_Asset/bubblemsg.png'); 
-  background-size: cover; 
-  background-repeat: no-repeat;
-  border-radius: 10px; 
-  padding: 20px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  position: relative; 
-  width: 300px; 
-  height: 150px; 
-}
-.nextbutton{
-  color: greenyellow;
-  font-size: medium;
-}
-
-.speech-bubble::after {
-  content: '';
-  position: absolute;
-  bottom: 100%; 
-  left: 50%;
-  margin-left: -10px;
-  border-width: 10px; 
-  border-style: solid;
-  border-color: transparent transparent white transparent;
-}
-
-.character-img {
-  max-height: 400px;
-  max-width: 200px; 
-  position: absolute;
-  left: 10px;
-  bottom: 30%;
-  margin-top: 10px; 
-  
-}
-
-#tutorial-button {
-  top: 2%; 
-  right: 2%; 
-  width: 100px;
-  size: 4rem;
-  height: auto;
-  cursor: pointer;
-}
 .button-container {
   position: relative;
   width: 100vw;
