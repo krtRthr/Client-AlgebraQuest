@@ -1,0 +1,28 @@
+
+<div class="popup-overlay" *ngIf="showPopup">
+  <div class="popup-container">
+    <div class="speech-bubble">
+      <div class="text-bubble">
+        <p *ngIf="currentStep === 0">Welcome, students! In today’s tutorial, we shall learn to add and subtract rational algebraic expressions with like denominators.</p>
+        <p *ngIf="currentStep === 1">Rational expressions are just fractions, but instead of numbers, they include variables. This might sound tricky, but once you get a hold of how to proceed, you’ll find it easy.</p>
+        <p *ngIf="currentStep === 2">Please be guided with the following procedures when adding or subtracting rational algebraic expressions with like denominators:</p>
+        <p *ngIf="currentStep === 3">1. Add (or subtract) the numerators.</p>
+        <p *ngIf="currentStep === 4">2. Copy the common denominator.</p>
+        <p *ngIf="currentStep === 5">3. Simplify the result.</p>
+        <p *ngIf="currentStep === 6">Let’s get started with a quick review.</p>
+        <p *ngIf="currentStep === 7">A rational algebraic expression is a fraction whose numerator and denominator are both polynomials.</p>
+        <p *ngIf="currentStep === 8">Whenever you add or subtract expressions which contain like denominators, you don’t have to worry about the denominator, just add the numerators instead.</p>
+        <p *ngIf="currentStep === 9">For instance, given the example: 1/2x + 1/2x.</p>
+        <p *ngIf="currentStep === 10">Notice that the denominators are the same, so we’ll need to focus on adding the numerators.</p>
+        <p *ngIf="currentStep === 11">We add the numerators like this: (1 + 1)/2x = 2/2x.</p>
+        <p *ngIf="currentStep === 12">Simplify the numerators by combining like terms: 2/2x ÷ 2/2.</p>
+        <p *ngIf="currentStep === 13">Which gives us: 1/x.</p>
+        <p *ngIf="currentStep === 14">Easy as that, right? Now, it’s your turn.</p>
+      </div>
+    </div>
+    <button class="next-button" (click)="nextStep()">Next</button>
+    <div class="character-img" >
+      <img src="../../assets/AlgebraQuest_Asset/prof.png" alt="Character" />
+    </div>
+  </div>
+</div>

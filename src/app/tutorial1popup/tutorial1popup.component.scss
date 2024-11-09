@@ -1,0 +1,62 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Keeps it at the top */
+    padding-top: 20px; /* Adds space from the top */
+    z-index: 1000; /* Ensures it is on top of other elements */
+  }
+  .popup-container {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .character-img {
+    width: 100px; 
+    height: 100px;
+    margin-right: 90%;
+    margin-top: 1%;
+  }
+  
+  .text-bubble{
+    padding: 10px;
+    margin-left: 30px;
+    font-size: medium;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+  }
+  .speech-bubble {
+    position: relative;
+    background-image: url('../../assets/AlgebraQuest_Asset/bubblemsg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    max-width: 420px; 
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+
+  .next-button {
+    margin-top: 0%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 200px;
+  }
+  

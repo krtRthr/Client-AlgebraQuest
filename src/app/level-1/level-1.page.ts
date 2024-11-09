@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Tutorial1popupComponent } from '../tutorial1popup/tutorial1popup.component';
 @Component({
   selector: 'app-level1',
   templateUrl: './level-1.page.html',
   styleUrls: ['./level-1.page.scss'],
 })
 export class Level1Page {
+
+  showTutorial: boolean = false;
+
   // Initial image sources for each button
   imageSrc1 = '../../assets/AlgebraQuest_Asset/lvl-buttons/lvl1-buttons/Group 49 (1).png';
   imageSrc2 = '../../assets/AlgebraQuest_Asset/lvl-buttons/lvl1-buttons/Group 50 (1).png';
@@ -75,7 +78,14 @@ export class Level1Page {
     audio.load();
     audio.play();
    }
-  
+   
+   openTutorial() {
+    this.showTutorial = true;
+  }
+
+  closeTutorial() {
+    this.showTutorial = false;
+  }
 }
 
 

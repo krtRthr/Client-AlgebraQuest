@@ -1,4 +1,6 @@
 <ion-content [fullscreen]="true" class="level1-page">
+  <app-tutorial1popup></app-tutorial1popup>
+  
   <div class="button-container">
     <img
       class="button"
@@ -8,6 +10,11 @@
       (click)="playButton()"
     />
     <p class="button" id="title">Level 1</p>   
+    
+    <button class="open-tutorial-button" (click)="openTutorial()">View Tutorial</button>
+  <!-- Include the tutorial pop-up component when showTutorial is true -->
+  <app-tutorial1popup *ngIf="showTutorial" (closeTutorial)="closeTutorial()"></app-tutorial1popup>
+
     <img
       (click)="changeImage($event, 1)"
       [src]="imageSrc1"
@@ -88,5 +95,7 @@
       routerLink="/question10"
       (click)="playButton()"
     />
-  </div>
-</ion-content> 
+  </div> 
+  
+
+</ion-content>
