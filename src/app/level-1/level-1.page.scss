@@ -14,7 +14,22 @@
   //background-size: 100% 100%;
   //background-repeat: no-repeat;
 }
- 
+.open-tutorial-button {
+  position: relative;
+  margin-bottom: 650px;
+  margin-left: 330px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 100; /* Ensure it sits above other content */
+}
+
 .button-container { 
   position: relative;
   width: 100vw;

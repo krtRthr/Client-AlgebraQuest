@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { Level1PageRoutingModule } from './level-1-routing.module';
 
 import { Level1Page } from './level-1.page';
+import { Tutorial1popupComponent } from '../tutorial1popup/tutorial1popup.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { Level1Page } from './level-1.page';
     IonicModule,
     Level1PageRoutingModule
   ],
-  declarations: [Level1Page]
+  declarations: [Level1Page,Tutorial1popupComponent]
 })
 export class Level1PageModule {}
