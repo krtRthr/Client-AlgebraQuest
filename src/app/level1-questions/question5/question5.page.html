@@ -25,7 +25,7 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <sup>1</sup>&frasl;<sub>2y</sub>
+      -<sup>1</sup>&frasl;<sub>y</sub>
     </button>
     <button
       class="button"
@@ -34,7 +34,7 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      1y + 2y
+      <sup>1</sup>&frasl;<sub>y</sub>
     </button>
     <button
       class="button"
@@ -43,7 +43,7 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-    <sup>1</sup>&frasl;<sub>y</sub>
+      -<sup>2</sup>&frasl;<sub>y</sub>
     </button>
     <button
       class="button"
@@ -52,8 +52,10 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-    <sup>-1</sup>&frasl;<sub>y</sub>
+      <sup>2</sup>&frasl;<sub>y</sub>
     </button>
-    <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">Submit</button>
+    <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
+      Submit
+    </button>
   </div>
 </ion-content>

@@ -29,16 +29,16 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <span style="padding-right: 10px">TRUE,</span><sup>1</sup>&frasl;<sub>x - 2</sub>
+      <span style="padding-right: 10px">TRUE,</span><sup>1</sup>&frasl;<sub>x + 2</sub>
     </button>
-    <button
+    <button 
       class="button"
       id="choice-2"
       [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <span style="padding-right: 10px">FALSE,</span><sup>1</sup>&frasl;<sub>x + 2</sub>
+      <span style="padding-right: 10px">FALSE,</span><sup>1</sup>&frasl;<sub>x - 2</sub>
     </button>
     <button
       class="button"

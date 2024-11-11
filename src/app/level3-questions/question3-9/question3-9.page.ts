@@ -12,7 +12,7 @@ export class Question39Page implements OnInit {
 
   ngOnInit() {}
 
-  correctAnswer: string = 'choice-2';
+  correctAnswer: string = 'choice-3';
   selectedAnswer: string = '';
   showResult: boolean = false;
 

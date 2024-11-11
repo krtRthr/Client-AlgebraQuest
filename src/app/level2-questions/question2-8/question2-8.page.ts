@@ -14,7 +14,7 @@ export class Question28Page implements OnInit {
 
   correctAnswer: string = 'choice-2';
   selectedAnswer: string = '';
-
+ 
   constructor(
     private alertController: AlertController,
     private router: Router,

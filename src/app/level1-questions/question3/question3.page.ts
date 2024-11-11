@@ -10,8 +10,8 @@ import { ScoreService } from 'src/app/score.service';
   styleUrls: ['./question3.page.scss'],
 })
 export class Question3Page  {
-
-  correctAnswer: string = 'choice-1';
+ 
+  correctAnswer: string = 'choice-3';
   selectedAnswer: string = '';
 
   constructor(

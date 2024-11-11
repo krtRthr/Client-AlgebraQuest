@@ -10,8 +10,8 @@ import { ScoreService } from 'src/app/score.service';
 export class Question5Page {
 
   
-  correctAnswer: string = 'choice-4';
-  selectedAnswer: string = '';
+  correctAnswer: string = 'choice-2';
+  selectedAnswer: string = ''; 
 
   constructor(
     private alertController: AlertController,

@@ -8,9 +8,9 @@ import { ScoreService } from 'src/app/score.service';
   templateUrl: './question1.page.html',
   styleUrls: ['./question1.page.scss'],
 })
-export class Question1Page {
+export class Question1Page { 
 
-  correctAnswer: string = 'choice-3';
+  correctAnswer: string = 'choice-1';
   selectedAnswer: string = '';
   showResult: boolean = false;
 

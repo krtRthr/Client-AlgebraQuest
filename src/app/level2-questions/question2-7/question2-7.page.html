@@ -26,7 +26,9 @@
       [ngClass]="{'selected': selectedAnswer === 'choice-1', 'correct': correctAnswer === 'choice-1'}"
       (click)="selectAnswer('choice-1')"
     >
-      <span style="display: inline-block; text-align: center"> A. Add or subtract the numerators </span>
+      <span style="display: inline-block; text-align: center">
+        A. Add or subtract the numerators
+      </span>
     </button>
     <button
       class="button"
@@ -42,7 +44,9 @@
       [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
       (click)="selectAnswer('choice-3')"
     >
-      <span style="display: inline-block; text-align: center"> C. Copy the common denominator </span>
+      <span style="display: inline-block; text-align: center">
+        C. Copy the common denominator
+      </span>
     </button>
     <button
       class="button"
@@ -50,7 +54,9 @@
       [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
       (click)="selectAnswer('choice-4')"
     >
-      <span style="display: inline-block; text-align: center"> D. Cancel out the common factor </span>
+      <span style="display: inline-block; text-align: center">
+        D. Cancel out the common factor
+      </span>
     </button>
     <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
       Submit

@@ -23,9 +23,9 @@
       id="choice-1"
       [ngClass]="getClass('choice-1')"
       (click)="selectAnswer('choice-1')"
-      (click)="choose_button()"
+      (click)="choose_button()" 
     >
-      <sup>15x - 3y</sup>&frasl;<sub>xy</sub>
+      <sup>-x - 3</sup>&frasl;<sub>xy</sub>
     </button>
 
     <button
@@ -35,7 +35,7 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <sup>9xy</sup>&frasl;<sub>xy</sub>
+      <sup>-x + 7y</sup>&frasl;<sub>xy</sub>
     </button>
 
     <button
@@ -45,7 +45,7 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      <sup>-13y</sup>&frasl;<sub>xy</sub>
+      <sup>15x + 7y</sup>&frasl;<sub>xy</sub>
     </button>
 
     <button
@@ -55,7 +55,7 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      <sup>9x - 13y</sup>&frasl;<sub>xy</sub>
+      <sup>15x - 3y</sup>&frasl;<sub>xy</sub>
     </button>
 
     <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
