@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true" class="main-page">
+  <div class="HomePage-button-container">
+    <img
+      class="button"
+      id="back-button"
+      routerLink="/tutorialpage"
+      src="../../../assets/AlgebraQuest_Asset/back btn (1).png"
+      (click)="stopVideo()"
+      (click)="playButton()"
+    />
+    <p class="button">Tutorial 3</p>
+    <video
+      class="button"
+      controls
+      autoplay
+      width="80%"
+      src="../../../assets/AlgebraQuest_Tutorial/AlgebraQuest Tutorial3.mp4"
+    ></video>
+
+    <button routerLink="/level-3" class="button" id="play-button" (click)="playButton()">
+      Proceed to Level 3
+    </button>
+  </div>
+</ion-content>

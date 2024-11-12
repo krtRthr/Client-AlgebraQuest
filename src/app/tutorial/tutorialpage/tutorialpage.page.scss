@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Game-Over";
+  src: url("../../../assets/font/game_over_2/Game\ Over.otf");
+}
+
+@font-face {
+  font-family: "Good-Game";
+  src: url("../../../assets/font/good_game/Good-Game.ttf");
+}
+
+.main-page {
+  --background: url("../../../assets/AlgebraQuest_Asset/Android\ Large\ -\ 35.png") 0 0/ 100% 100% no-repeat;
+  //background-position: 0 0;
+  //background-size: 100% 100%;
+  //background-repeat: no-repeat;
+}
+
+.button-container {
+  max-width: 50rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#back-button{
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+#button-1,
+#button-2, 
+#button-3 {
+  display: block;
+  width: 65%;
+  height: 10%;
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  border-radius: 25px; 
+  border: none;
+  font-family: "Good-Game";
+  -webkit-text-stroke: 0.5px #000;
+}
+
+#button-1 {
+  background: linear-gradient(#F2C934, #f2ce4d, #d7c68a);
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 3px #5e5c5c;
+}
+
+#button-2 {
+  background: linear-gradient(#40AFDE, #59afd4, #c7d0d5);
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 3px #5e5c5c;
+}
+
+#button-3 {
+  background: linear-gradient(#DB2727, #e32f4d, #db9f9f);
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 3px #5e5c5c;
+}

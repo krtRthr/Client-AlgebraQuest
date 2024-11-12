@@ -154,7 +154,23 @@ const routes: Routes = [
   {
     path: 'question4',
     loadChildren: () => import('./level1-questions/question4/question4.module').then( m => m.Question4PageModule)
+  },  {
+    path: 'tutorial1',
+    loadChildren: () => import('./tutorial/tutorial1/tutorial1.module').then( m => m.Tutorial1PageModule)
+  },
+  {
+    path: 'tutorial2',
+    loadChildren: () => import('./tutorial/tutorial2/tutorial2.module').then( m => m.Tutorial2PageModule)
+  },
+  {
+    path: 'tutorial3',
+    loadChildren: () => import('./tutorial/tutorial3/tutorial3.module').then( m => m.Tutorial3PageModule)
+  },
+  {
+    path: 'tutorialpage',
+    loadChildren: () => import('./tutorial/tutorialpage/tutorialpage.module').then( m => m.TutorialpagePageModule)
   }
+
 
 ];
 

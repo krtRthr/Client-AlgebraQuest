@@ -9,7 +9,7 @@
 }
 
 .main-page {
-  --background: url("../../assets/AlgebraQuest_Asset/2nd\ page\ bg.png") 0 0/ 100% 100% no-repeat;
+  --background: url("../../assets/AlgebraQuest_Asset/Android\ Large\ -\ 35.png") 0 0/ 100% 100% no-repeat;
   //background-position: 0 0;
   //background-size: 100% 100%;
   //background-repeat: no-repeat;
@@ -35,7 +35,7 @@
 
 .HomePage-button-container {
   margin-top: 20%;
-}
+} 
 
 .button-container {
   max-width: 50rem;
@@ -46,7 +46,8 @@
 }
 
 #button-1,
-#button-2 {
+#button-2, 
+#button-3 {
   display: block;
   width: 58%;
   height: 8vh;
@@ -70,7 +71,14 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 2px 4px 3px #5e5c5c;
 }
- 
+
+#button-3 {
+  background: linear-gradient(#F2C934, #f2ce4d, #cab66e);
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 3px #5e5c5c;
+}
+
 #filler{
   width: 2px;
   height: 2px;
