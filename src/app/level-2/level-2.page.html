@@ -1,15 +1,20 @@
 <ion-content [fullscreen]="true" class="level2-page">
-
-  
   <div class="button-container">
-    <img 
+    <img
       class="button"
       id="back-button"
       routerLink="/landing-page"
       src="../../assets/AlgebraQuest_Asset/back btn (1).png"
       (click)="playButton()"
     />
-    <p class="button" id="title">Level 2</p> 
+    <img
+      class="button"
+      id="tutorial-button"
+      routerLink="/tutorial2"
+      (click)="playButton()"
+      src="../../assets/AlgebraQuest_Asset/Group 135.png"
+    />
+    <p class="button" id="title">Level 2</p>
     <img
       (click)="changeImage($event, 1)"
       [src]="imageSrc1"
