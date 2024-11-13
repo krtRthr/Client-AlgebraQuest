@@ -24,7 +24,6 @@ export class Tutorial3Page implements OnInit {
     if (this.tutorialVideo && this.tutorialVideo.nativeElement) {
       this.tutorialVideo.nativeElement.pause();
     }
-    this.router.navigate(['/tutorialpage']);
   }
 
   playButton(){

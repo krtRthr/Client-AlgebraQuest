@@ -52,9 +52,15 @@
   left: 2%;
 }
 
+#arithmetic-operation {
+  padding: 0px 5px 0px 5px;
+  font-size: 1.4rem;
+  color: #51DD4E;
+}
+
 #question-cont {
   width: 85%;
-  height: 130px;
+  height: 140px;
   background: linear-gradient(#6ba1b8, #40AFDE, #6ba1b8);
   top: 25%;
   border-radius: 10px;
@@ -74,7 +80,7 @@
   top: 28%;
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1rem;
+  font-size: 0.9rem;
   -webkit-text-stroke: 0.8px #000000;
   text-align: center;
   padding-left: 8px;

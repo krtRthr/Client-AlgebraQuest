@@ -17,7 +17,13 @@
       src="../../../assets/AlgebraQuest_Tutorial/AlgebraQuest Tutorial3.mp4"
     ></video>
 
-    <button routerLink="/level-3" class="button" id="play-button" (click)="playButton()">
+    <button
+      routerLink="/level-3"
+      class="button"
+      id="play-button"
+      (click)="stopVideo()"
+      (click)="playButton()"
+    >
       Proceed to Level 3
     </button>
   </div>

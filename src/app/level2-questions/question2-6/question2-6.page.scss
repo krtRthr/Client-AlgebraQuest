@@ -42,7 +42,7 @@
   font-size: 1.4rem;
   color: #51DD4E;
 }
-
+ 
 #title {
   font-family: "Good-Game";
   font-size: 4rem;
@@ -58,7 +58,7 @@
 } 
 
 #question-cont {
-  width: 88%;
+  width: 80%;
   height: 145px;
   background: linear-gradient(#6ba1b8, #40AFDE, #6ba1b8);
   top: 25%;
@@ -68,7 +68,7 @@
 }
 
 #question {
-  top: 5%;
+  top: 3%;
   color: #51DD4E;
   margin: 0;
   font-family: "Good-Game";
@@ -77,19 +77,20 @@
 }
 
 #is {
+  color: #ffffff;
   margin: 0;
   font-size: 1.6rem;
   -webkit-text-stroke: 1px #000000;
-  top: 26%;
+  top: 18%;
   text-align: center;
 }
 
 #sub-question {
   margin: 0;
   font-family: "Good-Game";
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   -webkit-text-stroke: 1px #000000;
-  top: 60%;
+  top: 44%;
   text-align: center;
 }
 

@@ -18,6 +18,14 @@
       src="../../../assets/AlgebraQuest_Tutorial/AlgebraQuest Tutorial1.mp4"
     ></video>
 
-    <button routerLink="/level-1" class="button" id="play-button" (click)="playButton()">Proceed to Level 1</button>
+    <button
+      routerLink="/level-1"
+      class="button"
+      id="play-button"
+      (click)="stopVideo()"
+      (click)="playButton()"
+    >
+      Proceed to Level 1
+    </button>
   </div>
 </ion-content>

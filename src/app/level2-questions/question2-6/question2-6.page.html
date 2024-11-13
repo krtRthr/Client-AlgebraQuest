@@ -14,11 +14,20 @@
       <p class="button" id="is" style="padding-right: 5px">is</p>
       <br />
       <p class="button" id="sub-question">
-        <sup>2x + 4</sup>&frasl;<sub>x<sup>2</sup> - 4</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> 2x + 4 </span>
+          <span style="display: block"> x<sup>2</sup> - 4 </span>
+        </span>
         <span id="arithmetic-operation"> + </span>
-        <sup>-x - 2</sup>&frasl;<sub>x<sup>2</sup> - 4</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> -x - 2</span>
+          <span style="display: block"> x<sup>2</sup> - 4 </span>
+        </span>
         <span id="arithmetic-operation"> = </span>
-        <sup>1</sup>&frasl;<sub>x - 2</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> 1</span>
+          <span style="display: block"> x - 2 </span>
+        </span>
       </p>
     </div>
 
@@ -31,7 +40,7 @@
     >
       <span style="padding-right: 10px">TRUE,</span><sup>1</sup>&frasl;<sub>x + 2</sub>
     </button>
-    <button 
+    <button
       class="button"
       id="choice-2"
       [ngClass]="{'selected': selectedAnswer === 'choice-2', 'correct': correctAnswer === 'choice-2'}"
