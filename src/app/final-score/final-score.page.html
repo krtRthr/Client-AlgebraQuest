@@ -4,12 +4,13 @@
   </audio>
   <div class="final-score-container">
     <h1>Congratulations!</h1>
-    <p>Your final score is: {{ finalScore }}</p>
     <button (click)="resetGame()" routerLink="/landing-page" (click)="playButton()">
       Play Again
     </button>
     <button routerLink="/landing-page" (click)="playButton()" (click)="resetGame()">
       Next Level
     </button>
+
+    <canvas id="confettiCanvas"></canvas>
   </div>
 </ion-content>

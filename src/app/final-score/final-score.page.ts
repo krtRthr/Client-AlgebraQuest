@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScoreService } from '../score.service';
+
 @Component({
   selector: 'app-final-score',
   templateUrl: './final-score.page.html',
@@ -29,4 +30,6 @@ export class FinalScorePage implements OnInit {
       audio.play();  
     }
   }
+
+  
 }
