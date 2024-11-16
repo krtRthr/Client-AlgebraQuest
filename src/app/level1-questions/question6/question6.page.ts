@@ -11,7 +11,7 @@ import { ScoreService } from 'src/app/score.service';
 export class Question6Page  {
 
 
-  correctAnswer: string = 'choice-3';
+  correctAnswer: string = 'choice-2';
   selectedAnswer: string = '';
 
   constructor(

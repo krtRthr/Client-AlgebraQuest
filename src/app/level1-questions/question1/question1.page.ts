@@ -85,6 +85,7 @@ export class Question1Page {
     }); 
     await alert.present();
   }
+  
   choose_button(){
     let audio = new Audio;
     audio.src="../assets/audio/choose_button.mp3"

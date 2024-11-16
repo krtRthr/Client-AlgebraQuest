@@ -38,7 +38,7 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <span style="padding-right: 10px">TRUE,</span><sub>5y - 3y</sub>
+      <span style="padding-right: 10px">TRUE</span>
     </button>
 
     <button
@@ -48,27 +48,7 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <span style="padding-right: 10px">FALSE,</span><sub>y - 2</sub>
-    </button>
-
-    <button
-      class="button"
-      id="choice-3"
-      [ngClass]="getClass('choice-3')"
-      (click)="selectAnswer('choice-3')"
-      (click)="choose_button()"
-    >
-      <span style="padding-right: 10px">TRUE,</span><sub>6y - 3y</sub>
-    </button>
-
-    <button
-      class="button"
-      id="choice-4"
-      [ngClass]="getClass('choice-4')"
-      (click)="selectAnswer('choice-4')"
-      (click)="choose_button()"
-    >
-      <span style="padding-right: 10px">FALSE,</span><sub>3y<sup>2</sup> - 3y</sub>
+      <span style="padding-right: 10px">FALSE</span>
     </button>
 
     <button class="button" id="submit" (click)="submitAnswer()">Submit</button>

@@ -13,9 +13,15 @@
       <p class="button" id="question">Simplify</p>
       <br />
       <p class="button" id="sub-question">
-        <sup>-1</sup>&frasl;<sub>2y</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> -1 </span>
+          <span style="display: block"> 2y </span>
+        </span>
         <span id="arithmetic-operation"> + </span>
-        <sup>3</sup>&frasl;<sub>2y</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> 3 </span>
+          <span style="display: block"> 2y </span>
+        </span>
       </p>
     </div>
     <button
@@ -25,7 +31,10 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      -<sup>1</sup>&frasl;<sub>y</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> -1 </span>
+        <span style="display: block"> y </span>
+      </span>
     </button>
     <button
       class="button"
@@ -34,7 +43,10 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <sup>1</sup>&frasl;<sub>y</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> 1 </span>
+        <span style="display: block"> y </span>
+      </span>
     </button>
     <button
       class="button"
@@ -43,7 +55,10 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      -<sup>2</sup>&frasl;<sub>y</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> -2 </span>
+        <span style="display: block"> y </span>
+      </span>
     </button>
     <button
       class="button"
@@ -52,7 +67,10 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      <sup>2</sup>&frasl;<sub>y</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> 2 </span>
+        <span style="display: block"> y </span>
+      </span>
     </button>
     <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
       Submit

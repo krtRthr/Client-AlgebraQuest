@@ -1,5 +1,5 @@
 <ion-content [fullscreen]="true" class="level1-question1">
-  <div class="content-container"> 
+  <div class="content-container">
     <img
       class="button"
       id="back-button"
@@ -13,9 +13,15 @@
       <p class="button" id="question">Simplify</p>
       <br />
       <p class="button" id="sub-question">
-        <sup>7</sup>&frasl;<sub>x</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> 7 </span>
+          <span style="display: block"> x </span>
+        </span>
         <span id="arithmetic-operation"> + </span>
-        <sup>2</sup>&frasl;<sub>x</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> 2 </span>
+          <span style="display: block"> x </span>
+        </span>
       </p>
     </div>
 
@@ -27,7 +33,10 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <sup>9</sup>&frasl;<sub>x</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> 9 </span>
+        <span style="display: block"> x </span>
+      </span>
     </button>
 
     <button
@@ -37,7 +46,10 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <sup>9</sup>&frasl;<sub>x<sup>2</sup></sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> 9 </span>
+        <span style="display: block"> x<sup>2</sup> </span>
+      </span>
     </button>
 
     <button
@@ -47,7 +59,10 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      <sup>9</sup>&frasl;<sub>2x</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> 9 </span>
+        <span style="display: block"> 2x </span>
+      </span>
     </button>
 
     <button
@@ -57,7 +72,7 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      <sup>9</sup>
+      <span>9</span>
     </button>
 
     <button class="button" id="submit" (click)="submitAnswer()">Submit</button>

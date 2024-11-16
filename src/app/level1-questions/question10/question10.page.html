@@ -14,10 +14,21 @@
       <br />
       <p class="button" id="sub-question">
         <span>
-          If <span style="font-size: 1.4rem"><sup>_</sup>&frasl;<sub>_</sub></span> +
-          <span style="font-size: 1.4rem"><sup>2</sup>&frasl;<sub>x - 2</sub></span> =
-          <span style="font-size: 1.4rem"><sup>5</sup>&frasl;<sub>x - 2</sub>,</span> then what is
-          the missing Rational Algebraic Expression?
+          If
+          <span style="display: inline-block; text-align: center">
+            <span style="border-bottom: 3px solid black; display: block"> </span>
+            <span style="display: block; opacity: 0"> x - 2 </span>
+          </span>
+          <span id="arithmetic-operation"> + </span>
+          <span style="display: inline-block; text-align: center">
+            <span style="border-bottom: 3px solid black; display: block"> 2 </span>
+            <span style="display: block"> x-2 </span>
+          </span>
+          <span id="arithmetic-operation"> = </span>
+          <span style="display: inline-block; text-align: center">
+            <span style="border-bottom: 3px solid black; display: block"> 5 </span>
+            <span style="display: block"> x-2 </span> </span
+          >, then what is the missing Rational Algebraic Expression?
         </span>
       </p>
     </div>
@@ -28,8 +39,10 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <span style="display: inline-block; text-align: center">
-        A. <sup>3</sup>&frasl;<sub>x - 1</sub>
+      A.
+      <span style="display: inline-block; text-align: center; font-size: 1.1rem; padding-left: 5px">
+        <span style="border-bottom: 3px solid black; display: block"> 3 </span>
+        <span style="display: block"> x - 1 </span>
       </span>
     </button>
     <button
@@ -39,8 +52,10 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <span style="display: inline-block; text-align: center">
-        B. <sup>-3</sup>&frasl;<sub>x - 2</sub>
+      B.
+      <span style="display: inline-block; text-align: center; font-size: 1.1rem; padding-left: 5px">
+        <span style="border-bottom: 3px solid black; display: block"> -3 </span>
+        <span style="display: block"> x - 2 </span>
       </span>
     </button>
     <button
@@ -50,8 +65,10 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      <span style="display: inline-block; text-align: center">
-        C. <sup>-3</sup>&frasl;<sub>x - 1</sub>
+      C.
+      <span style="display: inline-block; text-align: center; font-size: 1.1rem; padding-left: 5px">
+        <span style="border-bottom: 3px solid black; display: block"> -3 </span>
+        <span style="display: block"> x - 2 </span>
       </span>
     </button>
     <button
@@ -61,8 +78,10 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      <span style="display: inline-block; text-align: center">
-        D. <sup>3</sup>&frasl;<sub>x - 2</sub>
+      D.
+      <span style="display: inline-block; text-align: center; font-size: 1.1rem; padding-left: 5px">
+        <span style="border-bottom: 3px solid black; display: block"> 3 </span>
+        <span style="display: block"> x - 2 </span>
       </span>
     </button>
     <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">

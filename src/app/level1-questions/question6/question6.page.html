@@ -14,11 +14,21 @@
       <br />
       <p class="button" id="sub-question">
         <span style="padding-right: 12px">is</span>
-        <sup>4</sup>&frasl;<sub>yz</sub>
+
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> 4 </span>
+          <span style="display: block"> yz </span>
+        </span>
         <span id="arithmetic-operation"> - </span>
-        <sup>-9</sup>&frasl;<sub>yz</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> -9 </span>
+          <span style="display: block"> yz </span>
+        </span>
         <span id="arithmetic-operation"> = </span>
-        <sup>-5</sup>&frasl;<sub>yz</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> -5 </span>
+          <span style="display: block"> yz </span>
+        </span>
       </p>
     </div>
 
@@ -29,7 +39,7 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <span style="padding-right: 10px">TRUE,</span><sup>13</sup>&frasl;<sub>y</sub>
+      <span style="padding-right: 10px">TRUE</span>
     </button>
     <button
       class="button"
@@ -38,25 +48,7 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <span style="padding-right: 10px">TRUE,</span><sup>-9</sup>&frasl;<sub>yz</sub>
-    </button>
-    <button
-      class="button"
-      id="choice-3"
-      [ngClass]="{'selected': selectedAnswer === 'choice-3', 'correct': correctAnswer === 'choice-3'}"
-      (click)="selectAnswer('choice-3')"
-      (click)="choose_button()"
-    >
-      <span style="padding-right: 10px">FALSE,</span><sup>13</sup>&frasl;<sub>yz</sub>
-    </button>
-    <button
-      class="button"
-      id="choice-4"
-      [ngClass]="{'selected': selectedAnswer === 'choice-4', 'correct': correctAnswer === 'choice-4'}"
-      (click)="selectAnswer('choice-4')"
-      (click)="choose_button()"
-    >
-      <span style="padding-right: 10px">FALSE,</span><sup>4</sup>&frasl;<sub>yz</sub>
+      <span style="padding-right: 10px">FALSE</span>
     </button>
     <button class="button" id="submit" (click)="submitAnswer()" (click)="playButton()">
       Submit

@@ -79,7 +79,7 @@ export class Question37Page implements OnInit {
       buttons: [{
         text: 'Next Question',
         handler: () => {
-          this.router.navigate(['/question3-5']);
+          this.router.navigate(['/question3-8']);
         }
       }
     ],

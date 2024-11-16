@@ -38,9 +38,12 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <sup>-3x<sup>2</sup> + 2x + 3</sup>&frasl;<sub>x + y</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block">-3x<sup>2</sup> + 2x + 3</span>
+        <span style="display: block"> x + y </span>
+      </span>
     </button>
-  
+
     <button
       class="button"
       id="choice-2"
@@ -48,7 +51,10 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <sup>3x<sup>2</sup> + 2x + 3</sup>&frasl;<sub>x + y</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block">3x<sup>2</sup> + 2x + 3</span>
+        <span style="display: block"> x + y </span>
+      </span>
     </button>
 
     <button
@@ -58,7 +64,10 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      <sup>3x<sup>4</sup> + 3</sup>&frasl;<sub>x + y</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block">3x<sup>4</sup> + 3</span>
+        <span style="display: block"> x + y </span>
+      </span>
     </button>
 
     <button
@@ -68,7 +77,10 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      <sup>5x<sup>4</sup> + 3</sup>&frasl;<sub>x + y</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block">5x<sup>4</sup> + 3</span>
+        <span style="display: block"> x + y </span>
+      </span>
     </button>
 
     <button class="button" id="submit" (click)="submitAnswer()">Submit</button>

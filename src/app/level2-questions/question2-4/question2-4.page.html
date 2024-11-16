@@ -14,8 +14,19 @@
       <p class="button" id="sub-question">
         <span>
           Subtract
-          <span style="font-size: 1.5rem"><sup>6x</sup>&frasl;<sub>x - 2</sub></span> from
-          <span style="font-size: 1.5rem"><sup>10x + 1</sup>&frasl;<sub>x - 2</sub></span>
+          <span style="font-size: 1rem">
+            <span style="display: inline-block; text-align: center">
+              <span style="border-bottom: 3px solid black; display: block"> 6x </span>
+              <span style="display: block"> x - 2 </span>
+            </span>
+          </span>
+          from
+          <span style="font-size: 1rem">
+            <span style="display: inline-block; text-align: center">
+              <span style="border-bottom: 3px solid black; display: block"> 10x + 1 </span>
+              <span style="display: block"> x - 2 </span>
+            </span>
+          </span>
         </span>
       </p>
     </div>
@@ -27,8 +38,11 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <sup>-4x - 1</sup>&frasl;<sub>x - 2</sub>
-    </button> 
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> -4x - 1 </span>
+        <span style="display: block"> x - 2 </span>
+      </span>
+    </button>
 
     <button
       class="button"
@@ -37,7 +51,10 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <sup>-4x + 1</sup>&frasl;<sub>x - 2</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> -4x + 1 </span>
+        <span style="display: block"> x - 2 </span>
+      </span>
     </button>
 
     <button
@@ -47,7 +64,10 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      <sup>4x - 1</sup>&frasl;<sub>x - 2</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> 4x - 1 </span>
+        <span style="display: block"> x - 2 </span>
+      </span>
     </button>
 
     <button
@@ -57,7 +77,10 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      <sup>4x + 1</sup>&frasl;<sub>x - 2</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> 4x + 1 </span>
+        <span style="display: block"> x - 2 </span>
+      </span>
     </button>
 
     <button class="button" id="submit" (click)="submitAnswer()">Submit</button>

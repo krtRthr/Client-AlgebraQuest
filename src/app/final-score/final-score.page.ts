@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ScoreService } from '../score.service';
+import * as confetti from 'canvas-confetti';
+
+
 
 @Component({
   selector: 'app-final-score',
@@ -30,6 +33,5 @@ export class FinalScorePage implements OnInit {
       audio.play();  
     }
   }
-
   
 }

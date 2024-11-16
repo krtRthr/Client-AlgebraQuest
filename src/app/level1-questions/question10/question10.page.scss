@@ -46,13 +46,19 @@
   -webkit-text-stroke: 2px #000000;
 }
 
+#arithmetic-operation {
+  padding: 0px 5px 0px 5px;
+  font-size: 1.2rem;
+  color: #51DD4E;
+}
+
 #back-button {
   top: 2%;
   left: 2%;
 }
 
 #question-cont {
-  width: 83%;
+  width: 87%;
   height: 140px;
   background: linear-gradient(#F1E5BA, #F2C934, #F2C934);
   top: 25%;
@@ -76,8 +82,8 @@
   font-size: 1rem;
   -webkit-text-stroke: 0.8px #000000;
   text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 #choice-1,

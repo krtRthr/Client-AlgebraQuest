@@ -12,9 +12,15 @@
       <p class="button" id="question">Question</p>
       <br />
       <p class="button" id="sub-question">
-        <sup>z - 7</sup>&frasl;<sub>z - 6</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> z - 7 </span>
+          <span style="display: block"> z - 6</span>
+        </span>
         <span id="arithmetic-operation"> + </span>
-        <sup>2z + 5</sup>&frasl;<sub>z - 6</sub>
+        <span style="display: inline-block; text-align: center">
+          <span style="border-bottom: 3px solid black; display: block"> 2z + 5 </span>
+          <span style="display: block"> z - 6 </span>
+        </span>
       </p>
     </div>
 
@@ -25,7 +31,10 @@
       (click)="selectAnswer('choice-1')"
       (click)="choose_button()"
     >
-      <sup>-z - 12</sup>&frasl;<sub>z - 6</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> -z - 12 </span>
+        <span style="display: block"> z - 6</span>
+      </span>
     </button>
 
     <button
@@ -35,7 +44,10 @@
       (click)="selectAnswer('choice-2')"
       (click)="choose_button()"
     >
-      <sup>-z - 1</sup>&frasl;<sub>z - 6</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> -z - 1 </span>
+        <span style="display: block"> z - 6</span>
+      </span>
     </button>
 
     <button
@@ -45,7 +57,10 @@
       (click)="selectAnswer('choice-3')"
       (click)="choose_button()"
     >
-      <sup>-3z - 11</sup>&frasl;<sub>z - 6</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> -3z - 11 </span>
+        <span style="display: block"> z - 6</span>
+      </span>
     </button>
 
     <button
@@ -55,7 +70,10 @@
       (click)="selectAnswer('choice-4')"
       (click)="choose_button()"
     >
-      <sup>-3z - 1</sup>&frasl;<sub>z - 6</sub>
+      <span style="display: inline-block; text-align: center">
+        <span style="border-bottom: 3px solid black; display: block"> -3z - 1 </span>
+        <span style="display: block"> z - 6</span>
+      </span>
     </button>
 
     <button class="button" id="submit" (click)="submitAnswer()">Submit</button>
