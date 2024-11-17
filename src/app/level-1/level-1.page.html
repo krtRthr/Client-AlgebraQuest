@@ -1,5 +1,7 @@
-<ion-content [fullscreen]="true" class="level1-page">
+<ion-content class="level1-page">
   <div class="button-container">
+    <!-- Back and Tutorial Buttons -->
+     <p id="title">Level 1</p>
     <img
       class="button"
       id="back-button"
@@ -11,89 +13,23 @@
       class="button"
       id="tutorial-button"
       routerLink="/tutorial1"
-      (click)="playButton()"
+      (click)="playButton(); revisitTutorial()"
+      
       src="../../assets/AlgebraQuest_Asset/Group 132.png"
     />
-    <p class="button" id="title">Level 1</p>
-    <img
-      (click)="changeImage($event, 1)"
-      [src]="imageSrc1"
-      class="button"
-      id="button1"
-      routerLink="/question1"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 2)"
-      [src]="imageSrc2"
-      class="button"
-      id="button2"
-      routerLink="/question2"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 3)"
-      [src]="imageSrc3"
-      class="button"
-      id="button3"
-      routerLink="/question3"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 4)"
-      [src]="imageSrc4"
-      class="button"
-      id="button4"
-      routerLink="/question4"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 5)"
-      [src]="imageSrc5"
-      class="button"
-      id="button5"
-      routerLink="/question5"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 6)"
-      [src]="imageSrc6"
-      class="button"
-      id="button6"
-      routerLink="/question6"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 7)"
-      [src]="imageSrc7"
-      class="button"
-      id="button7"
-      routerLink="/question7"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 8)"
-      [src]="imageSrc8"
-      class="button"
-      id="button8"
-      routerLink="/question8"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 9)"
-      [src]="imageSrc9"
-      class="button"
-      id="button9"
-      routerLink="/question9"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 10)"
-      [src]="imageSrc10"
-      class="button"
-      id="button10"
-      routerLink="/question10"
-      (click)="playButton()"
-    />
+    
+    <!-- Level Buttons -->
+    <ng-container *ngFor="let imageSrc of currentImageSrcs; let i = index">
+      <button
+        class="button"
+        [id]="'button' + (i + 1)"
+        [routerLink]="buttonStates[i] ? '/question' + (i + 1) : null"
+        [disabled]="!buttonStates[i]"
+        (click)="buttonStates[i] && playButton(); changeImage($event, i + 1)"
+      >
+        <img [src]="currentImageSrcs[i]" [class.disabled]="!buttonStates[i]" />
+      </button>
+    </ng-container>
+    
   </div>
 </ion-content>

@@ -1,24 +1,41 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { BackgroundMusicService } from './background-music.service';
+import { Router, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
+  private routerSubscription: Subscription;
+  private musicStopRoutes: string[] = [
+    '/tutorialpage',
+    '/tutorial1',
+    '/tutorial2',
+    '/tutorial3',
+    '/final-score',
+  ];
 
-  @ViewChild('backgroundMusic', { static: true }) backgroundMusic!: ElementRef<HTMLAudioElement>;
+  constructor(private router: Router, private musicService: BackgroundMusicService) {
+    this.routerSubscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const currentUrl = event.url.split('?')[0].toLowerCase(); // Ignore query params and normalize case
+        const isMusicStopRoute = this.musicStopRoutes.some(
+          (route) => route.toLowerCase() === currentUrl || `${route}/` === currentUrl
+        );
 
-  constructor(private musicService: BackgroundMusicService) {}
-
-  ngAfterViewInit() {
-    // Initialize the audio element in the service
-    this.musicService.initializeAudioElement(this.backgroundMusic.nativeElement);
+        if (isMusicStopRoute) {
+          this.musicService.stopMusic();
+        } else {
+          this.musicService.playMusic();
+        }
+      }
+    });
   }
-  background() {
-    const audio = document.getElementById('background-music') as HTMLAudioElement;
-    if (audio) {
-      audio.play();  
-    }
+
+  ngOnDestroy(): void {
+    this.routerSubscription.unsubscribe();
   }
 }

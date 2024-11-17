@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular'; 
 import { BackgroundMusicService } from '../../background-music.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-tutorialpage',
   templateUrl: './tutorialpage.page.html',
@@ -16,7 +16,7 @@ export class TutorialpagePage implements OnInit {
     music: 0 
   };
   private audio: HTMLAudioElement;
-  constructor(private navCtrl: NavController, private musicService: BackgroundMusicService) {
+  constructor(private navCtrl: NavController, private musicService: BackgroundMusicService, private router: Router) {
     
     this.audio = new Audio();
     this.audio.src = '../assets/audio/background.mp3'; // Update path as needed
@@ -50,8 +50,7 @@ export class TutorialpagePage implements OnInit {
     audio.play();
   }
 
-  onButtonClick() {
-    this.musicService.stopMusic(); // Stop the background music
+  revisitTutorial(tutorial: string) {
+    this.router.navigate([`/${tutorial}`], { queryParams: { revisit: true } });
   }
-
 }

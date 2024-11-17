@@ -22,6 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none;
 }
 
 .button {
@@ -29,12 +30,15 @@
   justify-content: center;
   align-items: center;
   position: absolute;
+  background: none;
 }
 
 #title {
   font-family: "Good-Game";
   font-size: 4rem;
-  top: 3.5%;
+  top: 0%;
+  left: 40%;
+  position: absolute;
   color: #ffffff;
   padding: 0;
   margin: 0;
@@ -46,8 +50,8 @@
   left: 2%;
 }
 
-#tutorial-button{
-  top:2%;
+#tutorial-button {
+  top: 2%;
   right: 3%;
   width: 4rem;
 }
@@ -102,3 +106,8 @@
   left: 46%;
 }
 
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}

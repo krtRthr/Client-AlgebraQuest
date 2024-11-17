@@ -5,24 +5,21 @@
       id="back-button"
       routerLink="/tutorialpage"
       src="../../../assets/AlgebraQuest_Asset/back btn (1).png"
-      (click)="stopVideo()"
-      (click)="playButton()"
+      (click)="stopVideo(); playButton()"
     />
     <p class="button">Tutorial 2</p>
     <video
-      class="button"
+      #tutorialVideo2
       controls
       autoplay
       width="80%"
-      src="../../../assets/AlgebraQuest_Tutorial/AlgebraQuest Tutorial2.mp4"
-    ></video>
-
+      src="../../../assets/AlgebraQuest_Tutorial/AlgebraQuest Tutorial2.mp4">
+    </video>
     <button
       routerLink="/level-2"
       class="button"
       id="play-button"
-      (click)="stopVideo()"
-      (click)="playButton()"
+      (click)="stopVideo() ; playButton()"
     >
       Proceed to Level 2
     </button>

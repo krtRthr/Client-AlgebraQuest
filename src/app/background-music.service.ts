@@ -1,29 +1,27 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BackgroundMusicService {
+  private audio: HTMLAudioElement | null = null;
 
-  private audioElement: HTMLAudioElement | null = null;
-
-  // Initialize the audio element, typically called from app.component.ts
-  initializeAudioElement(audioElement: HTMLAudioElement) {
-    this.audioElement = audioElement;
+  constructor() {
+    this.audio = new Audio();
+    this.audio.src = 'assets/audio/background.mp3'; // Path to your audio file
+    this.audio.loop = true; // Enable looping for continuous playback
   }
 
-  // Method to play music
   playMusic() {
-    if (this.audioElement) {
-      this.audioElement.play().catch(error => console.error('Error playing music:', error));
+    if (this.audio) {
+      this.audio.play();
     }
   }
 
-  // Method to pause and stop music
   stopMusic() {
-    if (this.audioElement) {
-      this.audioElement.pause();
-      this.audioElement.currentTime = 0; // Optionally reset to the start
+    if (this.audio) {
+      this.audio.pause();
+      this.audio.currentTime = 0; // Reset to the beginning
     }
   }
 }

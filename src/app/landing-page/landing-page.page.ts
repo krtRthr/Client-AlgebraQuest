@@ -1,51 +1,55 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { BackgroundMusicService } from '../background-music.service';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.page.html',
   styleUrls: ['./landing-page.page.scss'],
 })
-export class LandingPagePage {
- 
-  /*
-  imageSrc1 = '../../assets/AlgebraQuest_Asset/level 2 card unlocked.png';
-  imageSrc2 = '../../assets/AlgebraQuest_Asset/level 3 card unlocked.png';
+export class LandingPagePage implements OnInit,OnDestroy {
+  constructor(private musicService:BackgroundMusicService ){}
 
-  newImageSrc1 = '../../assets/AlgebraQuest_Asset/level 2 card (1).png';
-  newImageSrc2 = '../../assets/AlgebraQuest_Asset/LEVEL 3 CARD (1).png';
+  cardUnlocked: boolean[] = [true, false, false]; 
 
-  changeImage(event: Event, buttonId: number) {  
-    const target = event.target as HTMLImageElement;
-    switch (buttonId) {
-      case 1:
-        target.src = this.newImageSrc1;
-        break;
-      case 2:
-        target.src = this.newImageSrc2;
-        break;
-      default:
-        break;
-    }
-  }*/
-
-  cardUnlocked = [true, false, false]; 
-
-
+  ngOnInit() {
+    this.loadCardState(); 
+    
+  }
+  ngOnDestroy() {
+  }
+  // Check if a card is disabled
   isCardDisabled(cardIndex: number): boolean {
     return !this.cardUnlocked[cardIndex];
   }
 
+  // Unlock the next card
   unlockCard(cardIndex: number) {
-    if (cardIndex >= 0 && cardIndex < this.cardUnlocked.length - 1) { 
-      this.cardUnlocked[cardIndex + 1] = true; 
+    if (cardIndex >= 0 && cardIndex < this.cardUnlocked.length - 1) {
+      if (!this.cardUnlocked[cardIndex + 1]) {
+        this.cardUnlocked[cardIndex + 1] = true;
+        this.saveCardState(); // Save the updated state
+      }
     }
   }
 
-  playButton(){
-    let audio = new Audio();
+  // Save the cardUnlocked state to localStorage
+  saveCardState() {
+    localStorage.setItem('cardUnlocked', JSON.stringify(this.cardUnlocked));
+  }
+
+  // Load the cardUnlocked state from localStorage
+  loadCardState() {
+    const savedState = localStorage.getItem('cardUnlocked');
+    if (savedState) {
+      this.cardUnlocked = JSON.parse(savedState);
+    }
+  }
+
+  // Play the button click sound
+  playButton() {
+    const audio = new Audio();
     audio.src = "../assets/audio/button-124476.mp3";
     audio.load();
     audio.play();
-   }  
-  
+  }
 }

@@ -13,7 +13,7 @@ export class Question35Page implements OnInit {
 
   ngOnInit() {}
 
-  correctAnswer: string = 'choice-1';
+  correctAnswer: string = 'choice-2';
   selectedAnswer: string = '';
   showResult: boolean = false;
 

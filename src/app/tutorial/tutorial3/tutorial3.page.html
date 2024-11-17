@@ -5,12 +5,11 @@
       id="back-button"
       routerLink="/tutorialpage"
       src="../../../assets/AlgebraQuest_Asset/back btn (1).png"
-      (click)="stopVideo()"
-      (click)="playButton()"
+      (click)="stopVideo(); playButton()"
     />
     <p class="button">Tutorial 3</p>
     <video
-      class="button"
+      #tutorialVideo3
       controls
       autoplay
       width="80%"
@@ -21,8 +20,7 @@
       routerLink="/level-3"
       class="button"
       id="play-button"
-      (click)="stopVideo()"
-      (click)="playButton()"
+      (click)="stopVideo(); playButton()"
     >
       Proceed to Level 3
     </button>

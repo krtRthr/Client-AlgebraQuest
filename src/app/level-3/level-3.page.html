@@ -10,91 +10,25 @@
     <img
       class="button"
       id="tutorial-button"
-      routerLink="/tutorial2"
-      (click)="playButton()"
+      routerLink="/tutorial3"
+      (click)="playButton(); revisitTutorial()"
       src="../../assets/AlgebraQuest_Asset/Group 136.png"
     />
     <p class="button" id="title">Level 3</p>
 
-    <img
-      (click)="changeImage($event, 1)"
-      [src]="imageSrc1"
-      class="button"
-      routerLink="/question3-1"
-      id="button1"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 2)"
-      [src]="imageSrc2"
-      class="button"
-      routerLink="/question3-2"
-      id="button2"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 3)"
-      [src]="imageSrc3"
-      class="button"
-      routerLink="/question3-3"
-      id="button3"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 4)"
-      [src]="imageSrc4"
-      class="button"
-      routerLink="/question3-4"
-      id="button4"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 5)"
-      [src]="imageSrc5"
-      class="button"
-      routerLink="/question3-5"
-      id="button5"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 6)"
-      [src]="imageSrc6"
-      class="button"
-      routerLink="/question3-6"
-      id="button6"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 7)"
-      [src]="imageSrc7"
-      class="button"
-      routerLink="/question3-7"
-      id="button7"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 8)"
-      [src]="imageSrc8"
-      class="button"
-      routerLink="/question3-8"
-      id="button8"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 9)"
-      [src]="imageSrc9"
-      class="button"
-      routerLink="/question3-9"
-      id="button9"
-      (click)="playButton()"
-    />
-    <img
-      (click)="changeImage($event, 10)"
-      [src]="imageSrc10"
-      class="button"
-      routerLink="/question3-10"
-      id="button10"
-      (click)="playButton()"
-    />
+    <ng-container *ngFor="let imageSrc of currentImageSrcs; let i = index">
+      <button
+        class="button"
+        [id]="'button' + (i + 1)"
+        [routerLink]="buttonStates[i] ? '/question3-' + (i + 1) : null"        
+        [disabled]="!buttonStates[i]"
+        (click)="buttonStates[i] && playButton(); changeImage($event, i + 1)"
+      >
+        <img
+          [src]="imageSrc"
+          [class.disabled]="!buttonStates[i]"
+        />
+      </button>
+    </ng-container>
   </div>
 </ion-content>
