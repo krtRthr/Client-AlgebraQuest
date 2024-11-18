@@ -10,7 +10,7 @@ import { ScoreService } from 'src/app/score.service';
 })
 export class Question4Page {
 
-  correctAnswer: string = 'choice-2';
+  correctAnswer: string = 'choice-1';
   selectedAnswer: string = ''; 
 
   constructor(
