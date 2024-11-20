@@ -13,20 +13,24 @@ export class Questions210Page implements OnInit {
   ngOnInit() {}
   correctAnswer: string = 'choice-3';
   selectedAnswer: string = '';
+  showResult: boolean = false;
 
   constructor(
     private alertController: AlertController,
     private router: Router,
-    private scoreService: ScoreService 
-
+    private scoreService: ScoreService
   ) {}
 
   selectAnswer(answer: string) {
-    this.selectedAnswer = answer;
+    if (!this.showResult) {
+      this.selectedAnswer = answer;
+    }
   }
 
   async submitAnswer() {
     if (this.selectedAnswer) {
+      this.showResult = true;
+
       let header: string;
       let message: string;
 
@@ -41,7 +45,7 @@ export class Questions210Page implements OnInit {
         this.incorrectAudio();
       }
 
-      await this.presentAlert(header, message);
+      await this.presentAlert(header, message, this.selectedAnswer === this.correctAnswer);
     } else {
       const alert = await this.alertController.create({
         header: 'No Answer Selected',
@@ -53,47 +57,58 @@ export class Questions210Page implements OnInit {
     }
   }
 
-  async presentAlert(header: string, message: string) {
+  async presentAlert(header: string, message: string, isCorrect: boolean) {
     const alert = await this.alertController.create({
       header: header,
       message: message,
-      buttons: [{
-        text: 'Next Question',
-        handler: () => {
-          this.router.navigate(['/final-score']);
+      buttons: [
+        {
+          text: isCorrect ? 'Finish' : 'Try Again',
+          handler: () => {
+            if (isCorrect) {
+              this.router.navigate(['/final-score']);
+            } else {
+              this.showResult = false; // Reset for retry
+              this.selectedAnswer = ''; // Clear selected answer
+            }
+          }
         }
-      }
-    ], 
+      ],
       cssClass: 'custom-alert'
     });
     await alert.present();
   }
-  choose_button(){
-    let audio = new Audio;
-    audio.src="../assets/audio/choose_button.mp3"
+
+  choose_button() {
+    let audio = new Audio();
+    audio.src = "../assets/audio/choose_button.mp3";
     audio.load();
     audio.play();
   }
-  playButton(){
+
+  playButton() {
     let audio = new Audio();
     audio.src = "../assets/audio/button-124476.mp3";
     audio.load();
     audio.play();
-   }
-   correctAudio(){
+  }
+
+  correctAudio() {
     let audio = new Audio();
-    audio.src ="../assets/audio/win.wav"
+    audio.src = "../assets/audio/win.wav";
     audio.load();
     audio.play();
-   }
-   incorrectAudio(){
+  }
+
+  incorrectAudio() {
     let audio = new Audio();
-    audio.src="../assets/audio/lose.wav"
+    audio.src = "../assets/audio/lose.wav";
     audio.load();
     audio.play();
-   }
-   bgMusic(){
+  }
+
+  bgMusic() {
     let audio = new Audio();
-    audio.src="../assets/audio/background.mp3"
-   }
+    audio.src = "../assets/audio/background.mp3";
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { ScoreService } from 'src/app/score.service';
@@ -8,25 +8,28 @@ import { ScoreService } from 'src/app/score.service';
   templateUrl: './question6.page.html',
   styleUrls: ['./question6.page.scss'],
 })
-export class Question6Page  {
-
+export class Question6Page {
 
   correctAnswer: string = 'choice-2';
   selectedAnswer: string = '';
+  showResult: boolean = false;
 
   constructor(
     private alertController: AlertController,
     private router: Router,
-    private scoreService: ScoreService 
-
+    private scoreService: ScoreService
   ) {}
 
   selectAnswer(answer: string) {
-    this.selectedAnswer = answer;
+    if (!this.showResult) {
+      this.selectedAnswer = answer;
+    }
   }
 
   async submitAnswer() {
     if (this.selectedAnswer) {
+      this.showResult = true;
+
       let header: string;
       let message: string;
 
@@ -41,7 +44,7 @@ export class Question6Page  {
         this.incorrectAudio();
       }
 
-      await this.presentAlert(header, message);
+      await this.presentAlert(header, message, this.selectedAnswer === this.correctAnswer);
     } else {
       const alert = await this.alertController.create({
         header: 'No Answer Selected',
@@ -53,43 +56,53 @@ export class Question6Page  {
     }
   }
 
-  async presentAlert(header: string, message: string) {
+  async presentAlert(header: string, message: string, isCorrect: boolean) {
     const alert = await this.alertController.create({
       header: header,
       message: message,
-      buttons: [{
-        text: 'Next Question',
-        handler: () => {
-          this.router.navigate(['/question7']);
+      buttons: [
+        {
+          text: isCorrect ? 'Next Question' : 'Try Again',
+          handler: () => {
+            if (isCorrect) {
+              this.router.navigate(['/question7']);
+            } else {
+              this.showResult = false; // Reset for retry
+              this.selectedAnswer = ''; // Clear selected answer
+            }
+          }
         }
-      }
-    ], 
+      ],
       cssClass: 'custom-alert'
     });
     await alert.present();
   }
-  choose_button(){
-    let audio = new Audio;
-    audio.src="../assets/audio/choose_button.mp3"
+
+  choose_button() {
+    let audio = new Audio();
+    audio.src = "../assets/audio/choose_button.mp3";
     audio.load();
     audio.play();
   }
-  playButton(){
+
+  playButton() {
     let audio = new Audio();
     audio.src = "../assets/audio/button-124476.mp3";
     audio.load();
     audio.play();
-   }
-   correctAudio(){
+  }
+
+  correctAudio() {
     let audio = new Audio();
-    audio.src ="../assets/audio/win.wav"
+    audio.src = "../assets/audio/win.wav";
     audio.load();
     audio.play();
-   }
-   incorrectAudio(){
+  }
+
+  incorrectAudio() {
     let audio = new Audio();
-    audio.src="../assets/audio/lose.wav"
+    audio.src = "../assets/audio/lose.wav";
     audio.load();
     audio.play();
-   }
+  }
 }

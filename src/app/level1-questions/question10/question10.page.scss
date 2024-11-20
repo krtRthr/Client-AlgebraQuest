@@ -60,7 +60,7 @@
 #question-cont {
   width: 87%;
   height: 140px;
-  background: linear-gradient(#F1E5BA, #F2C934, #F2C934);
+  background: linear-gradient(#7bce98, #459e64, #4ea46c);
   top: 25%;
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
@@ -92,7 +92,7 @@
 #choice-4 {
   width: 40%;
   height: 52px;
-  background: linear-gradient(#F1E5BA, #F2C934);
+  background: linear-gradient(#75c591, #4ea46c);
   color: #ffffff;
   border-radius: 10px;
   box-shadow: 2px 4px 3px #363535;
@@ -109,7 +109,7 @@
   }
 
   &.selected {
-    border-color: rgb(255, 255, 255); /* Outline color when selected */
+    border-color: rgb(255, 0, 0); /* Outline color when selected */
   }
 
   &.correct-reveal {

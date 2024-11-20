@@ -44,13 +44,12 @@ export class Question1Page {
         this.incorrectAudio();
       }
 
-      await this.presentAlert(header, message);
+      await this.presentAlert(header, message, this.selectedAnswer === this.correctAnswer);
     } else {
       const alert = await this.alertController.create({
         header: 'No Answer Selected',
         message: 'Please select an answer before submitting.',
         buttons: ['OK']
-        
       });
       await alert.present();
       this.incorrectAudio();
@@ -70,45 +69,53 @@ export class Question1Page {
     return '';
   } 
 
-  async presentAlert(header: string, message: string) {
+  async presentAlert(header: string, message: string, isCorrect: boolean) {
     const alert = await this.alertController.create({
       header: header,
       message: message,
-      buttons: [{
-        text: 'Next Question',
-        handler: () => {
-          this.router.navigate(['/question2']);
+      buttons: [
+        {
+          text: isCorrect ? 'Next Question' : 'Try Again',
+          handler: () => {
+            if (isCorrect) {
+              this.router.navigate(['/question2']);
+            } else {
+              this.showResult = false; // Reset the result view for retry
+              this.selectedAnswer = ''; // Clear selected answer
+            }
+          }
         }
-      }
-    ],
+      ],
       cssClass: 'custom-alert'
     }); 
     await alert.present();
   }
   
-  choose_button(){
+  choose_button() {
     let audio = new Audio;
-    audio.src="../assets/audio/choose_button.mp3"
+    audio.src="../assets/audio/choose_button.mp3";
     audio.load();
     audio.play();
   }
-  playButton(){
+
+  playButton() {
     let audio = new Audio();
     audio.src = "../assets/audio/button-124476.mp3";
     audio.load();
     audio.play();
-   }
-   correctAudio(){
-    let audio = new Audio();
-    audio.src ="../assets/audio/win.wav"
-    audio.load();
-    audio.play();
-   }
-   incorrectAudio(){
-    let audio = new Audio();
-    audio.src="../assets/audio/lose.wav"
-    audio.load();
-    audio.play();
-   }
+  }
 
+  correctAudio() {
+    let audio = new Audio();
+    audio.src = "../assets/audio/win.wav";
+    audio.load();
+    audio.play();
+  }
+
+  incorrectAudio() {
+    let audio = new Audio();
+    audio.src = "../assets/audio/lose.wav";
+    audio.load();
+    audio.play();
+  }
 }
