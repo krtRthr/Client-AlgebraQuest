@@ -11,7 +11,7 @@ export class BackgroundMusicService {
     this.audio.src = 'assets/audio/background.mp3'; // Path to your audio file
     this.audio.loop = true; // Enable looping for continuous playback
   }
-
+ 
   playMusic() {
     if (this.audio) {
       this.audio.play();

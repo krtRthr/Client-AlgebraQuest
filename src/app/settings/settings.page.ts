@@ -7,7 +7,7 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./settings.page.scss'],
 })
 export class SettingsPage {
-  settings = {
+  /*settings = {
     sound: true,
     music: 100 
   };
@@ -44,5 +44,5 @@ export class SettingsPage {
     audio.src = "../assets/audio/button-124476.mp3";
     audio.load();
     audio.play();
-  }
+  }*/
 }
