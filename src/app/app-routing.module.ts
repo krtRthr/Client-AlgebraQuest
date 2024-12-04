@@ -148,13 +148,10 @@ const routes: Routes = [
     loadChildren: () => import('./final-score/final-score.module').then( m => m.FinalScorePageModule)
   },
   {
-    path: 'settings',
-    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
-  },
-  {
     path: 'question4',
     loadChildren: () => import('./level1-questions/question4/question4.module').then( m => m.Question4PageModule)
-  },  {
+  },
+  {
     path: 'tutorial1',
     loadChildren: () => import('./tutorial/tutorial1/tutorial1.module').then( m => m.Tutorial1PageModule)
   },

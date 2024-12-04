@@ -1,4 +1,11 @@
 <ion-content [fullscreen]="true" class="main-page">
+  <img
+    class="button"
+    id="sound_button"
+    [src]="musicService.isMuted() ? '../../assets/AlgebraQuest_Asset/mute.png' : '../../assets/AlgebraQuest_Asset/volume.png'"
+    width="45"
+    (click)="toggleSound()"
+  />
   <section class="level-container">
     <div class="level-slider-container">
       <div class="level">
@@ -32,7 +39,6 @@
   <section class="HomePage-button-container">
     <div class="button-container">
       <button id="button-1" routerLink="/tutorialpage" (click)="playButton()">Tutorial</button>
-      <button id="button-2" routerLink="/settings" (click)="playButton()">Settings</button>
     </div>
   </section>
 </ion-content>

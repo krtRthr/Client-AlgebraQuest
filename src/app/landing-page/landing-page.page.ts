@@ -7,7 +7,12 @@ import { BackgroundMusicService } from '../background-music.service';
   styleUrls: ['./landing-page.page.scss'],
 })
 export class LandingPagePage implements OnInit,OnDestroy {
-  constructor(private musicService:BackgroundMusicService ){}
+
+  constructor(public musicService: BackgroundMusicService) {}
+
+  toggleSound(): void {
+    this.musicService.toggleMute();
+  }
 
   cardUnlocked: boolean[] = [true, false, false]; 
 
